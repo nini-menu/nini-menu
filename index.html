@@ -1,0 +1,1835 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Каталог меню НИНИ — составы и КБЖУ</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%238F883D'/%3E%3Cg fill='%23fff' transform='translate(8,22) scale(0.0407)'%3E%3Cpath d='M0 0h100v420H0zM270 0h100v420H270zM540 0h100v420H540zM810 0h100v420H810zM1080 0h100v420h-100zM100 165h170v95H100zM640 165h170v95H640zM540 0h100L370 420H270zM1080 0h100L910 420H810z'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>:root{
+  --bg:#FAF8F6;--card:#fff;--ink:#252525;--soft:#6b6663;--olive:#8F883D;--olive-d:#6E682C;
+  --pink:#F8BDC4;--line:#e6e2d9;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141209;--card:#1d1a12;--ink:#F2EDE0;--soft:#a39b89;--olive:#A6BB63;--olive-d:#C2D488;
+  --pink:#E79FBB;--line:#332f26;}}
+:root[data-theme="dark"]{--bg:#141209;--card:#1d1a12;--ink:#F2EDE0;--soft:#a39b89;--olive:#A6BB63;
+  --olive-d:#C2D488;--pink:#E79FBB;--line:#332f26;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Geologica',system-ui,sans-serif;background:var(--bg);color:var(--ink);
+  font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.hero{max-width:1100px;margin:0 auto;padding:48px 20px 24px}
+.brand{font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--olive)}
+h1{margin-top:14px;font-size:clamp(34px,6vw,54px);font-weight:700;line-height:1;letter-spacing:-.025em;text-transform:uppercase}
+.lead{margin-top:14px;font-size:15px;font-weight:300;color:var(--soft);max-width:62ch}
+#q{margin-top:22px;width:100%;max-width:560px;padding:13px 16px;border:1.5px solid var(--line);
+  border-radius:12px;background:var(--card);color:var(--ink);font:inherit;font-size:14px}
+#q:focus{outline:2px solid var(--olive);outline-offset:1px;border-color:transparent}
+
+.toc{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);
+  padding:12px 20px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:thin}
+.toc a{flex:0 0 auto;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:20px;
+  padding:7px 13px;font-size:12px;font-weight:500;white-space:nowrap}
+.toc a:hover{border-color:var(--olive);color:var(--olive-d)}
+.toc a i{font-style:normal;font-size:10px;color:var(--soft);margin-left:5px}
+
+main{max-width:1100px;margin:0 auto;padding:10px 20px 60px}
+.empty{padding:40px 0;color:var(--soft)}
+.sec{padding-top:38px;scroll-margin-top:64px}
+.sec-head{display:flex;align-items:baseline;gap:10px;border-bottom:2px solid var(--olive);padding-bottom:8px;margin-bottom:20px}
+.sec-head h2{font-size:clamp(20px,3.4vw,27px);font-weight:700;letter-spacing:-.02em;text-transform:uppercase;color:var(--olive-d)}
+.sec-head span{font-size:12px;color:var(--soft)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.ph{aspect-ratio:4/5;background:#efece4;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.nophoto{width:100%;height:100%;display:flex;align-items:center;justify-content:center;
+  font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#a09a8c}
+.txt{padding:16px 16px 18px;display:flex;flex-direction:column;gap:8px}
+h3{font-size:17px;font-weight:700;line-height:1.2}
+.price{display:flex;align-items:baseline;gap:9px}
+.price b{font-size:19px;font-weight:700;color:var(--olive-d)}
+.price span{font-size:12px;color:var(--soft)}
+.badges{display:flex;flex-wrap:wrap;gap:6px}
+.badge{background:var(--pink);color:#252525;border-radius:20px;padding:3px 9px;font-size:10px;font-weight:700;
+  letter-spacing:.06em;text-transform:uppercase}
+.desc{font-size:13.5px;font-weight:300;color:var(--soft);line-height:1.45}
+details{border-top:1px dotted var(--line);padding-top:8px}
+summary{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--olive);cursor:pointer}
+details p{margin-top:7px;font-size:13px;font-weight:300;line-height:1.45}
+.kb{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:11.5px;color:var(--soft)}
+.kb b{font-weight:700;color:var(--ink);font-size:10px;letter-spacing:.08em;text-transform:uppercase;margin-right:4px}
+.alrg{font-size:11.5px;font-weight:300;color:var(--soft);line-height:1.4}
+.alrg b{font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--olive);margin-right:5px}
+.up{display:inline-block;margin-top:16px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--soft);text-decoration:none}
+.up:hover{color:var(--olive-d)}
+footer{border-top:1px solid var(--line);padding:26px 20px 40px;max-width:1100px;margin:0 auto;
+  font-size:12px;font-weight:300;color:var(--soft);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer .mono{font-weight:700;letter-spacing:.02em;color:var(--ink);font-size:15px}
+@media (max-width:640px){
+  .hero{padding:34px 16px 18px}
+  main{padding:8px 16px 44px}
+  .grid{grid-template-columns:1fr;gap:14px}
+  .ph{aspect-ratio:16/11}
+}
+
+/* --- фирменный стиль: клетка, логотип, монограмма --- */
+:root{--grid:rgba(110,104,44,.09);--cell:22px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--grid:rgba(242,237,224,.06)}}
+:root[data-theme="dark"]{--grid:rgba(242,237,224,.06)}
+body{background-color:var(--bg);
+  background-image:repeating-linear-gradient(to right,var(--grid) 0 1px,transparent 1px var(--cell)),
+                   repeating-linear-gradient(to bottom,var(--grid) 0 1px,transparent 1px var(--cell))}
+.hero{position:relative}
+.mark{display:flex;align-items:center;gap:14px}
+.mark .disc{width:52px;height:52px;border-radius:50%;background:var(--olive-d);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.mark .disc .mono{width:28px;color:#FAF8F6}
+.wordmark{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;line-height:1.35;color:var(--ink)}
+.toc{background:var(--bg);box-shadow:0 1px 0 var(--line)}
+.sec-head .mono{width:22px;color:var(--olive);flex:0 0 auto;margin-left:auto;opacity:.5}
+footer.brandfoot{max-width:1100px;margin:0 auto;padding:30px 20px 54px;border-top:1px solid var(--line);
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+footer.brandfoot .disc{width:44px;height:44px;border-radius:50%;background:var(--pink);display:flex;align-items:center;justify-content:center}
+footer.brandfoot .disc .mono{width:24px;color:#252525}
+footer.brandfoot p{font-size:12px;color:var(--soft);font-weight:300}
+footer.brandfoot b{display:block;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);font-size:11px;margin-bottom:3px}
+
+/* --- панель инструментов --- */
+.bar{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar .row{max-width:1100px;margin:0 auto;padding:10px 20px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.bar #q{margin:0;flex:1 1 260px;min-width:200px;padding:11px 14px;font-size:14px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:20px;padding:7px 12px;
+  font:inherit;font-size:12px;font-weight:500;cursor:pointer;white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--olive-d);border-color:var(--olive-d);color:#FAF8F6}
+.chip:hover{border-color:var(--olive)}
+.count{font-size:12px;color:var(--soft);white-space:nowrap}
+.toc{position:sticky;top:57px;z-index:15}
+.toc a.on{border-color:var(--olive);color:var(--olive-d);font-weight:700}
+.up-fab{position:fixed;right:18px;bottom:18px;z-index:30;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:16px;cursor:pointer;
+  display:none;align-items:center;justify-content:center;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+.up-fab.show{display:flex}
+@media print{.bar,.toc,.up-fab,.hint{display:none!important}
+  .item{break-inside:avoid;border:1px solid #ccc}
+  body{background:#fff!important}}
+@media (max-width:600px){.bar .row{padding:8px 16px}.count{width:100%}}
+
+/* значки из меню: gluten free / lactose free / protein */
+.badges{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+.ic{width:36px;height:36px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
+  font-size:7.5px;font-weight:700;line-height:1.05;text-align:center;letter-spacing:.02em;text-transform:uppercase;
+  color:#fff;flex:0 0 auto}
+.ic-g{background:#6E682C}
+.ic-l{background:#F8BDC4}
+.ic-p{background:#BDB3B3}
+.legend{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-top:16px;font-size:12px;color:var(--soft)}
+.legend span{display:flex;align-items:center;gap:7px}
+</style></head>
+<body id="top">
+<header class="hero">
+  <div class="mark"><span class="disc"><svg class="mono" viewBox="0 0 1180 420" fill="currentColor" aria-hidden="true"><path d="M0 0h100v420H0zM270 0h100v420H270zM540 0h100v420H540zM810 0h100v420H810zM1080 0h100v420h-100zM100 165h170v95H100zM640 165h170v95H640zM540 0h100L370 420H270zM1080 0h100L910 420H810z"/></svg></span><p class="wordmark">Ни стыда<br>ни сахара</p></div>
+  <h1>Каталог меню</h1>
+  <p class="lead">Составы, пищевая ценность и аллергены по каждой позиции.</p>
+<div class="legend"><span class="ic ic-g" title="без глютена">gluten<br>free</span><span>без глютена</span><span class="ic ic-l" title="без лактозы">lactose<br>free</span><span>без лактозы</span><span class="ic ic-p" title="много белка">protein</span><span>много белка</span></div>
+</header>
+<div class="bar">
+  <div class="row">
+    <input id="q" type="search" placeholder="Поиск: название, продукт, раздел — например, лосось" aria-label="Поиск" autocomplete="off">
+    <span class="count" id="count"></span>
+  </div>
+</div>
+<nav class="toc" aria-label="Оглавление"><a href="#zavtraki-nini">Завтраки НИНИ <i>6</i></a><a href="#ayca">Яйца <i>5</i></a><a href="#ne-hleb">Не хлеб <i>5</i></a><a href="#hleb">Хлеб <i>9</i></a><a href="#kasi">Каши <i>7</i></a><a href="#sladkoe">Сладкое <i>16</i></a><a href="#poke-i-bouly">Поке и боулы <i>15</i></a><a href="#deserty-porcionnye">Десерты порционные <i>17</i></a><a href="#cizkeyki">Чизкейки <i>4</i></a><a href="#keyk-boksy">Кейк-боксы <i>3</i></a><a href="#tarty-kol-ca-i-eklery">Тарты, кольца и эклеры <i>7</i></a><a href="#deserty-mussovye">Десерты муссовые <i>10</i></a><a href="#deserty-proteinovye">Десерты протеиновые <i>15</i></a><a href="#deserty-bezglutenovye">Десерты безглютеновые <i>4</i></a><a href="#torty">Торты <i>10</i></a><a href="#detskoe-menu">Детское меню <i>11</i></a></nav>
+<main>
+  <p id="empty" hidden class="empty">Ничего не нашлось. Попробуйте другое слово.</p>
+  <section class="sec" id="zavtraki-nini">
+  <div class="sec-head"><h2>Завтраки НИНИ</h2><svg class="mono" viewBox="0 0 1180 420" fill="currentColor" aria-hidden="true"><path d="M0 0h100v420H0zM270 0h100v420H270zM540 0h100v420H540zM810 0h100v420H810zM1080 0h100v420h-100zM100 165h170v95H100zM640 165h170v95H640zM540 0h100L370 420H270zM1080 0h100L910 420H810z"/></svg><span>6</span></div>
+  <div class="grid"><article class="item" data-q="нини «фирменный» яйцо, белок на выбор, микс салата / киноа, гуакамоле, творожный мусс, хумус, огурцы, смесь семян, масло оливковое, хлеб.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/dbd9df24966b.jpg" alt="НИНИ «Фирменный»"></div>
+  <div class="txt">
+    <h3>НИНИ «Фирменный»</h3>
+    <p class="price"><b>910 ₽</b><span>420 г</span></p>
+    
+    <p class="desc">Фирменный завтрак-конструктор: в основе два мягких яйца, лосось, индейка или курица на выбор, микс салата и свежий огурец. Дополняем хрустящим тартином из ремесленного хлеба на закваске и фирменными намазками. В завтрак входит десерт без сахара, а также напиток на выбор.</p>
+    <details><summary>Состав</summary><p>Яйцо, белок на выбор, микс салата / киноа, гуакамоле, творожный мусс, хумус, огурцы, смесь семян, масло оливковое, хлеб.</p></details>
+    <p class="kb"><span><b>на порцию</b> 443 / 25,2 / 26,5 / 26,9</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, глютен, молоко, рыба, ракообразные. Возможны следы орехов.</p>
+  </div>
+</article><article class="item" data-q="нини «безглютеновый» яйцо, 5 мин, микс салата / киноа, микс семян, творожный мусс, гуакамоле, хумус, хлеб безглютеновый, пармезан, масло раст. / оливковое.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/5edf6cf0633e.jpg" alt="НИНИ «Безглютеновый»"></div>
+  <div class="txt">
+    <h3>НИНИ «Безглютеновый»</h3>
+    <p class="price"><b>690 ₽</b><span>400 г</span></p>
+    <div class="badges"><span class="ic ic-g" title="без глютена">gluten<br>free</span></div>
+    <p class="desc">Фирменный завтрак с мягким яйцом, микс салата, сыр, ремесленный безглютеновый хлеб с семенами, мятый авокадо, творожный сыр, хумус.</p>
+    <details><summary>Состав</summary><p>Яйцо, 5 мин, микс салата / киноа, микс семян, творожный мусс, гуакамоле, хумус, хлеб безглютеновый, пармезан, масло раст. / оливковое.</p></details>
+    <p class="kb"><span><b>на порцию</b> 572 / 27,2 / 26 / 36</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, молоко, кунжут и семена.</p>
+  </div>
+</article><article class="item" data-q="нини «зож» яйцо, шпинат для омлета, микс салата / киноа, креветки, творожный мусс, гуакамоле, хумус, масло раст. / оливковое, микс семян, хлеб.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/2aff274baac1.jpg" alt="НИНИ «ЗОЖ»"></div>
+  <div class="txt">
+    <h3>НИНИ «ЗОЖ»</h3>
+    <p class="price"><b>810 ₽</b><span>400 г</span></p>
+    
+    <p class="desc">Фирменный завтрак с зелёным омлетом, обжаренной креветкой, микс салата с отварным киноа, мятый авокадо, творожный сыр. Дополняем хрустящим тартином из ремесленного хлеба на закваске.</p>
+    <details><summary>Состав</summary><p>Яйцо, шпинат для омлета, микс салата / киноа, креветки, творожный мусс, гуакамоле, хумус, масло раст. / оливковое, микс семян, хлеб.</p></details>
+    <p class="kb"><span><b>на порцию</b> 564 / 34 / 28 / 38,8</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, молоко, ракообразные, глютен.</p>
+  </div>
+</article><article class="item" data-q="нини «протеин» белок, курица су-вид, микс салата / киноа, пармезан, хлеб, микс семян, масло раст. / оливковое, творожный мусс, гуакамоле, хумус.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/68da5da9f849.jpg" alt="НИНИ «Протеин»"></div>
+  <div class="txt">
+    <h3>НИНИ «Протеин»</h3>
+    <p class="price"><b>810 ₽</b><span>400 г</span></p>
+    
+    <p class="desc">Фирменный завтрак с белковым омлетом, куриным филе су-вид, микс салата с отварным киноа, мятый авокадо, творожный сыр. Дополняем хрустящим тартином из ремесленного хлеба на закваске.</p>
+    <details><summary>Состав</summary><p>Белок, курица су-вид, микс салата / киноа, пармезан, хлеб, микс семян, масло раст. / оливковое, творожный мусс, гуакамоле, хумус.</p></details>
+    <p class="kb"><span><b>на порцию</b> 414 / 40 / 11 / 38</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, молоко, глютен.</p>
+  </div>
+</article><article class="item" data-q="нини «с вафлей» яйцо, сливки 33 %, вафля льняная, микс салата / киноа, микс семян, помидоры, филе индейки, творожный мусс, гуакамоле, хумус, масло раст. / оливковое.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/a37db9563b03.jpg" alt="НИНИ «С вафлей»"></div>
+  <div class="txt">
+    <h3>НИНИ «С вафлей»</h3>
+    <p class="price"><b>810 ₽</b><span>385 г</span></p>
+    
+    <p class="desc">Фирменный завтрак, в основе сливочный скрембл, льняная вафля, микс салата, мятый авокадо и творожный сыр. В завтрак входит филе индейки, запечённое с травами.</p>
+    <details><summary>Состав</summary><p>Яйцо, сливки 33 %, вафля льняная, микс салата / киноа, микс семян, помидоры, филе индейки, творожный мусс, гуакамоле, хумус, масло раст. / оливковое.</p></details>
+    <p class="kb"><span><b>на порцию</b> 516 / 36,4 / 25,1 / 27,5</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, молоко, глютен.</p>
+  </div>
+</article><article class="item" data-q="нини «мужицкий» яйцо, ростбиф, картофель айдахо, микс салата / киноа, микс семян / перцы / соль, масло раст. / оливковое, хлеб, творожный мусс, гуакамоле, хумус.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/ee46fd06a245.jpg" alt="НИНИ «Мужицкий»"></div>
+  <div class="txt">
+    <h3>НИНИ «Мужицкий»</h3>
+    <p class="price"><b>810 ₽</b><span>400 г</span></p>
+    
+    <p class="desc">Фирменный сытный завтрак, в основе глазунья из двух яиц, нежный ростбиф, микс салата, запечённый картофель. Дополняем хрустящим тартином из ремесленного хлеба на закваске, творожным сыром, мятым авокадо и хумусом.</p>
+    <details><summary>Состав</summary><p>Яйцо, ростбиф, картофель айдахо, микс салата / киноа, микс семян / перцы / соль, масло раст. / оливковое, хлеб, творожный мусс, гуакамоле, хумус.</p></details>
+    <p class="kb"><span><b>на порцию</b> 716 / 44 / 30,8 / 68</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, молоко, глютен, кунжут.</p>
+  </div>
+</article></div>
+  <a class="up" href="#top">Наверх ↑</a>
+</section><section class="sec" id="ayca">
+  <div class="sec-head"><h2>Яйца</h2><svg class="mono" viewBox="0 0 1180 420" fill="currentColor" aria-hidden="true"><path d="M0 0h100v420H0zM270 0h100v420H270zM540 0h100v420H540zM810 0h100v420H810zM1080 0h100v420h-100zM100 165h170v95H100zM640 165h170v95H640zM540 0h100L370 420H270zM1080 0h100L910 420H810z"/></svg><span>5</span></div>
+  <div class="grid"><article class="item" data-q="неанглийский яйцо, бекон / курица су-вид, помидор / сахар, масло раст. / оливковое, шампиньоны, фасоль консервированная, микс салата / семян, хлеб чёрный, смесь перцев / соль.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/e5a44c0875c0.jpg" alt="Неанглийский"></div>
+  <div class="txt">
+    <h3>Неанглийский</h3>
+    <p class="price"><b>610 ₽</b><span>350 г</span></p>
+    
+    <p class="desc">Глазунья из двух яиц, бекон, куриное филе су-вид, запечённые шампиньоны, микс салата, свежий томат, фасоль. Дополняем хрустящим тартином из ремесленного хлеба на закваске и намазкой из творожного мусса.</p>
+    <details><summary>Состав</summary><p>Яйцо, бекон / курица су-вид, помидор / сахар, масло раст. / оливковое, шампиньоны, фасоль консервированная, микс салата / семян, хлеб чёрный, смесь перцев / соль.</p></details>
+    <p class="kb"><span><b>на порцию</b> 508 / 31,5 / 26,9 / 35</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, молоко, глютен.</p>
+  </div>
+</article><article class="item" data-q="скрембл / креветка яйцо, сливки 33 %, креветки тигровые, микс салата / семян, хлеб, помидор / сахар / икра, соль / масло раст., творожный мусс / перцы.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/a3ebe2d7eadf.jpg" alt="Скрембл / креветка"></div>
+  <div class="txt">
+    <h3>Скрембл / креветка</h3>
+    <p class="price"><b>610 ₽</b><span>365 г</span></p>
+    
+    <p class="desc">Нежный скрембл из трёх яиц, обжаренная креветка, микс салата. Дополняем хрустящим тартином из ремесленного хлеба на закваске и намазкой из творожного мусса.</p>
+    <details><summary>Состав</summary><p>Яйцо, сливки 33 %, креветки тигровые, микс салата / семян, хлеб, помидор / сахар / икра, соль / масло раст., творожный мусс / перцы.</p></details>
+    <p class="kb"><span><b>на порцию</b> 461 / 30,8 / 25,1 / 28,4</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, молоко, ракообразные, глютен, рыба (икра).</p>
+  </div>
+</article><article class="item" data-q="омлет / мусс пармезан / спаржа яйцо, мусс пармезан, спаржа отварная, микрозелень, масло растительное, пармезан.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/2305f63e3719.jpg" alt="Омлет / мусс пармезан / спаржа"></div>
+  <div class="txt">
+    <h3>Омлет / мусс пармезан / спаржа</h3>
+    <p class="price"><b>610 ₽</b><span>250 г</span></p>
+    
+    <p class="desc">Сливочный омлет из трёх яиц, лёгкий мусс из пармезана, отварная спаржа. Дополняем хрустящим тартином из ремесленного хлеба на закваске и творожным муссом.</p>
+    <details><summary>Состав</summary><p>Яйцо, мусс пармезан, спаржа отварная, микрозелень, масло растительное, пармезан.</p></details>
+    <p class="kb"><span><b>на порцию</b> 490 / 31 / 27,5 / 29</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, молоко, глютен (тартин).</p>
+  </div>
+</article><article class="item" data-q="белковый омлет / помидор / песто белок, соус песто, помидор, хлеб, микрозелень, масло растительное, пармезан.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/8f13bad13656.jpg" alt="Белковый омлет / помидор / песто"></div>
+  <div class="txt">
+    <h3>Белковый омлет / помидор / песто</h3>
+    <p class="price"><b>610 ₽</b><span>250 г</span></p>
+    
+    <p class="desc">Воздушный белковый омлет, соус песто и свежий томат. Дополняем хрустящим тартином из ремесленного хлеба на закваске и творожным муссом.</p>
+    <details><summary>Состав</summary><p>Белок, соус песто, помидор, хлеб, микрозелень, масло растительное, пармезан.</p></details>
+    <p class="kb"><span><b>на порцию</b> 358 / 41 / 9 / 28</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, молоко, глютен, орехи (песто).</p>
+  </div>
+</article><article class="item" data-q="шакшука яйцо, соус для шакшуки, сыр брынза, петрушка, пита.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/eeeb30d31782.jpg" alt="Шакшука"></div>
+  <div class="txt">
+    <h3>Шакшука</h3>
+    <p class="price"><b>510 ₽</b><span>350 г</span></p>
+    
+    <p class="desc">Дальневосточный завтрак на основе пряного томатного соуса, с мягким яйцом, зеленью и солёной брынзой. Дополняем горячей питой.</p>
+    <details><summary>Состав</summary><p>Яйцо, соус для шакшуки, сыр брынза, петрушка, пита.</p></details>
+    <p class="kb"><span><b>на порцию</b> 483 / 24,1 / 14 / 60,9</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, молоко, глютен (пита).</p>
+  </div>
+</article></div>
+  <a class="up" href="#top">Наверх ↑</a>
+</section><section class="sec" id="ne-hleb">
+  <div class="sec-head"><h2>Не хлеб</h2><svg class="mono" viewBox="0 0 1180 420" fill="currentColor" aria-hidden="true"><path d="M0 0h100v420H0zM270 0h100v420H270zM540 0h100v420H540zM810 0h100v420H810zM1080 0h100v420h-100zM100 165h170v95H100zM640 165h170v95H640zM540 0h100L370 420H270zM1080 0h100L910 420H810z"/></svg><span>5</span></div>
+  <div class="grid"><article class="item" data-q="оттодраник картофель / батат, мука / соль, яйцо, лосось с/с, микс салата / семян, яйцо пашот, соус дзадзики.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/daccc8e2a118.jpg" alt="Оттодраник"></div>
+  <div class="txt">
+    <h3>Оттодраник</h3>
+    <p class="price"><b>690 ₽</b><span>300 г</span></p>
+    
+    <p class="desc">Запечённые драники из батата и картофеля, дополняем творожным муссом и лососем слабой соли.</p>
+    <details><summary>Состав</summary><p>Картофель / батат, мука / соль, яйцо, лосось с/с, микс салата / семян, яйцо пашот, соус дзадзики.</p></details>
+    <p class="kb"><span><b>на порцию</b> 357 / 15,6 / 27 / 13,8</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, глютен, молоко (дзадзики), рыба.</p>
+  </div>
+</article><article class="item" data-q="шпинатная вафля с лососем вафля шпинатная, голландский соус, лосось с/с, яйцо пашот, творожный мусс.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/9abcdfc72dac.jpg" alt="Шпинатная вафля с лососем"></div>
+  <div class="txt">
+    <h3>Шпинатная вафля с лососем</h3>
+    <p class="price"><b>710 ₽</b><span>250 г</span></p>
+    
+    <p class="desc">Несладкая вафля с добавлением шпината, творожный мусс с травами, слабосолёный лосось, яйцо пашот и нежный соус голландез.</p>
+    <details><summary>Состав</summary><p>Вафля шпинатная, голландский соус, лосось с/с, яйцо пашот, творожный мусс.</p></details>
+    <p class="kb"><span><b>на порцию</b> 552 / 27 / 36 / 30</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, молоко, глютен, рыба.</p>
+  </div>
+</article><article class="item" data-q="вафля льняная с лососем вафля льняная, мусс из творожного сыра, лосось, руккола, кунжут, яйцо перепелиное, смесь семян, микрозелень.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/14cab62dc111.jpg" alt="Вафля льняная с лососем"></div>
+  <div class="txt">
+    <h3>Вафля льняная с лососем</h3>
+    <p class="price"><b>630 ₽</b><span>160 г</span></p>
+    
+    <p class="desc">Несладкая вафля на основе льняной муки, дополняем миксом зелени, творожным сыром и слабосолёным лососем.</p>
+    <details><summary>Состав</summary><p>Вафля льняная, мусс из творожного сыра, лосось, руккола, кунжут, яйцо перепелиное, смесь семян, микрозелень.</p></details>
+    <p class="kb"><span><b>на порцию</b> 456 / 22,2 / 16,6 / 55,2</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, молоко, глютен, рыба, кунжут.</p>
+  </div>
+</article><article class="item" data-q="вафля льняная с курицей вафля льняная, мусс из творожного сыра, курица су-вид, руккола, смесь семян, яйцо перепелиное, микрозелень.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/9164a89a980d.jpg" alt="Вафля льняная с курицей"></div>
+  <div class="txt">
+    <h3>Вафля льняная с курицей</h3>
+    <p class="price"><b>610 ₽</b><span>160 г</span></p>
+    
+    <p class="desc">Несладкая вафля на основе льняной муки, дополняем миксом зелени, творожным сыром и куриным филе.</p>
+    <details><summary>Состав</summary><p>Вафля льняная, мусс из творожного сыра, курица су-вид, руккола, смесь семян, яйцо перепелиное, микрозелень.</p></details>
+    <p class="kb"><span><b>на порцию</b> 419 / 20,5 / 19,2 / 44,5</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, молоко, глютен.</p>
+  </div>
+</article><article class="item" data-q="вафля картофельная с индейкой вафля картофельная, мусс из творожного сыра, ветчина из индейки, руккола, смесь семян, яйцо перепелиное, микрозелень.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/b46fd2b13a61.jpg" alt="Вафля картофельная с индейкой"></div>
+  <div class="txt">
+    <h3>Вафля картофельная с индейкой</h3>
+    <p class="price"><b>610 ₽</b><span>160 г</span></p>
+    
+    <p class="desc">Несладкая вафля на картофельной основе, дополняем миксом зелени, творожным сыром и индейкой.</p>
+    <details><summary>Состав</summary><p>Вафля картофельная, мусс из творожного сыра, ветчина из индейки, руккола, смесь семян, яйцо перепелиное, микрозелень.</p></details>
+    <p class="kb"><span><b>на порцию</b> 453 / 20 / 20,8 / 46,4</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, молоко, глютен.</p>
+  </div>
+</article></div>
+  <a class="up" href="#top">Наверх ↑</a>
+</section><section class="sec" id="hleb">
+  <div class="sec-head"><h2>Хлеб</h2><svg class="mono" viewBox="0 0 1180 420" fill="currentColor" aria-hidden="true"><path d="M0 0h100v420H0zM270 0h100v420H270zM540 0h100v420H540zM810 0h100v420H810zM1080 0h100v420h-100zM100 165h170v95H100zM640 165h170v95H640zM540 0h100L370 420H270zM1080 0h100L910 420H810z"/></svg><span>9</span></div>
+  <div class="grid"><article class="item" data-q="брускетта лосось тартин пшеничный, мусс из творожного сыра, лосось с/с, огурец, руккола, кунжут, икра лососевая, микрозелень, яйцо перепелиное.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/44e7e1d39bf0.jpg" alt="Брускетта лосось"></div>
+  <div class="txt">
+    <h3>Брускетта лосось</h3>
+    <p class="price"><b>690 ₽</b><span>200 г</span></p>
+    
+    <p class="desc">Хрустящий тартин из ремесленного хлеба на закваске с мусом из творожного сыра, слабосолёный лосось, огурец, руккола, икра лососевая и перепелиное яйцо.</p>
+    <details><summary>Состав</summary><p>Тартин пшеничный, мусс из творожного сыра, лосось с/с, огурец, руккола, кунжут, икра лососевая, микрозелень, яйцо перепелиное.</p></details>
+    <p class="kb"><span><b>на порцию</b> 424 / 19,8 / 19,8 / 43,4</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, молоко, глютен, рыба, кунжут.</p>
+  </div>
+</article><article class="item" data-q="брускетта креветка тартин пшеничный, мусс из творожного сыра, гуакамоле, помидор, креветки тигровые обжаренные, микрозелень, руккола, пармезан, сушёные томаты.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/fcb46c59834d.jpg" alt="Брускетта креветка"></div>
+  <div class="txt">
+    <h3>Брускетта креветка</h3>
+    <p class="price"><b>690 ₽</b><span>200 г</span></p>
+    
+    <p class="desc">Хрустящий тартин из ремесленного хлеба на закваске с мусом из творожного сыра, обжаренная тигровая креветка, свежие овощи и микрозелень.</p>
+    <details><summary>Состав</summary><p>Тартин пшеничный, мусс из творожного сыра, гуакамоле, помидор, креветки тигровые обжаренные, микрозелень, руккола, пармезан, сушёные томаты.</p></details>
+    <p class="kb"><span><b>на порцию</b> 368 / 16,2 / 16 / 39,8</span></p>
+    <p class="alrg"><b>Аллергены</b> Молоко, глютен, ракообразные.</p>
+  </div>
+</article><article class="item" data-q="брускетта курица песто тартин пшеничный, мусс из творожного сыра, курица су-вид, вяленые томаты, соус песто, микрозелень, смесь семян, руккола.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/5f2a2e756670.jpg" alt="Брускетта курица песто"></div>
+  <div class="txt">
+    <h3>Брускетта курица песто</h3>
+    <p class="price"><b>630 ₽</b><span>200 г</span></p>
+    
+    <p class="desc">Хрустящий тартин из ремесленного хлеба на закваске с соусом песто, куриное филе, свежие овощи и микрозелень.</p>
+    <details><summary>Состав</summary><p>Тартин пшеничный, мусс из творожного сыра, курица су-вид, вяленые томаты, соус песто, микрозелень, смесь семян, руккола.</p></details>
+    <p class="kb"><span><b>на порцию</b> 420 / 20,6 / 19,2 / 44,6</span></p>
+    <p class="alrg"><b>Аллергены</b> Молоко, глютен, орехи (песто).</p>
+  </div>
+</article><article class="item" data-q="брускетта индейка хлеб ржаной, мусс из творожного сыра, индейка, яйцо перепелиное, руккола / шпинат, смесь семян.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/29c72ae1e423.jpg" alt="Брускетта индейка"></div>
+  <div class="txt">
+    <h3>Брускетта индейка</h3>
+    <p class="price"><b>630 ₽</b><span>200 г</span></p>
+    
+    <p class="desc">Хрустящий тартин из ремесленного хлеба на закваске с мусом из творожного сыра, филе индейки, свежие овощи и микрозелень.</p>
+    <details><summary>Состав</summary><p>Хлеб ржаной, мусс из творожного сыра, индейка, яйцо перепелиное, руккола / шпинат, смесь семян.</p></details>
+    <p class="kb"><span><b>на порцию</b> 472 / 24,4 / 22,2 / 45,4</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, молоко, глютен.</p>
+  </div>
+</article><article class="item" data-q="скрембл-тост с индейкой тартин пшеничный, скрембл, — яйцо, — сливки 33 %, — соль, индейка, микрозелень, пармезан.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/729f0eb61683.jpg" alt="Скрембл-тост с индейкой"></div>
+  <div class="txt">
+    <h3>Скрембл-тост с индейкой</h3>
+    <p class="price"><b>690 ₽</b><span>250 г</span></p>
+    
+    <p class="desc">Хрустящий тартин из ремесленного хлеба на закваске под шапкой нежного скрембла, сверху филе индейки, пармезан и микрозелень.</p>
+    <details><summary>Состав</summary><p>Тартин пшеничный, скрембл, — яйцо, — сливки 33 %, — соль, индейка, микрозелень, пармезан.</p></details>
+    <p class="kb"><span><b>на порцию</b> 379 / 20,6 / 14,9 / 36,1</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, молоко, глютен.</p>
+  </div>
+</article><article class="item" data-q="скрембл-тост с креветкой тартин пшеничный, скрембл, — яйцо, — сливки 33 %, — соль, креветка тигровая, пармезан, микрозелень.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/fd7a424b9cc8.jpg" alt="Скрембл-тост с креветкой"></div>
+  <div class="txt">
+    <h3>Скрембл-тост с креветкой</h3>
+    <p class="price"><b>710 ₽</b><span>250 г</span></p>
+    
+    <p class="desc">Хрустящий тартин из ремесленного хлеба на закваске под шапкой нежного скрембла, сверху обжаренная тигровая креветка, пармезан и микрозелень.</p>
+    <details><summary>Состав</summary><p>Тартин пшеничный, скрембл, — яйцо, — сливки 33 %, — соль, креветка тигровая, пармезан, микрозелень.</p></details>
+    <p class="kb"><span><b>на порцию</b> 389 / 25,8 / 14,9 / 34,8</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, молоко, глютен, ракообразные.</p>
+  </div>
+</article><article class="item" data-q="сэндвич «индейка» хлеб пшеничный, мусс творожный, песто соб. пр-ва, руккола, помидор, огурец свежий, филе индейки.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/9f5413e67d51.jpg" alt="Сэндвич «Индейка»"></div>
+  <div class="txt">
+    <h3>Сэндвич «Индейка»</h3>
+    <p class="price"><b>650 ₽</b><span>310 г</span></p>
+    
+    <p class="desc">Ремесленный хлеб на закваске, творожный мусс и песто собственного приготовления, филе индейки, руккола, свежие томат и огурец.</p>
+    <details><summary>Состав</summary><p>Хлеб пшеничный, мусс творожный, песто соб. пр-ва, руккола, помидор, огурец свежий, филе индейки.</p></details>
+    <p class="kb"><span><b>на порцию</b> 499 / 27,9 / 13,6 / 65,1</span></p>
+    <p class="alrg"><b>Аллергены</b> Молоко, глютен, орехи (песто).</p>
+  </div>
+</article><article class="item" data-q="сэндвич «ростбиф» хлеб пшеничный, творожный мусс, руккола, огурец маринованный, помидор, ростбиф, соус тахини.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/deaaa9336231.jpg" alt="Сэндвич «Ростбиф»"></div>
+  <div class="txt">
+    <h3>Сэндвич «Ростбиф»</h3>
+    <p class="price"><b>690 ₽</b><span>315 г</span></p>
+    
+    <p class="desc">Ремесленный хлеб на закваске, творожный мусс и соус тахини, нежный ростбиф, руккола, свежий томат и маринованный огурец.</p>
+    <details><summary>Состав</summary><p>Хлеб пшеничный, творожный мусс, руккола, огурец маринованный, помидор, ростбиф, соус тахини.</p></details>
+    <p class="kb"><span><b>на порцию</b> 517 / 26,5 / 16,7 / 66,8</span></p>
+    <p class="alrg"><b>Аллергены</b> Молоко, глютен, кунжут, горчица.</p>
+  </div>
+</article><article class="item" data-q="сэндвич «тунец» хлеб, творожный мусс, намазка «тунец», лук маринованный.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/0d596b7879cf.jpg" alt="Сэндвич «Тунец»"></div>
+  <div class="txt">
+    <h3>Сэндвич «Тунец»</h3>
+    <p class="price"><b>650 ₽</b><span>253 г</span></p>
+    
+    <p class="desc">Ремесленный хлеб на закваске, творожный мусс, домашняя намазка из тунца и маринованный лук.</p>
+    <details><summary>Состав</summary><p>Хлеб, творожный мусс, намазка «тунец», лук маринованный.</p></details>
+    <p class="kb"><span><b>на порцию</b> 481 / 30,4 / 17,7 / 50,6</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, молоко, глютен, рыба.</p>
+  </div>
+</article></div>
+  <a class="up" href="#top">Наверх ↑</a>
+</section><section class="sec" id="kasi">
+  <div class="sec-head"><h2>Каши</h2><svg class="mono" viewBox="0 0 1180 420" fill="currentColor" aria-hidden="true"><path d="M0 0h100v420H0zM270 0h100v420H270zM540 0h100v420H540zM810 0h100v420H810zM1080 0h100v420h-100zM100 165h170v95H100zM640 165h170v95H640zM540 0h100L370 420H270zM1080 0h100L910 420H810z"/></svg><span>7</span></div>
+  <div class="grid"><article class="item" data-q="каша манная · масло гхи / смородина манная крупа, молоко 3,5 %, сливки 33 %, сахар / соль, масло гхи, кедровый орех, конфитюр смородиновый — какая версия?.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/3590fd8821e1.jpg" alt="Каша манная · масло гхи / смородина"></div>
+  <div class="txt">
+    <h3>Каша манная · масло гхи / смородина</h3>
+    <p class="price"><b>320 ₽</b><span>220 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Нежная манная каша на молоке со сливками, топлёное масло гхи, смородиновый конфитюр и кедровый орех.</p>
+    <details><summary>Состав</summary><p>Манная крупа, молоко 3,5 %, сливки 33 %, сахар / соль, масло гхи, кедровый орех, конфитюр смородиновый — какая версия?.</p></details>
+    <p class="kb"><span><b>на порцию</b> 420 / 8,8 / 17,6 / 52,8</span></p>
+    <p class="alrg"><b>Аллергены</b> Молоко, глютен, орехи.</p>
+  </div>
+</article><article class="item" data-q="каша манная · белый шоколад / манго манная крупа, молоко кокосовое, мусс цитрус-манго — какая версия?, сахар / соль, цедра лайма, кокосовая стружка, белый шоколад.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/9d3ac89b744a.jpg" alt="Каша манная · белый шоколад / манго"></div>
+  <div class="txt">
+    <h3>Каша манная · белый шоколад / манго</h3>
+    <p class="price"><b>320 ₽</b><span>220 г</span></p>
+    <div class="badges"><span class="ic ic-l" title="без лактозы">lactose<br>free</span><span class="badge">без сахара</span></div>
+    <p class="desc">Манная каша на кокосовом молоке, мусс цитрус-манго, белый шоколад, кокосовая стружка и цедра лайма.</p>
+    <details><summary>Состав</summary><p>Манная крупа, молоко кокосовое, мусс цитрус-манго — какая версия?, сахар / соль, цедра лайма, кокосовая стружка, белый шоколад.</p></details>
+    <p class="kb"><span><b>на порцию</b> 136 / 2,9 / 4,2 / 22</span></p>
+    <p class="alrg"><b>Аллергены</b> Глютен, кокос, возможны соя и орехи (шоколад).</p>
+  </div>
+</article><article class="item" data-q="каша гречневая · мусс пармезан / яйцо пашот крупа гречневая, молоко 3,5 %, сливки 33 %, соль / сахар, мусс из пармезана, яйцо пашот, микрозелень, пармезан.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/522da4b997a7.jpg" alt="Каша гречневая · мусс пармезан / яйцо пашот"></div>
+  <div class="txt">
+    <h3>Каша гречневая · мусс пармезан / яйцо пашот</h3>
+    <p class="price"><b>320 ₽</b><span>220 г</span></p>
+    <div class="badges"><span class="ic ic-g" title="без глютена">gluten<br>free</span></div>
+    <p class="desc">Несладкая гречневая каша на молоке со сливками, лёгкий мусс из пармезана, яйцо пашот и микрозелень.</p>
+    <details><summary>Состав</summary><p>Крупа гречневая, молоко 3,5 %, сливки 33 %, соль / сахар, мусс из пармезана, яйцо пашот, микрозелень, пармезан.</p></details>
+    <p class="kb"><span><b>на порцию</b> 376 / 17,6 / 13,2 / 48,4</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, молоко.</p>
+  </div>
+</article><article class="item" data-q="каша овсяная · кофейный мусс овсянка, молоко миндальное, вода, сушёное яблоко, соль / сахар, кофейный мусс, фундук.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/723145b8beb9.jpg" alt="Каша овсяная · кофейный мусс"></div>
+  <div class="txt">
+    <h3>Каша овсяная · кофейный мусс</h3>
+    <p class="price"><b>320 ₽</b><span>220 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Овсяная каша на миндальном молоке, воздушный кофейный мусс, фундук и сушёное яблоко.</p>
+    <details><summary>Состав</summary><p>Овсянка, молоко миндальное, вода, сушёное яблоко, соль / сахар, кофейный мусс, фундук.</p></details>
+    <p class="kb"><span><b>на порцию</b> 354 / 8,8 / 17,6 / 38,5</span></p>
+    <p class="alrg"><b>Аллергены</b> Глютен, орехи (миндальное молоко, фундук), молоко в муссе.</p>
+  </div>
+</article><article class="item" data-q="каша овсяная · томат / яйцо овсянка, вода / соль, помидор, масло гхи, чеснок, смесь перцев / масло оливковое, протёртые томаты, яйцо, микрозелень, сушёный томат.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/a9503c79f084.jpg" alt="Каша овсяная · томат / яйцо"></div>
+  <div class="txt">
+    <h3>Каша овсяная · томат / яйцо</h3>
+    <p class="price"><b>320 ₽</b><span>220 г</span></p>
+    
+    <p class="desc">Несладкая овсяная каша с томатами и чесноком на масле гхи, яйцо, вяленый томат и микрозелень.</p>
+    <details><summary>Состав</summary><p>Овсянка, вода / соль, помидор, масло гхи, чеснок, смесь перцев / масло оливковое, протёртые томаты, яйцо, микрозелень, сушёный томат.</p></details>
+    <p class="kb"><span><b>на порцию</b> 279 / 11 / 9,9 / 33</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, глютен, молоко (гхи).</p>
+  </div>
+</article><article class="item" data-q="каша рисовая · манго рис варёный, сливки 33 %, молоко кокосовое, соль / сахар, мусс цитрус- манго — какая версия?, карамелизованный кешью.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/f1cc48b32e3c.jpg" alt="Каша рисовая · манго"></div>
+  <div class="txt">
+    <h3>Каша рисовая · манго</h3>
+    <p class="price"><b>320 ₽</b><span>220 г</span></p>
+    <div class="badges"><span class="ic ic-g" title="без глютена">gluten<br>free</span><span class="badge">без сахара</span></div>
+    <p class="desc">Рисовая каша на кокосовом молоке со сливками, мусс цитрус-манго и карамелизованный кешью.</p>
+    <details><summary>Состав</summary><p>Рис варёный, сливки 33 %, молоко кокосовое, соль / сахар, мусс цитрус- манго — какая версия?, карамелизованный кешью.</p></details>
+    <p class="kb"><span><b>на порцию</b> 378 / 6,6 / 17,6 / 44</span></p>
+    <p class="alrg"><b>Аллергены</b> Молоко, кокос, орехи (кешью).</p>
+  </div>
+</article><article class="item" data-q="каша пшённая · финик / солёная карамель пшено варёное, молоко кокосовое, соль / сахар, финики, соус финиковый, солёная карамель, мельница.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/e900d508028e.jpg" alt="Каша пшённая · финик / солёная карамель"></div>
+  <div class="txt">
+    <h3>Каша пшённая · финик / солёная карамель</h3>
+    <p class="price"><b>320 ₽</b><span>220 г</span></p>
+    <div class="badges"><span class="ic ic-l" title="без лактозы">lactose<br>free</span><span class="badge">без сахара</span></div>
+    <p class="desc">Пшённая каша на кокосовом молоке, финики, финиковый соус и солёная карамель.</p>
+    <details><summary>Состав</summary><p>Пшено варёное, молоко кокосовое, соль / сахар, финики, соус финиковый, солёная карамель, мельница.</p></details>
+    <p class="kb"><span><b>на порцию</b> 249 / 6,6 / 2,2 / 48,4</span></p>
+    <p class="alrg"><b>Аллергены</b> Кокос, возможны орехи и соя, карамель может содержать глютен.</p>
+  </div>
+</article></div>
+  <a class="up" href="#top">Наверх ↑</a>
+</section><section class="sec" id="sladkoe">
+  <div class="sec-head"><h2>Сладкое</h2><svg class="mono" viewBox="0 0 1180 420" fill="currentColor" aria-hidden="true"><path d="M0 0h100v420H0zM270 0h100v420H270zM540 0h100v420H540zM810 0h100v420H810zM1080 0h100v420h-100zM100 165h170v95H100zM640 165h170v95H640zM540 0h100L370 420H270zM1080 0h100L910 420H810z"/></svg><span>16</span></div>
+  <div class="grid"><article class="item" data-q="протеиновые оладьи · шоколад / пекан оладьи, шоколадный соус б/с, пекан, клюква вяленая.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/90a48ba4a50d.jpg" alt="Протеиновые оладьи · шоколад / пекан"></div>
+  <div class="txt">
+    <h3>Протеиновые оладьи · шоколад / пекан</h3>
+    <p class="price"><b>610 ₽</b><span>225 г</span></p>
+    <div class="badges"><span class="ic ic-p" title="много белка">protein</span><span class="badge">без сахара</span></div>
+    <p class="desc">Три протеиновых оладья, шоколадный соус без сахара, орех пекан и вяленая клюква.</p>
+    <details><summary>Состав</summary><p>Оладьи, шоколадный соус б/с, пекан, клюква вяленая.</p></details>
+    <p class="kb"><span><b>на порцию</b> 504 / 27 / 22,5 / 40,5</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, молоко, глютен, орехи, соя.</p>
+  </div>
+</article><article class="item" data-q="протеиновые оладьи · смородина / рикотта оладьи, конфитюр смородиновый — какая версия?, крем «рикотта», крошка фисташковая.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/8d4f6d02fa9b.jpg" alt="Протеиновые оладьи · смородина / рикотта"></div>
+  <div class="txt">
+    <h3>Протеиновые оладьи · смородина / рикотта</h3>
+    <p class="price"><b>610 ₽</b><span>225 г</span></p>
+    <div class="badges"><span class="ic ic-p" title="много белка">protein</span><span class="badge">без сахара</span></div>
+    <p class="desc">Три протеиновых оладья, смородиновый конфитюр, крем «рикотта» и фисташковая крошка.</p>
+    <details><summary>Состав</summary><p>Оладьи, конфитюр смородиновый — какая версия?, крем «рикотта», крошка фисташковая.</p></details>
+    <p class="kb"><span><b>на порцию</b> 374 / 27 / 11,2 / 31,5</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, молоко, глютен, орехи.</p>
+  </div>
+</article><article class="item" data-q="мягкий творог / гранола · классика творог мягкий, гранола домашняя, ягода сезонная, сироп без сахара.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/b0133b5c37a5.jpg" alt="Мягкий творог / гранола · классика"></div>
+  <div class="txt">
+    <h3>Мягкий творог / гранола · классика</h3>
+    <p class="price"><b>390 ₽</b><span>200 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Мягкий творог, домашняя гранола, сезонная ягода и сироп без сахара.</p>
+    <details><summary>Состав</summary><p>Творог мягкий, гранола домашняя, ягода сезонная, сироп без сахара.</p></details>
+    <p class="kb"><span><b>на порцию</b> 303 / 18 / 15 / 24</span></p>
+    <p class="alrg"><b>Аллергены</b> Молоко, орехи, глютен (гранола).</p>
+  </div>
+</article><article class="item" data-q="мягкий творог / гранола · шоколад / банан творог мягкий, гранола домашняя, банан, шоколад б/с дроблёный.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/0d1b52961aaf.jpg" alt="Мягкий творог / гранола · шоколад / банан"></div>
+  <div class="txt">
+    <h3>Мягкий творог / гранола · шоколад / банан</h3>
+    <p class="price"><b>390 ₽</b><span>200 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Мягкий творог, домашняя гранола, свежий банан и дроблёный шоколад без сахара.</p>
+    <details><summary>Состав</summary><p>Творог мягкий, гранола домашняя, банан, шоколад б/с дроблёный.</p></details>
+    <p class="kb"><span><b>на порцию</b> 347 / 18 / 15 / 35</span></p>
+    <p class="alrg"><b>Аллергены</b> Молоко, орехи, глютен, соя.</p>
+  </div>
+</article><article class="item" data-q="мягкий творог / гранола · кокос творог мягкий, гранола домашняя, кокосовая стружка обжаренная, кокосовые чипсы, кокосовый сироп б/с.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/df7163a764a0.jpg" alt="Мягкий творог / гранола · кокос"></div>
+  <div class="txt">
+    <h3>Мягкий творог / гранола · кокос</h3>
+    <p class="price"><b>390 ₽</b><span>200 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Мягкий творог, домашняя гранола, обжаренная кокосовая стружка, кокосовые чипсы и кокосовый сироп без сахара.</p>
+    <details><summary>Состав</summary><p>Творог мягкий, гранола домашняя, кокосовая стружка обжаренная, кокосовые чипсы, кокосовый сироп б/с.</p></details>
+    <p class="kb"><span><b>на порцию</b> 303 / 18 / 15 / 24</span></p>
+    <p class="alrg"><b>Аллергены</b> Молоко, кокос, орехи, глютен.</p>
+  </div>
+</article><article class="item" data-q="sweet-bowl творог мягкий или густой йогурт, гранола домашняя, банан, ягода сезонная, ореховая паста.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/1617816bc301.jpg" alt="Sweet-bowl"></div>
+  <div class="txt">
+    <h3>Sweet-bowl</h3>
+    <p class="price"><b>410 ₽</b><span>200 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Мягкий творог или густой йогурт на выбор, домашняя гранола, банан, сезонная ягода и ореховая паста.</p>
+    <details><summary>Состав</summary><p>Творог мягкий или густой йогурт, гранола домашняя, банан, ягода сезонная, ореховая паста.</p></details>
+    <p class="kb"><span><b>на порцию</b> 385 / 15 / 18 / 40</span></p>
+    <p class="alrg"><b>Аллергены</b> Молоко, орехи, глютен.</p>
+  </div>
+</article><article class="item" data-q="сырники · смородина / мак сырники, конфитюр смородиновый — какая версия?, мак, сметана.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/b9563a10edb5.jpg" alt="Сырники · смородина / мак"></div>
+  <div class="txt">
+    <h3>Сырники · смородина / мак</h3>
+    <p class="price"><b>390 ₽</b><span>150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Три сырника, смородиновый конфитюр, мак и сметана.</p>
+    <details><summary>Состав</summary><p>Сырники, конфитюр смородиновый — какая версия?, мак, сметана.</p></details>
+    <p class="kb"><span><b>на порцию</b> 382 / 20,2 / 16,9 / 45,9</span></p>
+    <p class="alrg"><b>Аллергены</b> Молоко, яйца, глютен, мак.</p>
+  </div>
+</article><article class="item" data-q="сырники · кокосовая сгущёнка / крамбл сырники, кокосовая сгущёнка, крамбл.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/4ac5c2cb8b7a.jpg" alt="Сырники · кокосовая сгущёнка / крамбл"></div>
+  <div class="txt">
+    <h3>Сырники · кокосовая сгущёнка / крамбл</h3>
+    <p class="price"><b>390 ₽</b><span>150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Три сырника, кокосовая сгущёнка и хрустящий крамбл.</p>
+    <details><summary>Состав</summary><p>Сырники, кокосовая сгущёнка, крамбл.</p></details>
+    <p class="kb"><span><b>на порцию</b> 422 / 27 / 15 / 49,5</span></p>
+    <p class="alrg"><b>Аллергены</b> Молоко, яйца, глютен, кокос.</p>
+  </div>
+</article><article class="item" data-q="сырники · цитрусовая рикотта сырники, крем из рикотты, цедра апельсина, долька цитруса.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/3e44d1c0a1ff.jpg" alt="Сырники · цитрусовая рикотта"></div>
+  <div class="txt">
+    <h3>Сырники · цитрусовая рикотта</h3>
+    <p class="price"><b>390 ₽</b><span>150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Три сырника, крем из рикотты с цедрой апельсина и долька цитруса.</p>
+    <details><summary>Состав</summary><p>Сырники, крем из рикотты, цедра апельсина, долька цитруса.</p></details>
+    <p class="kb"><span><b>на порцию</b> 351 / 19,5 / 12 / 42</span></p>
+    <p class="alrg"><b>Аллергены</b> Молоко, яйца, глютен.</p>
+  </div>
+</article><article class="item" data-q="сырники безлактозные творог безлактозный, мука рисовая, яйцо, подсластитель, соль / ваниль, сырники на порцию, топпинг. 28–33 16,9 /">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/fb4bdc2e83be.jpg" alt="Сырники безлактозные"></div>
+  <div class="txt">
+    <h3>Сырники безлактозные</h3>
+    <p class="price"><b>430 ₽</b><span>150 г</span></p>
+    <div class="badges"><span class="ic ic-g" title="без глютена">gluten<br>free</span><span class="ic ic-l" title="без лактозы">lactose<br>free</span><span class="badge">без сахара</span></div>
+    <p class="desc">Три сырника на безлактозном твороге и рисовой муке, без сахара. Топпинг на выбор. 42–49,5</p>
+    <details><summary>Состав</summary><p>Творог безлактозный, мука рисовая, яйцо, подсластитель, соль / ваниль, сырники на порцию, топпинг. 28–33 16,9 /</p></details>
+    <p class="kb"><span><b>на порцию</b> 351–422 / 19,5–27 / 12–</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца. Позиция безлактозная и безглютеновая — проговаривать гостю.</p>
+  </div>
+</article><article class="item" data-q="протеиновая вафля · банан / арахисовая паста вафля протеиновая, банан, арахисовая паста, ягода, — тесто: мука, — протеин растительный, — яйцо, — растительное молоко, — масло растительное, — разрыхлитель.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/e42b914a4993.jpg" alt="Протеиновая вафля · банан / арахисовая паста"></div>
+  <div class="txt">
+    <h3>Протеиновая вафля · банан / арахисовая паста</h3>
+    <p class="price"><b>490 ₽</b><span>180 г</span></p>
+    <div class="badges"><span class="ic ic-l" title="без лактозы">lactose<br>free</span><span class="ic ic-p" title="много белка">protein</span><span class="badge">без сахара</span></div>
+    <p class="desc">Протеиновая вафля на растительном протеине, свежий банан, арахисовая паста и ягода.</p>
+    <details><summary>Состав</summary><p>Вафля протеиновая, банан, арахисовая паста, ягода, — тесто: мука, — протеин растительный, — яйцо, — растительное молоко, — масло растительное, — разрыхлитель.</p></details>
+    <p class="kb"><span><b>на порцию</b> 675 / 39,6 / 28,8 / 64,8</span></p>
+    <p class="alrg"><b>Аллергены</b> Арахис, яйца, глютен, соя.</p>
+  </div>
+</article><article class="item" data-q="протеиновая вафля · шоколадный крем / ягода вафля протеиновая, шоколадный соус б/с, ягода свежая.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/ae5388d496e8.jpg" alt="Протеиновая вафля · шоколадный крем / ягода"></div>
+  <div class="txt">
+    <h3>Протеиновая вафля · шоколадный крем / ягода</h3>
+    <p class="price"><b>490 ₽</b><span>180 г</span></p>
+    <div class="badges"><span class="ic ic-l" title="без лактозы">lactose<br>free</span><span class="ic ic-p" title="много белка">protein</span><span class="badge">без сахара</span></div>
+    <p class="desc">Протеиновая вафля на растительном протеине, шоколадный соус без сахара и свежая ягода.</p>
+    <details><summary>Состав</summary><p>Вафля протеиновая, шоколадный соус б/с, ягода свежая.</p></details>
+    <p class="kb"><span><b>на порцию</b> 558 / 32,4 / 19,8 / 64,8</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, глютен, соя, кокос.</p>
+  </div>
+</article><article class="item" data-q="ленивая овсянка · ягода хлопья овсяные, молоко или растительное молоко, йогурт густой, ягода сезонная, семена чиа, ореховая паста.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/c57b32cc08b5.jpg" alt="Ленивая овсянка · ягода"></div>
+  <div class="txt">
+    <h3>Ленивая овсянка · ягода</h3>
+    <p class="price"><b>470 ₽</b><span>≈300 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Овсяные хлопья, настоянные на молоке с густым йогуртом, семена чиа, сезонная ягода и ореховая паста.</p>
+    <details><summary>Состав</summary><p>Хлопья овсяные, молоко или растительное молоко, йогурт густой, ягода сезонная, семена чиа, ореховая паста.</p></details>
+    <p class="kb"><span><b>на порцию</b> 463 / 12 / 15 / 70</span></p>
+    <p class="alrg"><b>Аллергены</b> Молоко, глютен (овёс), орехи.</p>
+  </div>
+</article><article class="item" data-q="мильфей мука ц/з, мука п/м, вода, масло сливочное, крахмал кукурузный, экстракт ванили, яйцо куриное, подсластитель эритрит, сливки растительные, ягода.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/00dc07bc2ac5.jpg" alt="Мильфей"></div>
+  <div class="txt">
+    <h3>Мильфей</h3>
+    <p class="price"><b>490 ₽</b><span></span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Слоёное тесто, нежный ванильный крем.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, вода, масло сливочное, крахмал кукурузный, экстракт ванили, яйцо куриное, подсластитель эритрит, сливки растительные, ягода.</p></details>
+    <p class="kb"><span><b>на порцию</b> 331,5 / 7,5 / 15 / 42</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, глютен, молоко.</p>
+  </div>
+</article><article class="item" data-q="чиа-пудинг клубника — кокос семена чиа, кокосовое молоко, кокосовые сливки, гранола, пюре клубники.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/c1592e38fbba.jpg" alt="Чиа-пудинг клубника — кокос"></div>
+  <div class="txt">
+    <h3>Чиа-пудинг клубника — кокос</h3>
+    <p class="price"><b>280 ₽</b><span></span></p>
+    <div class="badges"><span class="ic ic-l" title="без лактозы">lactose<br>free</span><span class="badge">без сахара</span></div>
+    <p class="desc">Пудинг на семенах чиа с кокосовым молоком, слой клубничного пюре, домашняя гранола и кокосовые чипсы.</p>
+    <details><summary>Состав</summary><p>Семена чиа, кокосовое молоко, кокосовые сливки, гранола, пюре клубники.</p></details>
+    
+    <p class="alrg"><b>Аллергены</b> Кокос, глютен (гранола).</p>
+  </div>
+</article><article class="item" data-q="чиа-пудинг манго — маракуйя семена чиа, кокосовое молоко, кокосовые сливки, манго, подсластитель.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/75f1b28152bc.jpg" alt="Чиа-пудинг манго — маракуйя"></div>
+  <div class="txt">
+    <h3>Чиа-пудинг манго — маракуйя</h3>
+    <p class="price"><b>280 ₽</b><span></span></p>
+    <div class="badges"><span class="ic ic-l" title="без лактозы">lactose<br>free</span><span class="badge">без сахара</span></div>
+    <p class="desc">Пудинг на семенах чиа с кокосовым молоком, манго и маракуйя, домашняя гранола и кокосовые чипсы.</p>
+    <details><summary>Состав</summary><p>Семена чиа, кокосовое молоко, кокосовые сливки, манго, подсластитель.</p></details>
+    
+    <p class="alrg"><b>Аллергены</b> Кокос, глютен (гранола).</p>
+  </div>
+</article></div>
+  <a class="up" href="#top">Наверх ↑</a>
+</section><section class="sec" id="poke-i-bouly">
+  <div class="sec-head"><h2>Поке и боулы</h2><svg class="mono" viewBox="0 0 1180 420" fill="currentColor" aria-hidden="true"><path d="M0 0h100v420H0zM270 0h100v420H270zM540 0h100v420H540zM810 0h100v420H810zM1080 0h100v420h-100zM100 165h170v95H100zM640 165h170v95H640zM540 0h100L370 420H270zM1080 0h100L910 420H810z"/></svg><span>15</span></div>
+  <div class="grid"><article class="item" data-q="поке лосось рис варёный, лосось с/с / кунжут, огурец, пекинская капуста, чука, эдамаме, нори, икра тобико или масаго, имбирь / соевый соус.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/cb3894850bf9.jpg" alt="Поке лосось"></div>
+  <div class="txt">
+    <h3>Поке лосось</h3>
+    <p class="price"><b>710 ₽</b><span>320 г + соус</span></p>
+    <div class="badges"><span class="ic ic-l" title="без лактозы">lactose<br>free</span></div>
+    <p class="desc">Тёплый рис, слабосолёный лосось с кунжутом, огурец, пекинская капуста, чука, эдамаме, нори и икра тобико. Имбирь и соевый соус подаём отдельно.</p>
+    <details><summary>Состав</summary><p>Рис варёный, лосось с/с / кунжут, огурец, пекинская капуста, чука, эдамаме, нори, икра тобико или масаго, имбирь / соевый соус.</p></details>
+    <p class="kb"><span><b>на порцию</b> 403 / 16 / 6,4 / 57,6</span></p>
+    <p class="alrg"><b>Аллергены</b> Рыба, соя, кунжут, глютен (соевый соус).</p>
+  </div>
+</article><article class="item" data-q="поке rawbow рис варёный, лосось с/с / кунжут, тунец / кунжут, огурец, пекинская капуста, чука / эдамаме, нори, соевый соус, имбирь.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/c990792e9ddf.jpg" alt="Поке RAWBOW"></div>
+  <div class="txt">
+    <h3>Поке RAWBOW</h3>
+    <p class="price"><b>750 ₽</b><span>320 г + соус</span></p>
+    <div class="badges"><span class="ic ic-l" title="без лактозы">lactose<br>free</span></div>
+    <p class="desc">Тёплый рис, слабосолёный лосось и тунец с кунжутом, огурец, пекинская капуста, чука, эдамаме и нори. Имбирь и соевый соус подаём отдельно.</p>
+    <details><summary>Состав</summary><p>Рис варёный, лосось с/с / кунжут, тунец / кунжут, огурец, пекинская капуста, чука / эдамаме, нори, соевый соус, имбирь.</p></details>
+    <p class="kb"><span><b>на порцию</b> 454 / 28,8 / 6,4 / 59,2</span></p>
+    <p class="alrg"><b>Аллергены</b> Рыба, соя, кунжут, глютен.</p>
+  </div>
+</article><article class="item" data-q="поке туна рис варёный, тунец / понзу / кунжут, огурец, пекинская капуста, морковь маринованная, чука, бобы эдамаме, нори, соевый соус.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/0e0466bc6791.jpg" alt="Поке туна"></div>
+  <div class="txt">
+    <h3>Поке туна</h3>
+    <p class="price"><b>710 ₽</b><span>320 г + соус</span></p>
+    <div class="badges"><span class="ic ic-l" title="без лактозы">lactose<br>free</span></div>
+    <p class="desc">Тёплый рис, тунец в соусе понзу с кунжутом, огурец, пекинская капуста, маринованная морковь, чука, эдамаме и нори. Соевый соус подаём отдельно.</p>
+    <details><summary>Состав</summary><p>Рис варёный, тунец / понзу / кунжут, огурец, пекинская капуста, морковь маринованная, чука, бобы эдамаме, нори, соевый соус.</p></details>
+    <p class="kb"><span><b>на порцию</b> 381 / 22,4 / 3,2 / 64</span></p>
+    <p class="alrg"><b>Аллергены</b> Рыба, соя, кунжут, глютен.</p>
+  </div>
+</article><article class="item" data-q="боул киноа лосось манго киноа, лосось с/с с кунжутом, огурец, пекинская капуста, чука, манго, соевый соус.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/ac13c5667960.jpg" alt="Боул киноа лосось манго"></div>
+  <div class="txt">
+    <h3>Боул киноа лосось манго</h3>
+    <p class="price"><b>710 ₽</b><span>320 г + соус</span></p>
+    <div class="badges"><span class="ic ic-l" title="без лактозы">lactose<br>free</span></div>
+    <p class="desc">Отварное киноа, слабосолёный лосось с кунжутом, свежее манго, огурец, пекинская капуста и чука. Соевый соус подаём отдельно.</p>
+    <details><summary>Состав</summary><p>Киноа, лосось с/с с кунжутом, огурец, пекинская капуста, чука, манго, соевый соус.</p></details>
+    <p class="kb"><span><b>на порцию</b> 422 / 22,4 / 9,6 / 60,8</span></p>
+    <p class="alrg"><b>Аллергены</b> Рыба, соя, кунжут, глютен.</p>
+  </div>
+</article><article class="item" data-q="боул мисо лосось рис, лосось опалённый / терияки / кунжут, огурец, пекинская капуста, чука, эдамаме, нори, икра масаго или тобико, соевый соус.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/a0a2a4988344.jpg" alt="Боул мисо лосось"></div>
+  <div class="txt">
+    <h3>Боул мисо лосось</h3>
+    <p class="price"><b>710 ₽</b><span>320 г + соус</span></p>
+    <div class="badges"><span class="ic ic-l" title="без лактозы">lactose<br>free</span></div>
+    <p class="desc">Тёплый рис, опалённый лосось в терияки с кунжутом, огурец, пекинская капуста, чука, эдамаме, нори и икра масаго. Соевый соус подаём отдельно.</p>
+    <details><summary>Состав</summary><p>Рис, лосось опалённый / терияки / кунжут, огурец, пекинская капуста, чука, эдамаме, нори, икра масаго или тобико, соевый соус.</p></details>
+    <p class="kb"><span><b>на порцию</b> 416 / 18,2 / 9,6 / 64</span></p>
+    <p class="alrg"><b>Аллергены</b> Рыба, соя, кунжут, глютен.</p>
+  </div>
+</article><article class="item" data-q="боул креветка манго рис, креветка тигровая обжаренная, огурец, морковь маринованная, чука, бобы эдамаме, нори, манго свежий, универсальный соус.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/d7bfe3d1232b.jpg" alt="Боул креветка манго"></div>
+  <div class="txt">
+    <h3>Боул креветка манго</h3>
+    <p class="price"><b>690 ₽</b><span>320 г + соус</span></p>
+    <div class="badges"><span class="ic ic-l" title="без лактозы">lactose<br>free</span></div>
+    <p class="desc">Тёплый рис, обжаренная тигровая креветка, свежее манго, огурец, маринованная морковь, чука, эдамаме и нори. Фирменный соус подаём отдельно.</p>
+    <details><summary>Состав</summary><p>Рис, креветка тигровая обжаренная, огурец, морковь маринованная, чука, бобы эдамаме, нори, манго свежий, универсальный соус.</p></details>
+    <p class="kb"><span><b>на порцию</b> 397 / 19,2 / 3,8 / 67,2</span></p>
+    <p class="alrg"><b>Аллергены</b> Ракообразные, соя, глютен.</p>
+  </div>
+</article><article class="item" data-q="боул киноа креветка киноа, креветка обжаренная, огурец, пекинская капуста, кукуруза консервированная, бобы эдамаме, начос, ореховый соус.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/9068f81d0687.jpg" alt="Боул киноа креветка"></div>
+  <div class="txt">
+    <h3>Боул киноа креветка</h3>
+    <p class="price"><b>690 ₽</b><span>320 г + соус</span></p>
+    <div class="badges"><span class="ic ic-l" title="без лактозы">lactose<br>free</span></div>
+    <p class="desc">Отварное киноа, обжаренная креветка, кукуруза, огурец, пекинская капуста, эдамаме и хрустящие начос. Ореховый соус подаём отдельно.</p>
+    <details><summary>Состав</summary><p>Киноа, креветка обжаренная, огурец, пекинская капуста, кукуруза консервированная, бобы эдамаме, начос, ореховый соус.</p></details>
+    <p class="kb"><span><b>на порцию</b> 458 / 25,6 / 9,6 / 67,2</span></p>
+    <p class="alrg"><b>Аллергены</b> Ракообразные, орехи, соя, глютен.</p>
+  </div>
+</article><article class="item" data-q="боул тунец греча греча, намазка «тунец», черри, эдамаме, шпинат / руккола, яйцо пашот, микрозелень, смесь семян, соус гуакамоле.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/e0aab9d5fa5f.jpg" alt="Боул тунец греча"></div>
+  <div class="txt">
+    <h3>Боул тунец греча</h3>
+    <p class="price"><b>690 ₽</b><span>320 г + соус</span></p>
+    <div class="badges"><span class="ic ic-g" title="без глютена">gluten<br>free</span></div>
+    <p class="desc">Отварная греча, домашняя намазка из тунца, яйцо пашот, черри, эдамаме, шпинат с рукколой и смесь семян. Гуакамоле подаём отдельно.</p>
+    <details><summary>Состав</summary><p>Греча, намазка «тунец», черри, эдамаме, шпинат / руккола, яйцо пашот, микрозелень, смесь семян, соус гуакамоле.</p></details>
+    <p class="kb"><span><b>на порцию</b> 368 / 19,2 / 9,9 / 40</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, рыба, молоко, соя.</p>
+  </div>
+</article><article class="item" data-q="боул греча гречка отварная, курица су-вид, брокколи, микс салата / масло оливковое, яйцо, 7 мин, вяленые томаты, смесь перца / семян, орех кедровый, ореховый соус.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/e0aab9d5fa5f.jpg" alt="Боул греча"></div>
+  <div class="txt">
+    <h3>Боул греча</h3>
+    <p class="price"><b>630 ₽</b><span>320 г + соус</span></p>
+    <div class="badges"><span class="ic ic-g" title="без глютена">gluten<br>free</span><span class="ic ic-l" title="без лактозы">lactose<br>free</span></div>
+    <p class="desc">Отварная гречка, куриное филе су- вид, брокколи, яйцо, вяленые томаты, микс салата и кедровый орех. Ореховый соус подаём отдельно.</p>
+    <details><summary>Состав</summary><p>Гречка отварная, курица су-вид, брокколи, микс салата / масло оливковое, яйцо, 7 мин, вяленые томаты, смесь перца / семян, орех кедровый, ореховый соус.</p></details>
+    <p class="kb"><span><b>на порцию</b> 326 / 25,6 / 6,4 / 40</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, орехи.</p>
+  </div>
+</article><article class="item" data-q="веган-боул киноа, нут консервированный, огурцы, морковь маринованная, пекинская капуста, черри, эдамаме, лук жареный, хумус / микс семян, ореховый соус.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/694d264740bd.jpg" alt="Веган-боул"></div>
+  <div class="txt">
+    <h3>Веган-боул</h3>
+    <p class="price"><b>610 ₽</b><span>320 г + соус</span></p>
+    <div class="badges"><span class="ic ic-g" title="без глютена">gluten<br>free</span><span class="ic ic-l" title="без лактозы">lactose<br>free</span></div>
+    <p class="desc">Отварное киноа, нут, хумус, черри, огурец, маринованная морковь, пекинская капуста, эдамаме и жареный лук. Ореховый соус подаём отдельно.</p>
+    <details><summary>Состав</summary><p>Киноа, нут консервированный, огурцы, морковь маринованная, пекинская капуста, черри, эдамаме, лук жареный, хумус / микс семян, ореховый соус.</p></details>
+    <p class="kb"><span><b>на порцию</b> 413 / 17,9 / 6,4 / 70,4</span></p>
+    <p class="alrg"><b>Аллергены</b> Орехи, кунжут (хумус), соя.</p>
+  </div>
+</article><article class="item" data-q="грин-боул киноа, авокадо (гуакамоле), огурец, спаржа варёная, эдамаме, микс салата, смесь семян, ореховый соус.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/5b14ee2f2859.jpg" alt="Грин-боул"></div>
+  <div class="txt">
+    <h3>Грин-боул</h3>
+    <p class="price"><b>610 ₽</b><span>320 г + соус</span></p>
+    <div class="badges"><span class="ic ic-g" title="без глютена">gluten<br>free</span><span class="ic ic-l" title="без лактозы">lactose<br>free</span></div>
+    <p class="desc">Отварное киноа, мятое авокадо, отварная спаржа, огурец, эдамаме, микс салата и смесь семян. Ореховый соус подаём отдельно.</p>
+    <details><summary>Состав</summary><p>Киноа, авокадо (гуакамоле), огурец, спаржа варёная, эдамаме, микс салата, смесь семян, ореховый соус.</p></details>
+    <p class="kb"><span><b>на порцию</b> 365 / 12,8 / 9 / 51,2</span></p>
+    <p class="alrg"><b>Аллергены</b> Орехи, соя.</p>
+  </div>
+</article><article class="item" data-q="боул индейка киноа киноа, индейка су-вид, эдамаме, руккола / шпинат, брокколи обжаренная, фасоль стручковая, масло растительное, греческий соус.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/081ccfebb8a5.jpg" alt="Боул индейка киноа"></div>
+  <div class="txt">
+    <h3>Боул индейка киноа</h3>
+    <p class="price"><b>630 ₽</b><span>320 г + соус</span></p>
+    <div class="badges"><span class="ic ic-g" title="без глютена">gluten<br>free</span></div>
+    <p class="desc">Отварное киноа, индейка су-вид, обжаренная брокколи, стручковая фасоль, эдамаме, руккола и шпинат. Греческий соус подаём отдельно.</p>
+    <details><summary>Состав</summary><p>Киноа, индейка су-вид, эдамаме, руккола / шпинат, брокколи обжаренная, фасоль стручковая, масло растительное, греческий соус.</p></details>
+    <p class="kb"><span><b>на порцию</b> 419 / 25,6 / 8 / 57,6</span></p>
+    <p class="alrg"><b>Аллергены</b> Молоко, орехи, соя.</p>
+  </div>
+</article><article class="item" data-q="боул курица кешью рис варёный, курица су-вид, огурец, черри, пекинская капуста, морковь маринованная, бобы эдамаме, кешью, лук жареный, ореховый соус.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/5ca84ff408f7.jpg" alt="Боул курица кешью"></div>
+  <div class="txt">
+    <h3>Боул курица кешью</h3>
+    <p class="price"><b>630 ₽</b><span>365 г + соус</span></p>
+    <div class="badges"><span class="ic ic-g" title="без глютена">gluten<br>free</span><span class="ic ic-l" title="без лактозы">lactose<br>free</span></div>
+    <p class="desc">Тёплый рис, куриное филе су-вид, кешью, огурец, черри, маринованная морковь, пекинская капуста, эдамаме и жареный лук. Ореховый соус подаём отдельно.</p>
+    <details><summary>Состав</summary><p>Рис варёный, курица су-вид, огурец, черри, пекинская капуста, морковь маринованная, бобы эдамаме, кешью, лук жареный, ореховый соус.</p></details>
+    <p class="kb"><span><b>на порцию</b> 481 / 23 / 11 / 68</span></p>
+    <p class="alrg"><b>Аллергены</b> Орехи, соя, кунжут.</p>
+  </div>
+</article><article class="item" data-q="боул курица терияки рис варёный, курица су-вид / терияки / кунжут, огурец, пекинская капуста, морковь маринованная, бобы эдамаме, манго свежий, универсальный соус.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/b54d558c5468.jpg" alt="Боул курица терияки"></div>
+  <div class="txt">
+    <h3>Боул курица терияки</h3>
+    <p class="price"><b>630 ₽</b><span>346 г + соус</span></p>
+    <div class="badges"><span class="ic ic-l" title="без лактозы">lactose<br>free</span></div>
+    <p class="desc">Тёплый рис, куриное филе су-вид в терияки с кунжутом, свежее манго, огурец, маринованная морковь, пекинская капуста и эдамаме. Фирменный соус подаём отдельно.</p>
+    <details><summary>Состав</summary><p>Рис варёный, курица су-вид / терияки / кунжут, огурец, пекинская капуста, морковь маринованная, бобы эдамаме, манго свежий, универсальный соус.</p></details>
+    <p class="kb"><span><b>на порцию</b> 385 / 20 / 4 / 65</span></p>
+    <p class="alrg"><b>Аллергены</b> Соя, кунжут, глютен.</p>
+  </div>
+</article><article class="item" data-q="боул киноа курица киноа, курица су-вид, огурцы, пекинская капуста, морковь маринованная, бобы эдамаме, брокколи, ореховый соус.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/5a7866b39656.jpg" alt="Боул киноа курица"></div>
+  <div class="txt">
+    <h3>Боул киноа курица</h3>
+    <p class="price"><b>630 ₽</b><span>335 г + соус</span></p>
+    <div class="badges"><span class="ic ic-g" title="без глютена">gluten<br>free</span><span class="ic ic-l" title="без лактозы">lactose<br>free</span></div>
+    <p class="desc">Отварное киноа, куриное филе су- вид, брокколи, огурец, маринованная морковь, пекинская капуста и эдамаме. Ореховый соус подаём отдельно.</p>
+    <details><summary>Состав</summary><p>Киноа, курица су-вид, огурцы, пекинская капуста, морковь маринованная, бобы эдамаме, брокколи, ореховый соус.</p></details>
+    <p class="kb"><span><b>на порцию</b> 348 / 28 / 9 / 47</span></p>
+    <p class="alrg"><b>Аллергены</b> Орехи, соя.</p>
+  </div>
+</article></div>
+  <a class="up" href="#top">Наверх ↑</a>
+</section><section class="sec" id="deserty-porcionnye">
+  <div class="sec-head"><h2>Десерты порционные</h2><svg class="mono" viewBox="0 0 1180 420" fill="currentColor" aria-hidden="true"><path d="M0 0h100v420H0zM270 0h100v420H270zM540 0h100v420H540zM810 0h100v420H810zM1080 0h100v420h-100zM100 165h170v95H100zM640 165h170v95H640zM540 0h100L370 420H270zM1080 0h100L910 420H810z"/></svg><span>17</span></div>
+  <div class="grid"><article class="item" data-q="медовик с фундучным пралине мука ц/з, мука п/м, мука овсяная, яйцо куриное, мёд, подсластитель эритрит, сливки растительные, крахмал кукурузный, экстракт ванили, фундучное пралине.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/6aad791d84ee.jpg" alt="Медовик с фундучным пралине"></div>
+  <div class="txt">
+    <h3>Медовик с фундучным пралине</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Медовый бисквит и нежный крем слоями, внутри фундучное пралине.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, мука овсяная, яйцо куриное, мёд, подсластитель эритрит, сливки растительные, крахмал кукурузный, экстракт ванили, фундучное пралине.</p></details>
+    <p class="kb"><span><b>на порцию</b> 369 / 11,9 / 18,2 / 38,9</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Орехи.</p>
+  </div>
+</article><article class="item" data-q="медовик с ежевичным конфи мука ц/з, мука п/м, мука овсяная, мёд, яйцо куриное, подсластитель эритрит, сливки растительные, крахмал кукурузный, лимонная кислота, экстракт ванили, ежевика.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/1c8758b2f124.jpg" alt="Медовик с ежевичным конфи"></div>
+  <div class="txt">
+    <h3>Медовик с ежевичным конфи</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Медовый бисквит и нежный крем слоями, внутри ежевичное конфи.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, мука овсяная, мёд, яйцо куриное, подсластитель эритрит, сливки растительные, крахмал кукурузный, лимонная кислота, экстракт ванили, ежевика.</p></details>
+    <p class="kb"><span><b>на порцию</b> 313 / 11 / 12,3 / 36,2</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен.</p>
+  </div>
+</article><article class="item" data-q="наполеон с клубничным конфи мука ц/з, мука п/м, псиллиум, масло сливочное, подсластитель эритрит, крахмал кукурузный, экстракт ванили, яйцо куриное, сливки растительные, клубника, лимонная кислота.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/7fa1d8db4faf.jpg" alt="Наполеон с клубничным конфи"></div>
+  <div class="txt">
+    <h3>Наполеон с клубничным конфи</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Слоёное тесто и заварной крем, внутри клубничное конфи.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, псиллиум, масло сливочное, подсластитель эритрит, крахмал кукурузный, экстракт ванили, яйцо куриное, сливки растительные, клубника, лимонная кислота.</p></details>
+    <p class="kb"><span><b>на порцию</b> 355 / 8,9 / 19,6 / 36,2</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен.</p>
+  </div>
+</article><article class="item" data-q="шоколад — солёная карамель — банан мука ц/з, мука п/м, мука кокосовая, яйцо куриное, какао алкализованное, экстракт ванили, подсластитель эритрит, сливки растительные, банан, шоколад молочный без сахара.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/d24283b41e66.jpg" alt="Шоколад — солёная карамель — банан"></div>
+  <div class="txt">
+    <h3>Шоколад — солёная карамель — банан</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Шоколадный бисквит, крем, солёная карамель и свежий банан.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, мука кокосовая, яйцо куриное, какао алкализованное, экстракт ванили, подсластитель эритрит, сливки растительные, банан, шоколад молочный без сахара.</p></details>
+    <p class="kb"><span><b>на порцию</b> 262 / 12,5 / 8 / 31,3</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Какао, Кокос.</p>
+  </div>
+</article><article class="item" data-q="сникерс мука ц/з, мука п/м, мука кокосовая, какао алкализованный, подсластитель эритрит, яйцо куриное, сливки растительные, экстракт ванили, арахис, карамель без сахара.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/16c0f7db9592.jpg" alt="Сникерс"></div>
+  <div class="txt">
+    <h3>Сникерс</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Шоколадный бисквит, крем, карамель и жареный арахис — в каждом слое.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, мука кокосовая, какао алкализованный, подсластитель эритрит, яйцо куриное, сливки растительные, экстракт ванили, арахис, карамель без сахара.</p></details>
+    <p class="kb"><span><b>на порцию</b> 312 / 15,7 / 11,4 / 29,6</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Арахис, Какао, Кокос.</p>
+  </div>
+</article><article class="item" data-q="кэроб-вишня мука ц/з, мука п/м, мука кокосовая, яйцо куриное, какао алкализованное, экстракт ванили, сливки растительные, подсластитель эритрит, вишня, лимонная кислота.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/cd3befc1911d.jpg" alt="Кэроб-вишня"></div>
+  <div class="txt">
+    <h3>Кэроб-вишня</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Шоколадный бисквит на кэробе, крем и вишня.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, мука кокосовая, яйцо куриное, какао алкализованное, экстракт ванили, сливки растительные, подсластитель эритрит, вишня, лимонная кислота.</p></details>
+    <p class="kb"><span><b>на порцию</b> 242 / 12,5 / 8,2 / 27,4</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Какао, Кокос.</p>
+  </div>
+</article><article class="item" data-q="смородина — белый шоколад мука ц/з, мука п/м, мука кокосовая, какао алкализованный, подсластитель эритрит, яйцо куриное, сливки растительные, экстракт ванили, шоколад белый без сахара, смородина.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/d24006d31342.jpg" alt="Смородина — белый шоколад"></div>
+  <div class="txt">
+    <h3>Смородина — белый шоколад</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Шоколадный бисквит, крем с белым шоколадом и чёрная смородина.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, мука кокосовая, какао алкализованный, подсластитель эритрит, яйцо куриное, сливки растительные, экстракт ванили, шоколад белый без сахара, смородина.</p></details>
+    <p class="kb"><span><b>на порцию</b> 285 / 12,9 / 12 / 30,7</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Какао, Кокос.</p>
+  </div>
+</article><article class="item" data-q="клубничный тирамису мука ц/з, мука п/м, мука рисовая, крахмал кукурузный, яичный белок, ванильный экстракт, сыр рикотта, сливки растительные, подсластитель эритрит, пюре клубники, лимонная кислота.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/e824188cb7f6.jpg" alt="Клубничный тирамису"></div>
+  <div class="txt">
+    <h3>Клубничный тирамису</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="ic ic-g" title="без глютена">gluten<br>free</span><span class="badge">без сахара</span></div>
+    <p class="desc">Савоярди, пропитанные клубничным сиропом, и крем на рикотте.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, мука рисовая, крахмал кукурузный, яичный белок, ванильный экстракт, сыр рикотта, сливки растительные, подсластитель эритрит, пюре клубники, лимонная кислота.</p></details>
+    <p class="kb"><span><b>на порцию</b> 287 / 9,3 / 8,8 / 42,3</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца.</p>
+  </div>
+</article><article class="item" data-q="тирамису мука ц/з, мука п/м, мука рисовая, яичный белок, ванильный экстракт, крахмал кукурузный, яйцо куриное, сыр рикотта, сливки растительные, подсластитель эритрит, кофе, какао- порошок.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/e17483930a39.jpg" alt="Тирамису"></div>
+  <div class="txt">
+    <h3>Тирамису</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="ic ic-g" title="без глютена">gluten<br>free</span><span class="badge">без сахара</span></div>
+    <p class="desc">Савоярди, пропитанные кофе, крем на рикотте и какао сверху.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, мука рисовая, яичный белок, ванильный экстракт, крахмал кукурузный, яйцо куриное, сыр рикотта, сливки растительные, подсластитель эритрит, кофе, какао- порошок.</p></details>
+    <p class="kb"><span><b>на порцию</b> 287 / 9,3 / 8,8 / 42,3</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Какао.</p>
+  </div>
+</article><article class="item" data-q="морковный мука ц/з, мука п/м, мука овсяная, яйцо куриное, грецкий орех, цедра апельсина, корица, мускатный орех, морковь, подсластитель эритрит, сливки растительные, экстракт ванили.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/8f646d3528fd.jpg" alt="Морковный"></div>
+  <div class="txt">
+    <h3>Морковный</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Морковный бисквит с корицей и мускатным орехом, крем и грецкий орех.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, мука овсяная, яйцо куриное, грецкий орех, цедра апельсина, корица, мускатный орех, морковь, подсластитель эритрит, сливки растительные, экстракт ванили.</p></details>
+    <p class="kb"><span><b>на порцию</b> 306 / 9,8 / 16 / 32</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Орехи.</p>
+  </div>
+</article><article class="item" data-q="прага мука ц/з, мука п/м, мука кокосовая, яйцо куриное, какао алкализованное, экстракт ванили, сливки растительные, подсластитель эритрит, шоколад молочный без сахара.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/b4c526c1f782.jpg" alt="Прага"></div>
+  <div class="txt">
+    <h3>Прага</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Шоколадный бисквит и шоколадный крем слоями.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, мука кокосовая, яйцо куриное, какао алкализованное, экстракт ванили, сливки растительные, подсластитель эритрит, шоколад молочный без сахара.</p></details>
+    <p class="kb"><span><b>на порцию</b> 285 / 12,9 / 12 / 30,7</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Какао, Кокос.</p>
+  </div>
+</article><article class="item" data-q="черёмуховый мука ц/з, мука черёмуховая, яйцо куриное, псиллиум, экстракт ванили, подсластитель эритрит, сливки растительные.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/c92dc486926e.jpg" alt="Черёмуховый"></div>
+  <div class="txt">
+    <h3>Черёмуховый</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Бисквит на черёмуховой муке и нежный ванильный крем.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука черёмуховая, яйцо куриное, псиллиум, экстракт ванили, подсластитель эритрит, сливки растительные.</p></details>
+    <p class="kb"><span><b>на порцию</b> 244 / 12,3 / 10,4 / 25,3</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен.</p>
+  </div>
+</article><article class="item" data-q="карамель мука ц/з, мука п/м, псиллиум, масло сливочное, крахмал кукурузный, экстракт ванили, яйцо куриное, подсластитель эритрит, сливки растительные, карамель без сахара.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/b51524bf2e08.jpg" alt="Карамель"></div>
+  <div class="txt">
+    <h3>Карамель</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Слоёное тесто, крем и солёная карамель.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, псиллиум, масло сливочное, крахмал кукурузный, экстракт ванили, яйцо куриное, подсластитель эритрит, сливки растительные, карамель без сахара.</p></details>
+    <p class="kb"><span><b>на порцию</b> 335 / 8,9 / 19,6 / 36,2</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен.</p>
+  </div>
+</article><article class="item" data-q="пекан-карамель мука ц/з, мука п/м, мука кокосовая, яйцо куриное, какао алкализованное, экстракт ванили, сливки растительные, подсластитель эритрит, шоколад молочный без сахара, орех пекан.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/df0c11900b1b.jpg" alt="Пекан-карамель"></div>
+  <div class="txt">
+    <h3>Пекан-карамель</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Шоколадный бисквит, крем, карамель и орех пекан.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, мука кокосовая, яйцо куриное, какао алкализованное, экстракт ванили, сливки растительные, подсластитель эритрит, шоколад молочный без сахара, орех пекан.</p></details>
+    <p class="kb"><span><b>на порцию</b> 290 / 12,9 / 13,6 / 27,6</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Орехи, Какао, Кокос.</p>
+  </div>
+</article><article class="item" data-q="красный бархат мука ц/з, мука п/м, мука овсяная, яйцо куриное, какао алкализованное, крахмал кукурузный, экстракт ванили, подсластитель эритрит, сливки растительные, краситель пищевой.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/f6cef9b27f24.jpg" alt="Красный бархат"></div>
+  <div class="txt">
+    <h3>Красный бархат</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Бисквит «красный бархат», крем и вишня.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, мука овсяная, яйцо куриное, какао алкализованное, крахмал кукурузный, экстракт ванили, подсластитель эритрит, сливки растительные, краситель пищевой.</p></details>
+    <p class="kb"><span><b>на порцию</b> 281 / 13,9 / 9,4 / 34,1</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Какао.</p>
+  </div>
+</article><article class="item" data-q="карамельный попкорн мука ц/з, мука п/м, мука кокосовая, яйцо куриное, какао алкализованное, сливки растительные, экстракт ванили, подсластитель эритрит, шоколад молочный без сахара, попкорн.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/5d56da6bf5b0.jpg" alt="Карамельный попкорн"></div>
+  <div class="txt">
+    <h3>Карамельный попкорн</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Шоколадный бисквит, крем, карамель и карамельный попкорн.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, мука кокосовая, яйцо куриное, какао алкализованное, сливки растительные, экстракт ванили, подсластитель эритрит, шоколад молочный без сахара, попкорн.</p></details>
+    <p class="kb"><span><b>на порцию</b> 281 / 13,9 / 9,4 / 34,1</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Какао, Кокос.</p>
+  </div>
+</article><article class="item" data-q="макадамия мука ц/з, мука п/м, мука кокосовая, яйцо куриное, какао алкализованное, подсластитель эритрит, сливки растительные, экстракт ванили, шоколад молочный без сахара, орех макадамия, ароматизатор пищевой.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/13354ed4b733.jpg" alt="Макадамия"></div>
+  <div class="txt">
+    <h3>Макадамия</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Шоколадный бисквит, крем и орех макадамия.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, мука кокосовая, яйцо куриное, какао алкализованное, подсластитель эритрит, сливки растительные, экстракт ванили, шоколад молочный без сахара, орех макадамия, ароматизатор пищевой.</p></details>
+    <p class="kb"><span><b>на порцию</b> 320 / 13,1 / 16,3 / 29,6</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Какао, Кокос.</p>
+  </div>
+</article></div>
+  <a class="up" href="#top">Наверх ↑</a>
+</section><section class="sec" id="cizkeyki">
+  <div class="sec-head"><h2>Чизкейки</h2><svg class="mono" viewBox="0 0 1180 420" fill="currentColor" aria-hidden="true"><path d="M0 0h100v420H0zM270 0h100v420H270zM540 0h100v420H540zM810 0h100v420H810zM1080 0h100v420h-100zM100 165h170v95H100zM640 165h170v95H640zM540 0h100L370 420H270zM1080 0h100L910 420H810z"/></svg><span>4</span></div>
+  <div class="grid"><article class="item" data-q="чизкейк нью-йорк мука ц/з, мука пшеничная, псиллиум, яйцо куриное, масло сливочное, экстракт ванили, подсластитель эритрит, творожный сыр, сливки растительные, желатин.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/68d2084e95c9.jpg" alt="Чизкейк Нью-Йорк"></div>
+  <div class="txt">
+    <h3>Чизкейк Нью-Йорк</h3>
+    <p class="price"><b>300 ₽</b><span>130 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Шоколадная крошка и классический сливочный чизкейк-крем.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука пшеничная, псиллиум, яйцо куриное, масло сливочное, экстракт ванили, подсластитель эритрит, творожный сыр, сливки растительные, желатин.</p></details>
+    <p class="kb"></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, молоко, глютен (крошка).</p>
+  </div>
+</article><article class="item" data-q="чизкейк вишня мука ц/з, мука пшеничная, псиллиум, яйцо куриное, масло сливочное, экстракт ванили, подсластитель эритрит, творожный сыр, сливки растительные, желатин, вишня, пюре вишни (вишня, вода, подсластитель эритрит, желатин).">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/4dcce4cd3b9a.jpg" alt="Чизкейк вишня"></div>
+  <div class="txt">
+    <h3>Чизкейк вишня</h3>
+    <p class="price"><b>300 ₽</b><span>130 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Шоколадная крошка, вишня и сливочный чизкейк-крем.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука пшеничная, псиллиум, яйцо куриное, масло сливочное, экстракт ванили, подсластитель эритрит, творожный сыр, сливки растительные, желатин, вишня, пюре вишни (вишня, вода, подсластитель эритрит, желатин).</p></details>
+    <p class="kb"></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, молоко, глютен (крошка).</p>
+  </div>
+</article><article class="item" data-q="чизкейк двойной шоколад мука ц/з, мука пшеничная, псиллиум, яйцо куриное, масло сливочное, экстракт ванили, подсластитель эритрит, творожный сыр, сливки растительные, желатин, какао, шоколад молочный без сахара.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/c02612396736.jpg" alt="Чизкейк двойной шоколад"></div>
+  <div class="txt">
+    <h3>Чизкейк двойной шоколад</h3>
+    <p class="price"><b>300 ₽</b><span>130 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Шоколадная крошка и три слоя шоколадного чизкейк-крема — от тёмного к молочному.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука пшеничная, псиллиум, яйцо куриное, масло сливочное, экстракт ванили, подсластитель эритрит, творожный сыр, сливки растительные, желатин, какао, шоколад молочный без сахара.</p></details>
+    <p class="kb"></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, молоко, какао, глютен (крошка).</p>
+  </div>
+</article><article class="item" data-q="чизкейк манго — кокос мука ц/з, мука пшеничная, псиллиум, яйцо куриное, масло сливочное, экстракт ванили, подсластитель эритрит, творожный сыр, сливки растительные, желатин, манго, пюре манго (манго, вода, подсластитель эритрит, желатин), кокосовая стружка.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/0bfc18eab533.jpg" alt="Чизкейк манго — кокос"></div>
+  <div class="txt">
+    <h3>Чизкейк манго — кокос</h3>
+    <p class="price"><b>300 ₽</b><span>130 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Песочная крошка, кокосовый чизкейк-крем и манговое конфи.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука пшеничная, псиллиум, яйцо куриное, масло сливочное, экстракт ванили, подсластитель эритрит, творожный сыр, сливки растительные, желатин, манго, пюре манго (манго, вода, подсластитель эритрит, желатин), кокосовая стружка.</p></details>
+    <p class="kb"></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, молоко, кокос, глютен (крошка).</p>
+  </div>
+</article></div>
+  <a class="up" href="#top">Наверх ↑</a>
+</section><section class="sec" id="keyk-boksy">
+  <div class="sec-head"><h2>Кейк-боксы</h2><svg class="mono" viewBox="0 0 1180 420" fill="currentColor" aria-hidden="true"><path d="M0 0h100v420H0zM270 0h100v420H270zM540 0h100v420H540zM810 0h100v420H810zM1080 0h100v420h-100zM100 165h170v95H100zM640 165h170v95H640zM540 0h100L370 420H270zM1080 0h100L910 420H810z"/></svg><span>3</span></div>
+  <div class="grid"><article class="item" data-q="кейк-бокс шоколад солёная карамель мука ц/з, мука кокосовая, какао алкализованный, яйцо куриное, экстракт ванили, подсластитель эритрит, сливки растительные банан, шоколад молочный без сахара.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/7bd098f445d7.jpg" alt="Кейк-бокс шоколад — солёная карамель"></div>
+  <div class="txt">
+    <h3>Кейк-бокс шоколад — солёная карамель</h3>
+    <p class="price"><b>450 ₽</b><span>170 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Шоколадная крошка, кружочки банана, мусс на солёной карамели и шоколадная стружка.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука кокосовая, какао алкализованный, яйцо куриное, экстракт ванили, подсластитель эритрит, сливки растительные банан, шоколад молочный без сахара.</p></details>
+    <p class="kb"></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Какао, Кокос.</p>
+  </div>
+</article><article class="item" data-q="кейк-бокс клубника со сливками мука рисовая, мука ц/з, крахмал кукурузный, яйцо куриное ,экстракт ванили, подсластитель эритрит, сливки растительные, лимонная кислота,пюре клубника ( клубника, вода, агар-агар, армотизатор клубника, эритрит).">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/4c6fe2ec0d5e.jpg" alt="Кейк-бокс клубника со сливками"></div>
+  <div class="txt">
+    <h3>Кейк-бокс клубника со сливками</h3>
+    <p class="price"><b>450 ₽</b><span>170 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Бисквитная крошка, свежая клубника и воздушный клубничный мусс.</p>
+    <details><summary>Состав</summary><p>Мука рисовая, мука ц/з, крахмал кукурузный, яйцо куриное ,экстракт ванили, подсластитель эритрит, сливки растительные, лимонная кислота,пюре клубника ( клубника, вода, агар-агар, армотизатор клубника, эритрит).</p></details>
+    <p class="kb"></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен.</p>
+  </div>
+</article><article class="item" data-q="кейк-бокс малиновый сорбет яйцо куриное, мука ц/з, мука соевая, подсластитель эритрит,сливки растительные, протеин растительный,желатин, экстракт ванили,желатин, малина, лимонная кислота.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/3b5ec4d1e7d4.jpg" alt="Кейк-бокс малиновый сорбет"></div>
+  <div class="txt">
+    <h3>Кейк-бокс малиновый сорбет</h3>
+    <p class="price"><b>450 ₽</b><span>170 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Бисквитная крошка, малина и лёгкий малиновый мусс.</p>
+    <details><summary>Состав</summary><p>Яйцо куриное, мука ц/з, мука соевая, подсластитель эритрит,сливки растительные, протеин растительный,желатин, экстракт ванили,желатин, малина, лимонная кислота.</p></details>
+    <p class="kb"></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Соя.</p>
+  </div>
+</article></div>
+  <a class="up" href="#top">Наверх ↑</a>
+</section><section class="sec" id="tarty-kol-ca-i-eklery">
+  <div class="sec-head"><h2>Тарты, кольца и эклеры</h2><svg class="mono" viewBox="0 0 1180 420" fill="currentColor" aria-hidden="true"><path d="M0 0h100v420H0zM270 0h100v420H270zM540 0h100v420H540zM810 0h100v420H810zM1080 0h100v420h-100zM100 165h170v95H100zM640 165h170v95H640zM540 0h100L370 420H270zM1080 0h100L910 420H810z"/></svg><span>7</span></div>
+  <div class="grid"><article class="item" data-q="тарт шоколадный мука миндальная, мука ц/з, мука кокосовая, псиллиум, масло сливочное, сливки растительные, подсластитель эритрит, какао, шоколад без сахара.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/fb40996a9883.jpg" alt="Тарт шоколадный"></div>
+  <div class="txt">
+    <h3>Тарт шоколадный</h3>
+    <p class="price"><b>420 ₽</b><span>150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Песочная корзинка, шоколадный крем шапкой, присыпка какао и свежая черника.</p>
+    <details><summary>Состав</summary><p>Мука миндальная, мука ц/з, мука кокосовая, псиллиум, масло сливочное, сливки растительные, подсластитель эритрит, какао, шоколад без сахара.</p></details>
+    <p class="kb"></p>
+    <p class="alrg"><b>Аллергены</b> Орехи (миндаль), глютен (овёс, псиллиум), молоко, кокос, какао.</p>
+  </div>
+</article><article class="item" data-q="тарт клубника мука миндальная, мука ц/з, мука кокосовая, псиллиум, масло сливочное, сливки растительные, подсластитель эритрит, свежая ягода.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/1f1442f08151.jpg" alt="Тарт клубника"></div>
+  <div class="txt">
+    <h3>Тарт клубника</h3>
+    <p class="price"><b>420 ₽</b><span>150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Песочная корзинка, ванильный крем и свежая клубника.</p>
+    <details><summary>Состав</summary><p>Мука миндальная, мука ц/з, мука кокосовая, псиллиум, масло сливочное, сливки растительные, подсластитель эритрит, свежая ягода.</p></details>
+    <p class="kb"></p>
+    <p class="alrg"><b>Аллергены</b> Орехи (миндаль), глютен (овёс, псиллиум), молоко, кокос.</p>
+  </div>
+</article><article class="item" data-q="тарт лимон мука миндальная, мука ц/з, мука кокосовая, псиллиум, масло сливочное, сливки растительные, подсластитель эритрит, сок лимона, экстракт ванили, лимонная цедра, кукурузный крахмал.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/4b612c2f6094.jpg" alt="Тарт лимон"></div>
+  <div class="txt">
+    <h3>Тарт лимон</h3>
+    <p class="price"><b>420 ₽</b><span>150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Песочная корзинка, лимонный курд, сливочный крем и цедра лимона.</p>
+    <details><summary>Состав</summary><p>Мука миндальная, мука ц/з, мука кокосовая, псиллиум, масло сливочное, сливки растительные, подсластитель эритрит, сок лимона, экстракт ванили, лимонная цедра, кукурузный крахмал.</p></details>
+    <p class="kb"></p>
+    <p class="alrg"><b>Аллергены</b> Орехи (миндаль), глютен (овёс, псиллиум), молоко, кокос.</p>
+  </div>
+</article><article class="item" data-q="кольцо классика мука пшеничная, яйцо куриное, масло сливочное, вода, соль, сливки растительные, подсластитель эритрит, экстракт ванили, клубника, фисташка. состав на подтверждение">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/51c7b3b8f1bf.jpg" alt="Кольцо классика"></div>
+  <div class="txt">
+    <h3>Кольцо классика</h3>
+    <p class="price"><b>450 ₽</b><span>170 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Заварное кольцо, сливочный крем, свежая клубника и дроблёная фисташка.</p>
+    <details><summary>Состав</summary><p>Мука пшеничная, яйцо куриное, масло сливочное, вода, соль, сливки растительные, подсластитель эритрит, экстракт ванили, клубника, фисташка. СОСТАВ НА ПОДТВЕРЖДЕНИЕ</p></details>
+    <p class="kb"><span><b>на порцию</b> 140 / 4,6 / 6 / 17,5</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, глютен, орехи (фисташка).</p>
+  </div>
+</article><article class="item" data-q="кольцо фисташка мука пшеничная, яйцо куриное, масло сливочное, вода, соль, сливки растительные, подсластитель эритрит, экстракт ванили, фисташковая паста, фисташка. состав на подтверждение">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/8de00737f723.jpg" alt="Кольцо фисташка"></div>
+  <div class="txt">
+    <h3>Кольцо фисташка</h3>
+    <p class="price"><b>450 ₽</b><span>170 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Заварное кольцо, фисташковый крем и дроблёный орех.</p>
+    <details><summary>Состав</summary><p>Мука пшеничная, яйцо куриное, масло сливочное, вода, соль, сливки растительные, подсластитель эритрит, экстракт ванили, фисташковая паста, фисташка. СОСТАВ НА ПОДТВЕРЖДЕНИЕ</p></details>
+    <p class="kb"><span><b>на порцию</b> 140 / 4,6 / 6 / 17,5</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, глютен, орехи (фисташка).</p>
+  </div>
+</article><article class="item" data-q="кольцо шоколад мука ц/з, мука п/м, яйцо куриное, масло сливочное, экстракт ванили, сливки растительные, лепестки миндаля, подсластитель эритрит, какао алкализованное, шоколад молочный без сахара. состав на подтверждение">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/536b3e76942e.jpg" alt="Кольцо шоколад"></div>
+  <div class="txt">
+    <h3>Кольцо шоколад</h3>
+    <p class="price"><b>450 ₽</b><span>170 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Заварное кольцо, шоколадный крем, дроблёный орех и шоколад.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, яйцо куриное, масло сливочное, экстракт ванили, сливки растительные, лепестки миндаля, подсластитель эритрит, какао алкализованное, шоколад молочный без сахара. СОСТАВ НА ПОДТВЕРЖДЕНИЕ</p></details>
+    <p class="kb"><span><b>на порцию</b> 140 / 4,6 / 6 / 17,5</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, глютен, орехи, какао.</p>
+  </div>
+</article><article class="item" data-q="эклер мука ц/з, мука п/м, яйцо куриное, масло сливочное, экстракт ванили, сливки растительные, подсластитель эритрит, ванильный экстракт, какао, шоколад без сахара. состав на подтверждение">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/4bd759453933.jpg" alt="Эклер"></div>
+  <div class="txt">
+    <h3>Эклер</h3>
+    <p class="price"><b>220 ₽</b><span>100 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Заварной эклер со сливочным кремом: кокос, клубника или тирамису на выбор.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, яйцо куриное, масло сливочное, экстракт ванили, сливки растительные, подсластитель эритрит, ванильный экстракт, какао, шоколад без сахара. СОСТАВ НА ПОДТВЕРЖДЕНИЕ</p></details>
+    <p class="kb"><span><b>на порцию</b> 140 / 4 / 6 / 17,5</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, глютен, какао (тирамису), кокос.</p>
+  </div>
+</article></div>
+  <a class="up" href="#top">Наверх ↑</a>
+</section><section class="sec" id="deserty-mussovye">
+  <div class="sec-head"><h2>Десерты муссовые</h2><svg class="mono" viewBox="0 0 1180 420" fill="currentColor" aria-hidden="true"><path d="M0 0h100v420H0zM270 0h100v420H270zM540 0h100v420H540zM810 0h100v420H810zM1080 0h100v420h-100zM100 165h170v95H100zM640 165h170v95H640zM540 0h100L370 420H270zM1080 0h100L910 420H810z"/></svg><span>10</span></div>
+  <div class="grid"><article class="item" data-q="фисташка-малина мука ц/з, мука п/м, мука рисовая, крахмал кукурузный, яйцо куриное, экстракт ванили, сливки растительные, подсластитель эритрит, фисташковая паста, малина, лимонная кислота.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/3deee7e70e90.jpg" alt="Фисташка-малина"></div>
+  <div class="txt">
+    <h3>Фисташка-малина</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Фисташковый крем и мусс, внутри малина.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, мука рисовая, крахмал кукурузный, яйцо куриное, экстракт ванили, сливки растительные, подсластитель эритрит, фисташковая паста, малина, лимонная кислота.</p></details>
+    <p class="kb"><span><b>на порцию</b> 272 / 13,3 / 11 / 29</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Орехи.</p>
+  </div>
+</article><article class="item" data-q="баунти мука ц/з, мука п/м, мука кокосовая, яйцо куриное, какао алкализованное, сливки растительные, экстракт ванили, подсластитель эритрит, шоколад молочный без сахара, кокосовая стружка.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/e371e3cddb89.jpg" alt="Баунти"></div>
+  <div class="txt">
+    <h3>Баунти</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Шоколадный бисквит и кокосовый мусс с какао и стружкой.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, мука кокосовая, яйцо куриное, какао алкализованное, сливки растительные, экстракт ванили, подсластитель эритрит, шоколад молочный без сахара, кокосовая стружка.</p></details>
+    <p class="kb"><span><b>на порцию</b> 336 / 20,8 / 14,7 / 28,3</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Какао, Кокос.</p>
+  </div>
+</article><article class="item" data-q="рафаэло мука ц/з, мука п/м, мука рисовая, крахмал кукурузный, яйцо куриное, экстракт ванили, сливки растительные, подсластитель эритрит, кокосовая стружка, шоколад белый без сахара.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/24c750424e2e.jpg" alt="Рафаэло"></div>
+  <div class="txt">
+    <h3>Рафаэло</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Классический бисквит, крем и кокосовый мусс с белым шоколадом.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, мука рисовая, крахмал кукурузный, яйцо куриное, экстракт ванили, сливки растительные, подсластитель эритрит, кокосовая стружка, шоколад белый без сахара.</p></details>
+    <p class="kb"><span><b>на порцию</b> 290 / 19,6 / 11,7 / 26,6</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Какао, Кокос.</p>
+  </div>
+</article><article class="item" data-q="персиковый пломбир мука ц/з, мука п/м, мука рисовая, крахмал кукурузный, яйцо куриное, экстракт ванили, сливки растительные, подсластитель эритрит, персик, желатин, лимонная кислота.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/72da1a1b134b.jpg" alt="Персиковый пломбир"></div>
+  <div class="txt">
+    <h3>Персиковый пломбир</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Классический бисквит, крем и персиковый мусс со вкусом пломбира.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, мука рисовая, крахмал кукурузный, яйцо куриное, экстракт ванили, сливки растительные, подсластитель эритрит, персик, желатин, лимонная кислота.</p></details>
+    <p class="kb"><span><b>на порцию</b> 295 / 19,7 / 11,7 / 27,6</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен.</p>
+  </div>
+</article><article class="item" data-q="клубника со сливками мука ц/з, мука п/м, мука рисовая, крахмал кукурузный, яйцо куриное, экстракт ванили, сливки растительные, подсластитель эритрит, лимонная кислота, пюре клубники (клубника, вода, агар-агар, эритрит, ароматизатор клубника).">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/a9072a18292b.jpg" alt="Клубника со сливками"></div>
+  <div class="txt">
+    <h3>Клубника со сливками</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Классический бисквит, крем и клубничный мусс на пюре из клубники.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, мука рисовая, крахмал кукурузный, яйцо куриное, экстракт ванили, сливки растительные, подсластитель эритрит, лимонная кислота, пюре клубники (клубника, вода, агар-агар, эритрит, ароматизатор клубника).</p></details>
+    <p class="kb"><span><b>на порцию</b> 293 / 19,7 / 11,7 / 27,4</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен.</p>
+  </div>
+</article><article class="item" data-q="три шоколада мука п/м, мука ц/з, мука кокосовая, яйцо куриное, какао алкализованное, экстракт ванили, сливки растительные, подсластитель эритрит, шоколад молочный без сахара, желатин.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/f543be646724.jpg" alt="Три шоколада"></div>
+  <div class="txt">
+    <h3>Три шоколада</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Шоколадный бисквит и мусс тремя слоями — от тёмного к белому.</p>
+    <details><summary>Состав</summary><p>Мука п/м, мука ц/з, мука кокосовая, яйцо куриное, какао алкализованное, экстракт ванили, сливки растительные, подсластитель эритрит, шоколад молочный без сахара, желатин.</p></details>
+    <p class="kb"><span><b>на порцию</b> 280 / 14,8 / 10,2 / 32</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Какао, Кокос.</p>
+  </div>
+</article><article class="item" data-q="вишня-миндаль мука ц/з, мука п/м, мука рисовая, крахмал кукурузный, яйцо куриное, экстракт ванили, сливки растительные, подсластитель эритрит, лимонная кислота, вишня, миндальные лепестки.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/0dcee741135a.jpg" alt="Вишня-миндаль"></div>
+  <div class="txt">
+    <h3>Вишня-миндаль</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Классический бисквит, вишня, миндальные лепестки и мусс на пралине.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, мука рисовая, крахмал кукурузный, яйцо куриное, экстракт ванили, сливки растительные, подсластитель эритрит, лимонная кислота, вишня, миндальные лепестки.</p></details>
+    <p class="kb"><span><b>на порцию</b> 265 / 18,2 / 10 / 25,4</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Орехи.</p>
+  </div>
+</article><article class="item" data-q="манго-маракуйя мука ц/з, мука п/м, мука рисовая, крахмал кукурузный, яйцо куриное, экстракт ванили, лимонная кислота, подсластитель эритрит, сливки растительные, пюре маракуйи, манго замороженный, желатин.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/40a0eeaca256.jpg" alt="Манго-маракуйя"></div>
+  <div class="txt">
+    <h3>Манго-маракуйя</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Классический бисквит, кусочки манго и мусс на пюре маракуйи.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, мука рисовая, крахмал кукурузный, яйцо куриное, экстракт ванили, лимонная кислота, подсластитель эритрит, сливки растительные, пюре маракуйи, манго замороженный, желатин.</p></details>
+    <p class="kb"><span><b>на порцию</b> 251 / 17,1 / 8,8 / 26,3</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен.</p>
+  </div>
+</article><article class="item" data-q="ягодный йогурт мука ц/з, мука п/м, мука рисовая, крахмал кукурузный, яйцо куриное, экстракт ванили, сливки растительные, подсластитель эритрит, лимонная кислота, пюре ягодное, желатин.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/5c6fe38e769d.jpg" alt="Ягодный йогурт"></div>
+  <div class="txt">
+    <h3>Ягодный йогурт</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Классический бисквит, крем и мусс на пюре лесных ягод.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, мука рисовая, крахмал кукурузный, яйцо куриное, экстракт ванили, сливки растительные, подсластитель эритрит, лимонная кислота, пюре ягодное, желатин.</p></details>
+    <p class="kb"><span><b>на порцию</b> 263 / 18,2 / 10 / 24,8</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен.</p>
+  </div>
+</article><article class="item" data-q="ирландский крем мука ц/з, мука п/м, мука кокосовая, яйцо куриное, какао алкализованное, экстракт ванили, подсластитель эритрит, сливки растительные, шоколад молочный без сахара, ароматизатор пищевой.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/65d266bf59e1.jpg" alt="Ирландский крем"></div>
+  <div class="txt">
+    <h3>Ирландский крем</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Шоколадный бисквит, крем и мусс на варёной сгущёнке со вкусом ирландских сливок.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, мука кокосовая, яйцо куриное, какао алкализованное, экстракт ванили, подсластитель эритрит, сливки растительные, шоколад молочный без сахара, ароматизатор пищевой.</p></details>
+    <p class="kb"><span><b>на порцию</b> 298 / 15,7 / 13 / 35,8</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Какао, Кокос.</p>
+  </div>
+</article></div>
+  <a class="up" href="#top">Наверх ↑</a>
+</section><section class="sec" id="deserty-proteinovye">
+  <div class="sec-head"><h2>Десерты протеиновые</h2><svg class="mono" viewBox="0 0 1180 420" fill="currentColor" aria-hidden="true"><path d="M0 0h100v420H0zM270 0h100v420H270zM540 0h100v420H540zM810 0h100v420H810zM1080 0h100v420h-100zM100 165h170v95H100zM640 165h170v95H640zM540 0h100L370 420H270zM1080 0h100L910 420H810z"/></svg><span>15</span></div>
+  <div class="grid"><article class="item" data-q="молочный ломтик яйцо куриное, мука ц/з, мука соевая, какао алкализованный, подсластитель эритрит, сливки растительные, протеин растительный (соевый), желатин, экстракт ванили.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/790da43b0bf0.jpg" alt="Молочный ломтик"></div>
+  <div class="txt">
+    <h3>Молочный ломтик</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="ic ic-p" title="много белка">protein</span><span class="badge">без сахара</span></div>
+    <p class="desc">Шоколадный бисквит, крем и протеиновый мусс со вкусом пломбира.</p>
+    <details><summary>Состав</summary><p>Яйцо куриное, мука ц/з, мука соевая, какао алкализованный, подсластитель эритрит, сливки растительные, протеин растительный (соевый), желатин, экстракт ванили.</p></details>
+    <p class="kb"><span><b>на порцию</b> 244 / 18,8 / 17 / 5,5</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Соя, Какао.</p>
+  </div>
+</article><article class="item" data-q="шоколадный мусс яйцо куриное, мука ц/з, мука соевая, какао алкализованный, подсластитель эритрит, сливки растительные, протеин растительный (соевый), желатин, экстракт ванили, шоколад молочный без сахара.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/9c2568c95f21.jpg" alt="Шоколадный мусс"></div>
+  <div class="txt">
+    <h3>Шоколадный мусс</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="ic ic-p" title="много белка">protein</span><span class="badge">без сахара</span></div>
+    <p class="desc">Шоколадный бисквит, крем и протеиновый мусс с какао.</p>
+    <details><summary>Состав</summary><p>Яйцо куриное, мука ц/з, мука соевая, какао алкализованный, подсластитель эритрит, сливки растительные, протеин растительный (соевый), желатин, экстракт ванили, шоколад молочный без сахара.</p></details>
+    <p class="kb"><span><b>на порцию</b> 231 / 16,4 / 11,6 / 12,5</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Соя, Какао.</p>
+  </div>
+</article><article class="item" data-q="черника — белый шоколад яйцо куриное, мука ц/з, мука соевая, сливки растительные, подсластитель эритрит, протеин растительный (соевый), желатин, экстракт ванили, шоколад белый без сахара, черника.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/ab2dd4351c4c.jpg" alt="Черника — белый шоколад"></div>
+  <div class="txt">
+    <h3>Черника — белый шоколад</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="ic ic-p" title="много белка">protein</span><span class="badge">без сахара</span></div>
+    <p class="desc">Классический бисквит, крем и протеиновый мусс с черникой и белым шоколадом.</p>
+    <details><summary>Состав</summary><p>Яйцо куриное, мука ц/з, мука соевая, сливки растительные, подсластитель эритрит, протеин растительный (соевый), желатин, экстракт ванили, шоколад белый без сахара, черника.</p></details>
+    <p class="kb"><span><b>на порцию</b> 233 / 15,2 / 11,5 / 13,6</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Соя, Какао.</p>
+  </div>
+</article><article class="item" data-q="клубника-маскарпоне яйцо куриное, мука ц/з, мука соевая, сливки растительные, подсластитель эритрит, желатин, экстракт ванили, протеин растительный (соевый), клубничное пюре (клубника, агар-агар, вода, лимонная кислота, ароматизатор клубника, эритрит).">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/d697cfc54f5d.jpg" alt="Клубника-маскарпоне"></div>
+  <div class="txt">
+    <h3>Клубника-маскарпоне</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="ic ic-p" title="много белка">protein</span><span class="badge">без сахара</span></div>
+    <p class="desc">Классический бисквит, крем и протеиновый мусс на клубничном пюре.</p>
+    <details><summary>Состав</summary><p>Яйцо куриное, мука ц/з, мука соевая, сливки растительные, подсластитель эритрит, желатин, экстракт ванили, протеин растительный (соевый), клубничное пюре (клубника, агар-агар, вода, лимонная кислота, ароматизатор клубника, эритрит).</p></details>
+    <p class="kb"><span><b>на порцию</b> 226 / 15,6 / 12 / 13,4</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Соя.</p>
+  </div>
+</article><article class="item" data-q="малиновый сорбет яйцо куриное, мука ц/з, мука соевая, сливки растительные, подсластитель эритрит, протеин растительный (соевый), желатин, экстракт ванили, малина, лимонная кислота.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/b1347ee3860f.jpg" alt="Малиновый сорбет"></div>
+  <div class="txt">
+    <h3>Малиновый сорбет</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="ic ic-p" title="много белка">protein</span><span class="badge">без сахара</span></div>
+    <p class="desc">Классический бисквит, крем и протеиновый мусс на малиновом пюре.</p>
+    <details><summary>Состав</summary><p>Яйцо куриное, мука ц/з, мука соевая, сливки растительные, подсластитель эритрит, протеин растительный (соевый), желатин, экстракт ванили, малина, лимонная кислота.</p></details>
+    <p class="kb"><span><b>на порцию</b> 200 / 12,3 / 11,7 / 14</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Соя.</p>
+  </div>
+</article><article class="item" data-q="фисташковый чизкейк яйцо куриное, мука ц/з, мука соевая, сливки растительные, подсластитель эритрит, протеин растительный (соевый), желатин, экстракт ванили, шоколад белый без сахара, фисташковая паста.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/946d72bed873.jpg" alt="Фисташковый чизкейк"></div>
+  <div class="txt">
+    <h3>Фисташковый чизкейк</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="ic ic-p" title="много белка">protein</span><span class="badge">без сахара</span></div>
+    <p class="desc">Классический бисквит, крем и протеиновый мусс с фисташковой пастой.</p>
+    <details><summary>Состав</summary><p>Яйцо куриное, мука ц/з, мука соевая, сливки растительные, подсластитель эритрит, протеин растительный (соевый), желатин, экстракт ванили, шоколад белый без сахара, фисташковая паста.</p></details>
+    <p class="kb"><span><b>на порцию</b> 259 / 14,6 / 15,9 / 15,4</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Соя, Орехи, Какао.</p>
+  </div>
+</article><article class="item" data-q="карамельный сироп яйцо куриное, мука ц/з, мука соевая, какао алкализованный, подсластитель эритрит, сливки растительные, протеин растительный (соевый), желатин, экстракт ванили, карамель без сахара.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/932042e1979a.jpg" alt="Карамельный сироп"></div>
+  <div class="txt">
+    <h3>Карамельный сироп</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="ic ic-p" title="много белка">protein</span><span class="badge">без сахара</span></div>
+    <p class="desc">Шоколадный бисквит, крем и протеиновый мусс с варёной сгущёнкой и солёной карамелью.</p>
+    <details><summary>Состав</summary><p>Яйцо куриное, мука ц/з, мука соевая, какао алкализованный, подсластитель эритрит, сливки растительные, протеин растительный (соевый), желатин, экстракт ванили, карамель без сахара.</p></details>
+    <p class="kb"><span><b>на порцию</b> 236 / 12,8 / 12,5 / 9,4</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Соя, Какао.</p>
+  </div>
+</article><article class="item" data-q="облепиховый мусс яйцо куриное, мука ц/з, мука соевая, сливки растительные, подсластитель эритрит, протеин растительный (соевый), желатин, экстракт ванили, шоколад белый без сахара, облепиховое пюре.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/3ea61e654bd6.jpg" alt="Облепиховый мусс"></div>
+  <div class="txt">
+    <h3>Облепиховый мусс</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="ic ic-p" title="много белка">protein</span><span class="badge">без сахара</span></div>
+    <p class="desc">Классический бисквит, крем и протеиновый мусс на облепиховом пюре.</p>
+    <details><summary>Состав</summary><p>Яйцо куриное, мука ц/з, мука соевая, сливки растительные, подсластитель эритрит, протеин растительный (соевый), желатин, экстракт ванили, шоколад белый без сахара, облепиховое пюре.</p></details>
+    <p class="kb"><span><b>на порцию</b> 237 / 13,7 / 12,7 / 15,4</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Соя, Какао.</p>
+  </div>
+</article><article class="item" data-q="сливочный латте яйцо куриное, мука ц/з, мука соевая, сливки растительные, подсластитель эритрит, протеин растительный (соевый), желатин, экстракт ванили, шоколад белый без сахара, кофе.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/7a91f0715305.jpg" alt="Сливочный латте"></div>
+  <div class="txt">
+    <h3>Сливочный латте</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="ic ic-p" title="много белка">protein</span><span class="badge">без сахара</span></div>
+    <p class="desc">Шоколадный бисквит, крем и протеиновый мусс с кофе.</p>
+    <details><summary>Состав</summary><p>Яйцо куриное, мука ц/з, мука соевая, сливки растительные, подсластитель эритрит, протеин растительный (соевый), желатин, экстракт ванили, шоколад белый без сахара, кофе.</p></details>
+    <p class="kb"><span><b>на порцию</b> 222 / 12,9 / 11,2 / 9,2</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Соя, Какао.</p>
+  </div>
+</article><article class="item" data-q="кокос — белый шоколад яйцо куриное, мука ц/з, мука соевая, сливки растительные, подсластитель эритрит, протеин растительный (соевый), желатин, экстракт ванили, шоколад белый без сахара, кокосовая стружка.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/e286a4ea65c6.jpg" alt="Кокос — белый шоколад"></div>
+  <div class="txt">
+    <h3>Кокос — белый шоколад</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="ic ic-p" title="много белка">protein</span><span class="badge">без сахара</span></div>
+    <p class="desc">Классический бисквит, крем и протеиновый мусс с кокосовой стружкой и белым шоколадом.</p>
+    <details><summary>Состав</summary><p>Яйцо куриное, мука ц/з, мука соевая, сливки растительные, подсластитель эритрит, протеин растительный (соевый), желатин, экстракт ванили, шоколад белый без сахара, кокосовая стружка.</p></details>
+    <p class="kb"><span><b>на порцию</b> 236 / 16,6 / 14,7 / 11,5</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Соя, Какао, Кокос.</p>
+  </div>
+</article><article class="item" data-q="арахисовая паста яйцо куриное, мука ц/з, мука соевая, сливки растительные, подсластитель эритрит, протеин растительный (соевый), какао алкализованный, желатин, экстракт ванили, шоколад белый без сахара, арахисовая паста без сахара, арахис.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/d728caa8209b.jpg" alt="Арахисовая паста"></div>
+  <div class="txt">
+    <h3>Арахисовая паста</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="ic ic-p" title="много белка">protein</span><span class="badge">без сахара</span></div>
+    <p class="desc">Шоколадный бисквит, крем и протеиновый мусс с арахисовой пастой.</p>
+    <details><summary>Состав</summary><p>Яйцо куриное, мука ц/з, мука соевая, сливки растительные, подсластитель эритрит, протеин растительный (соевый), какао алкализованный, желатин, экстракт ванили, шоколад белый без сахара, арахисовая паста без сахара, арахис.</p></details>
+    <p class="kb"><span><b>на порцию</b> 230 / 15,8 / 15,8 / 11,2</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Соя, Арахис, Какао.</p>
+  </div>
+</article><article class="item" data-q="сливочно-ореховый десерт яйцо куриное, мука ц/з, мука соевая, сливки растительные, подсластитель эритрит, протеин растительный (соевый), желатин, экстракт ванили, шоколад белый без сахара, фундучная паста.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/5c8b8797902f.jpg" alt="Сливочно-ореховый десерт"></div>
+  <div class="txt">
+    <h3>Сливочно-ореховый десерт</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="ic ic-p" title="много белка">protein</span><span class="badge">без сахара</span></div>
+    <p class="desc">Шоколадный бисквит, крем и протеиновый мусс на фундучном пралине.</p>
+    <details><summary>Состав</summary><p>Яйцо куриное, мука ц/з, мука соевая, сливки растительные, подсластитель эритрит, протеин растительный (соевый), желатин, экстракт ванили, шоколад белый без сахара, фундучная паста.</p></details>
+    <p class="kb"><span><b>на порцию</b> 260 / 14,5 / 15,7 / 12,4</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Соя, Орехи, Какао.</p>
+  </div>
+</article><article class="item" data-q="черничный маффин мука рисовая, мука ц/з, крахмал кукурузный, яйцо куриное, экстракт ванили, подсластитель эритрит, сливки растительные, черника.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/3dfbf7535836.jpg" alt="Черничный маффин"></div>
+  <div class="txt">
+    <h3>Черничный маффин</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="ic ic-p" title="много белка">protein</span><span class="badge">без сахара</span></div>
+    <p class="desc">Шоколадный бисквит, крем и протеиновый мусс с черникой.</p>
+    <details><summary>Состав</summary><p>Мука рисовая, мука ц/з, крахмал кукурузный, яйцо куриное, экстракт ванили, подсластитель эритрит, сливки растительные, черника.</p></details>
+    <p class="kb"><span><b>на порцию</b> 234 / 13,5 / 12,6 / 24,3</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен.</p>
+  </div>
+</article><article class="item" data-q="шоколадное печенье мука ц/з, мука соевая, яйцо куриное, подсластитель эритрит, какао алкализованный, сливки растительные, протеин растительный (соевый), желатин, экстракт ванили, карамель без сахара.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/9fed31f40074.jpg" alt="Шоколадное печенье"></div>
+  <div class="txt">
+    <h3>Шоколадное печенье</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="ic ic-p" title="много белка">protein</span><span class="badge">без сахара</span></div>
+    <p class="desc">Шоколадный бисквит, крем и протеиновый мусс с шоколадным печеньем.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука соевая, яйцо куриное, подсластитель эритрит, какао алкализованный, сливки растительные, протеин растительный (соевый), желатин, экстракт ванили, карамель без сахара.</p></details>
+    <p class="kb"><span><b>на порцию</b> 267 / 12,9 / 17 / 14</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Соя, Какао.</p>
+  </div>
+</article><article class="item" data-q="грушевый пирог мука ц/з, мука соевая, яйцо куриное, подсластитель эритрит, сливки растительные, протеин растительный (соевый), желатин, экстракт ванили, карамель без сахара, грушевый сироп.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/4b5376c70f36.jpg" alt="Грушевый пирог"></div>
+  <div class="txt">
+    <h3>Грушевый пирог</h3>
+    <p class="price"><b>350 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="ic ic-p" title="много белка">protein</span><span class="badge">без сахара</span></div>
+    <p class="desc">Классический бисквит, крем и протеиновый мусс на грушевом пюре.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука соевая, яйцо куриное, подсластитель эритрит, сливки растительные, протеин растительный (соевый), желатин, экстракт ванили, карамель без сахара, грушевый сироп.</p></details>
+    <p class="kb"><span><b>на порцию</b> 208 / 12,5 / 11,7 / 14</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Соя.</p>
+  </div>
+</article></div>
+  <a class="up" href="#top">Наверх ↑</a>
+</section><section class="sec" id="deserty-bezglutenovye">
+  <div class="sec-head"><h2>Десерты безглютеновые</h2><svg class="mono" viewBox="0 0 1180 420" fill="currentColor" aria-hidden="true"><path d="M0 0h100v420H0zM270 0h100v420H270zM540 0h100v420H540zM810 0h100v420H810zM1080 0h100v420h-100zM100 165h170v95H100zM640 165h170v95H640zM540 0h100L370 420H270zM1080 0h100L910 420H810z"/></svg><span>4</span></div>
+  <div class="grid"><article class="item" data-q="матча мука рисовая, мука кокосовая, сливки растительные, яйцо куриное, желатин, подсластитель эритрит, матча.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/8c0a00d2a1bb.jpg" alt="Матча"></div>
+  <div class="txt">
+    <h3>Матча</h3>
+    <p class="price"><b>420 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="ic ic-g" title="без глютена">gluten<br>free</span><span class="badge">без сахара</span></div>
+    <p class="desc">Безглютеновый бисквит, воздушный мусс на матче и присыпка зелёного чая.</p>
+    <details><summary>Состав</summary><p>мука рисовая, мука кокосовая, сливки растительные, яйцо куриное, желатин, подсластитель эритрит, матча.</p></details>
+    <p class="kb"><span><b>на порцию</b> 434 / 7 / 21 / 53,2</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца. Без глютена.</p>
+  </div>
+</article><article class="item" data-q="птичье молоко мука рисовая, мука кокосовая, сливки растительные, яйцо куриное, желатин, подсластитель эритрит, какао- порошок, шоколад без сахара.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/c5174f4d9a16.jpg" alt="Птичье молоко"></div>
+  <div class="txt">
+    <h3>Птичье молоко</h3>
+    <p class="price"><b>420 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="ic ic-g" title="без глютена">gluten<br>free</span><span class="badge">без сахара</span></div>
+    <p class="desc">Шоколадный безглютеновый бисквит, нежный сливочный мусс и присыпка какао.</p>
+    <details><summary>Состав</summary><p>мука рисовая, мука кокосовая, сливки растительные, яйцо куриное, желатин, подсластитель эритрит, какао- порошок, шоколад без сахара.</p></details>
+    <p class="kb"><span><b>на порцию</b> 441 / 7 / 22,4 / 53,2</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, какао. Без глютена.</p>
+  </div>
+</article><article class="item" data-q="вишня мука рисовая, мука кокосовая, сливки растительные, яйцо куриное, желатин, подсластитель эритрит, какао- порошок, шоколад без сахара, вишня, пюре вишни.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/9ab051952780.jpg" alt="Вишня"></div>
+  <div class="txt">
+    <h3>Вишня</h3>
+    <p class="price"><b>380 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="ic ic-g" title="без глютена">gluten<br>free</span><span class="badge">без сахара</span></div>
+    <p class="desc">Шоколадная безглютеновая крошка, вишня и сливочный мусс.</p>
+    <details><summary>Состав</summary><p>Мука рисовая, мука кокосовая, сливки растительные, яйцо куриное, желатин, подсластитель эритрит, какао- порошок, шоколад без сахара, вишня, пюре вишни.</p></details>
+    <p class="kb"><span><b>на порцию</b> 362,6 / 7 / 21 / 43,4</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, какао. Без глютена.</p>
+  </div>
+</article><article class="item" data-q="кейк-бокс земляника — кокос мука рисовая, мука кокосовая, сливки растительные, яйцо куриное, желатин, подсластитель эритрит, пюре клубника, ароматизатор пищевой.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/8efb75f059bc.jpg" alt="Кейк-бокс земляника — кокос"></div>
+  <div class="txt">
+    <h3>Кейк-бокс земляника — кокос</h3>
+    <p class="price"><b>520 ₽</b><span>130–150 г</span></p>
+    <div class="badges"><span class="ic ic-g" title="без глютена">gluten<br>free</span><span class="badge">без сахара</span></div>
+    <p class="desc">Бисквитная крошка, кокосовый мусс, слой земляничного конфи и кокосовая стружка.</p>
+    <details><summary>Состав</summary><p>мука рисовая, мука кокосовая, сливки растительные, яйцо куриное, желатин, подсластитель эритрит, пюре клубника, ароматизатор пищевой.</p></details>
+    
+    <p class="alrg"><b>Аллергены</b> Яйца, кокос. Без глютена.</p>
+  </div>
+</article></div>
+  <a class="up" href="#top">Наверх ↑</a>
+</section><section class="sec" id="torty">
+  <div class="sec-head"><h2>Торты</h2><svg class="mono" viewBox="0 0 1180 420" fill="currentColor" aria-hidden="true"><path d="M0 0h100v420H0zM270 0h100v420H270zM540 0h100v420H540zM810 0h100v420H810zM1080 0h100v420h-100zM100 165h170v95H100zM640 165h170v95H640zM540 0h100L370 420H270zM1080 0h100L910 420H810z"/></svg><span>10</span></div>
+  <div class="grid"><article class="item" data-q="фисташка-малина мука ц/з, мука п/м, мука рисовая, крахмал кукурузный, яйцо куриное, экстракт ванили, сливки растительные, подсластитель эритрит, фисташковая паста, малина, лимонная кислота.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/ac98cb35d17c.jpg" alt="Фисташка-малина"></div>
+  <div class="txt">
+    <h3>Фисташка-малина</h3>
+    <p class="price"><b>1900 / 2600 ₽</b><span>600 / 1000 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Муссовый торт на фисташковом бисквите: слой малинового мусса с кусочками ягод и воздушный фисташковый мусс. Украшаем свежей ягодой.</p>
+    <details><summary>Состав</summary><p>Мука ц/з, мука п/м, мука рисовая, крахмал кукурузный, яйцо куриное, экстракт ванили, сливки растительные, подсластитель эритрит, фисташковая паста, малина, лимонная кислота.</p></details>
+    <p class="kb"><span><b>на порцию</b> 272 / 13,3 / 11 / 29</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, орехи (фисташка), глютен.</p>
+  </div>
+</article><article class="item" data-q="киндер-кантри яйцо куриное, мука ц/з, мука соевая, какао алколизованный, подсластитель эритрит,сливки растительные, протеин растительный,желатин, экстракт ванили, дутый рис, шоколад без сахара.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/b131f8f02bd2.jpg" alt="Киндер-кантри"></div>
+  <div class="txt">
+    <h3>Киндер-кантри</h3>
+    <p class="price"><b>1900 / 2600 ₽</b><span>600 / 1000 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Муссовый торт на шоколадном бисквите: сливочный мусс, дутый рис и шоколад без сахара. Украшаем свежей ягодой.</p>
+    <details><summary>Состав</summary><p>Яйцо куриное, мука ц/з, мука соевая, какао алколизованный, подсластитель эритрит,сливки растительные, протеин растительный,желатин, экстракт ванили, дутый рис, шоколад без сахара.</p></details>
+    <p class="kb"><span><b>на изделие</b> 600 г 1110 / 66 / 60 / 114</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Соя, Какао.</p>
+  </div>
+</article><article class="item" data-q="три шоколада мука п/м, мука ц/з, мука кокосовая, яйцо куриное, какао алкализованное, экстракт ванили, сливки растительные, подсластитель эритрит, шоколад молочный без сахара, желатин.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/8eab897f9eb0.jpg" alt="Три шоколада"></div>
+  <div class="txt">
+    <h3>Три шоколада</h3>
+    <p class="price"><b>1900 / 2600 ₽</b><span>600 / 1000 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Муссовый торт на шоколадном бисквите: три слоя шоколадного мусса, от тёмного к светлому. Украшаем свежей ягодой.</p>
+    <details><summary>Состав</summary><p>Мука п/м, мука ц/з, мука кокосовая, яйцо куриное, какао алкализованное, экстракт ванили, сливки растительные, подсластитель эритрит, шоколад молочный без сахара, желатин.</p></details>
+    <p class="kb"><span><b>на порцию</b> 280 / 14,8 / 10,2 / 32</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, глютен, какао.</p>
+  </div>
+</article><article class="item" data-q="клубника-маскарпоне яйцо куриное, мука ц/з, мука соевая, сливки растительные, подсластитель эритрит, желатин, экстракт ванили, протеин растительный (соевый), клубничное пюре (клубника, агар-агар, вода, лимонная кислота, ароматизатор клубника, эритрит).">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/b430a2840caa.jpg" alt="Клубника-маскарпоне"></div>
+  <div class="txt">
+    <h3>Клубника-маскарпоне</h3>
+    <p class="price"><b>2200 / 3100 ₽</b><span>600 / 1000 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Муссовый торт на классическом бисквите: сливочный слой и протеиновый мусс на клубничном пюре. Украшаем свежей ягодой.</p>
+    <details><summary>Состав</summary><p>Яйцо куриное, мука ц/з, мука соевая, сливки растительные, подсластитель эритрит, желатин, экстракт ванили, протеин растительный (соевый), клубничное пюре (клубника, агар-агар, вода, лимонная кислота, ароматизатор клубника, эритрит).</p></details>
+    <p class="kb"><span><b>на порцию</b> 226 / 15,6 / 12 / 13,4</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Соя.</p>
+  </div>
+</article><article class="item" data-q="карамельный сироп яйцо куриное, мука ц/з, мука соевая, какао алкализованный, подсластитель эритрит, сливки растительные, протеин растительный (соевый), желатин, экстракт ванили, карамель без сахара.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/bee4c3307dec.jpg" alt="Карамельный сироп"></div>
+  <div class="txt">
+    <h3>Карамельный сироп</h3>
+    <p class="price"><b>2200 / 3100 ₽</b><span>600 / 1000 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Муссовый торт на шоколадном бисквите: сливочный слой и мусс на солёной карамели. Украшаем свежей ягодой.</p>
+    <details><summary>Состав</summary><p>Яйцо куриное, мука ц/з, мука соевая, какао алкализованный, подсластитель эритрит, сливки растительные, протеин растительный (соевый), желатин, экстракт ванили, карамель без сахара.</p></details>
+    <p class="kb"><span><b>на порцию</b> 236 / 12,8 / 12,5 / 9,4</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Соя, Какао.</p>
+  </div>
+</article><article class="item" data-q="шоколадный мусс яйцо куриное, мука ц/з, мука соевая, какао алкализованный, подсластитель эритрит, сливки растительные, протеин растительный (соевый), желатин, экстракт ванили, шоколад молочный без сахара.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/830432a23e3b.jpg" alt="Шоколадный мусс"></div>
+  <div class="txt">
+    <h3>Шоколадный мусс</h3>
+    <p class="price"><b>2200 / 3100 ₽</b><span>600 / 1000 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Муссовый торт на шоколадном бисквите: сливочный слой и протеиновый мусс с какао. Украшаем свежей ягодой.</p>
+    <details><summary>Состав</summary><p>Яйцо куриное, мука ц/з, мука соевая, какао алкализованный, подсластитель эритрит, сливки растительные, протеин растительный (соевый), желатин, экстракт ванили, шоколад молочный без сахара.</p></details>
+    <p class="kb"><span><b>на порцию</b> 231 / 16,4 / 11,6 / 12,5</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, Глютен, Соя, Какао.</p>
+  </div>
+</article><article class="item" data-q="птичье молоко мука рисовая, мука кокосовая, сливки растительные, яйцо куриное, желатин, подсластитель эритрит, какао- порошок, шоколад без сахара.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/3fce6cf53b03.jpg" alt="Птичье молоко"></div>
+  <div class="txt">
+    <h3>Птичье молоко</h3>
+    <p class="price"><b>2200 / 3500 ₽</b><span>600 / 1000 г</span></p>
+    <div class="badges"><span class="ic ic-g" title="без глютена">gluten<br>free</span><span class="badge">без сахара</span></div>
+    <p class="desc">Муссовый торт на шоколадном безглютеновом бисквите, нежный сливочный мусс, присыпка какао. Украшаем свежей ягодой.</p>
+    <details><summary>Состав</summary><p>мука рисовая, мука кокосовая, сливки растительные, яйцо куриное, желатин, подсластитель эритрит, какао- порошок, шоколад без сахара.</p></details>
+    <p class="kb"><span><b>на изделие</b> 600 г 1890 / 30 / 96 / 228</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, какао. Без глютена.</p>
+  </div>
+</article><article class="item" data-q="манго-белый шоколад мука рисовая, мука кокосовая, крахмал кукурузный, яйцо куриное, экстракт ванили, подсластитель эритрит, сливки растительные, лимонная кислота, пюре манго, манго замороженный, желатин.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/6dace97ac99c.jpg" alt="Манго-белый шоколад"></div>
+  <div class="txt">
+    <h3>Манго-белый шоколад</h3>
+    <p class="price"><b>2200 / 3500 ₽</b><span>600 / 1000 г</span></p>
+    <div class="badges"><span class="ic ic-g" title="без глютена">gluten<br>free</span><span class="badge">без сахара</span></div>
+    <p class="desc">Муссовый торт на безглютеновом бисквите: воздушный мусс с белым шоколадом и слой мангового пюре с кусочками манго. Украшаем свежей ягодой.</p>
+    <details><summary>Состав</summary><p>Мука рисовая, мука кокосовая, крахмал кукурузный, яйцо куриное, экстракт ванили, подсластитель эритрит, сливки растительные, лимонная кислота, пюре манго, манго замороженный, желатин.</p></details>
+    <p class="kb"><span><b>на изделие</b> 600 г 1812 / 30 / 90 / 216</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, кокос. Без глютена.</p>
+  </div>
+</article><article class="item" data-q="вишня мука рисовая, мука кокосовая, сливки растительные, яйцо куриное, желатин, подсластитель эритрит, какао- порошок, шоколад без сахара, вишня, пюре вишни.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/85420ba56128.jpg" alt="Вишня"></div>
+  <div class="txt">
+    <h3>Вишня</h3>
+    <p class="price"><b>2200 / 3500 ₽</b><span>600 / 1000 г</span></p>
+    <div class="badges"><span class="ic ic-g" title="без глютена">gluten<br>free</span><span class="badge">без сахара</span></div>
+    <p class="desc">Муссовый торт на шоколадном безглютеновом бисквите: сливочный слой и вишнёвый мусс. Украшаем свежей ягодой.</p>
+    <details><summary>Состав</summary><p>Мука рисовая, мука кокосовая, сливки растительные, яйцо куриное, желатин, подсластитель эритрит, какао- порошок, шоколад без сахара, вишня, пюре вишни.</p></details>
+    <p class="kb"><span><b>на изделие</b> 600 г 1554 / 30 / 90 / 186</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца, кокос, какао. Без глютена.</p>
+  </div>
+</article><article class="item" data-q="матча мука рисовая, мука кокосовая, сливки растительные, яйцо куриное, желатин, подсластитель эритрит, матча.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/7a4d3b89d587.jpg" alt="Матча"></div>
+  <div class="txt">
+    <h3>Матча</h3>
+    <p class="price"><b>2200 / 3500 ₽</b><span>600 / 1000 г</span></p>
+    <div class="badges"><span class="ic ic-g" title="без глютена">gluten<br>free</span><span class="badge">без сахара</span></div>
+    <p class="desc">Муссовый торт на безглютеновом бисквите: сливочный мусс с матчей. Украшаем свежей ягодой.</p>
+    <details><summary>Состав</summary><p>мука рисовая, мука кокосовая, сливки растительные, яйцо куриное, желатин, подсластитель эритрит, матча.</p></details>
+    <p class="kb"><span><b>на изделие</b> 600 г 1860 / 30 / 90 / 228</span></p>
+    <p class="alrg"><b>Аллергены</b> Яйца. Без глютена.</p>
+  </div>
+</article></div>
+  <a class="up" href="#top">Наверх ↑</a>
+</section><section class="sec" id="detskoe-menu">
+  <div class="sec-head"><h2>Детское меню</h2><svg class="mono" viewBox="0 0 1180 420" fill="currentColor" aria-hidden="true"><path d="M0 0h100v420H0zM270 0h100v420H270zM540 0h100v420H540zM810 0h100v420H810zM1080 0h100v420h-100zM100 165h170v95H100zM640 165h170v95H640zM540 0h100L370 420H270zM1080 0h100L910 420H810z"/></svg><span>11</span></div>
+  <div class="grid"><article class="item" data-q="детский бургер филе индейки, панировка, мини-булка на кефире, сыр твёрдый, огурец свежий, картофель фри запечённый.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/9c0d7e3213a5.jpg" alt="Детский бургер"></div>
+  <div class="txt">
+    <h3>Детский бургер</h3>
+    <p class="price"><b>490 ₽</b><span>240 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Котлета из индейки в лёгкой панировке, приготовленная в аэрогриле. Ломтик твёрдого сыра, свежий огурец, мини- булка на кефире. Подаём с запечённым картофелем фри. Без острых соусов.</p>
+    <details><summary>Состав</summary><p>Филе индейки, панировка, мини-булка на кефире, сыр твёрдый, огурец свежий, картофель фри запечённый.</p></details>
+    <p class="kb"><span><b>на порцию</b> 460 / 21 / 18 / 52</span></p>
+    <p class="alrg"><b>Аллергены</b> Глютен, молочные продукты.</p>
+  </div>
+</article><article class="item" data-q="котлета из индейки с гарниром филе индейки, гарнир на выбор — рис / картофельное пюре / паста птитим.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/eb8f19262a92.jpg" alt="Котлета из индейки с гарниром"></div>
+  <div class="txt">
+    <h3>Котлета из индейки с гарниром</h3>
+    <p class="price"><b>420 ₽</b><span>200 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Котлета из филе индейки в аэрогриле — без масла и фритюра. Гарнир на выбор: рис, картофельное пюре или паста птитим.</p>
+    <details><summary>Состав</summary><p>Филе индейки, гарнир на выбор — рис / картофельное пюре / паста птитим.</p></details>
+    <p class="kb"><span><b>на порцию</b> 305 / 24 / 10 / 30</span></p>
+    <p class="alrg"><b>Аллергены</b> Глютен, молочные продукты.</p>
+  </div>
+</article><article class="item" data-q="детский боул курица су-вид, рис, кукуруза, овощи, соус на греческом йогурте 20 г.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/1073cfc36586.jpg" alt="Детский боул"></div>
+  <div class="txt">
+    <h3>Детский боул</h3>
+    <p class="price"><b>350 ₽</b><span>190 г</span></p>
+    <div class="badges"><span class="ic ic-g" title="без глютена">gluten<br>free</span><span class="badge">без сахара</span></div>
+    <p class="desc">Курица су-вид, рис, кукуруза и мягкие овощи без острых заправок. Соус на греческом йогурте подаём отдельно — ребёнок решает сам.</p>
+    <details><summary>Состав</summary><p>Курица су-вид, рис, кукуруза, овощи, соус на греческом йогурте 20 г.</p></details>
+    <p class="kb"><span><b>на порцию</b> 370 / 23 / 9 / 44</span></p>
+    <p class="alrg"><b>Аллергены</b> Молочные продукты.</p>
+  </div>
+</article><article class="item" data-q="детская паста паста перья, соус на выбор — сливочный / томатный,сыр твёрдый.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/bdd538cbc30e.jpg" alt="Детская паста"></div>
+  <div class="txt">
+    <h3>Детская паста</h3>
+    <p class="price"><b>330 ₽</b><span>220 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Перья пасты, соус на выбор — сливочный или томатный, без остроты и специй. Сверху тёртый твёрдый сыр.</p>
+    <details><summary>Состав</summary><p>Паста перья, соус на выбор — сливочный / томатный,сыр твёрдый.</p></details>
+    <p class="kb"><span><b>на порцию</b> 340–390 / 11–12 / 7–15 / 49–56</span></p>
+    <p class="alrg"><b>Аллергены</b> Глютен, молочные продукты. Безглютеновая паста +50 ₽.</p>
+  </div>
+</article><article class="item" data-q="детские сырники творог, мука, сметана, ягодное конфи.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/eadd50d98d0a.jpg" alt="Детские сырники"></div>
+  <div class="txt">
+    <h3>Детские сырники</h3>
+    <p class="price"><b>310 ₽</b><span>115 г · 2 шт</span></p>
+    
+    <p class="desc">Два мини-сырника со сметаной и ягодным конфи.</p>
+    <details><summary>Состав</summary><p>Творог, мука, сметана, ягодное конфи.</p></details>
+    <p class="kb"><span><b>на порцию</b> 270 / 15 / 9 / 32</span></p>
+    <p class="alrg"><b>Аллергены</b> Глютен, молочные продукты.</p>
+  </div>
+</article><article class="item" data-q="детская каша молоко, крупа на выбор — манная / овсяная / рисовая, свежие фрукты.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/204d780cb194.jpg" alt="Детская каша"></div>
+  <div class="txt">
+    <h3>Детская каша</h3>
+    <p class="price"><b>240 ₽</b><span>220 г</span></p>
+    <div class="badges"><span class="badge">без сахара</span></div>
+    <p class="desc">Каша на молоке на выбор — манная, овсяная или рисовая. Украшаем свежими фруктами.</p>
+    <details><summary>Состав</summary><p>Молоко, крупа на выбор — манная / овсяная / рисовая, свежие фрукты.</p></details>
+    <p class="kb"><span><b>на порцию</b> 225 / 7 / 4 / 42</span></p>
+    <p class="alrg"><b>Аллергены</b> Молочные продукты; глютен — манная и овсяная.</p>
+  </div>
+</article><article class="item" data-q="детская вафля вафля венская, топпинг на выбор — шоколадная паста / сгущённое молоко.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/9a8029239b04.jpg" alt="Детская вафля"></div>
+  <div class="txt">
+    <h3>Детская вафля</h3>
+    <p class="price"><b>280 ₽</b><span>100 г</span></p>
+    
+    <p class="desc">Венская вафля, топпинг на выбор — шоколадная паста или сгущённое молоко.</p>
+    <details><summary>Состав</summary><p>Вафля венская, топпинг на выбор — шоколадная паста / сгущённое молоко.</p></details>
+    <p class="kb"><span><b>на порцию</b> 300 / 5 / 12 / 45</span></p>
+    <p class="alrg"><b>Аллергены</b> Глютен, молочные продукты.</p>
+  </div>
+</article><article class="item" data-q="детское мороженое мороженое сливочное на подсластителе, топпинг на выбор — шоколадный / карамельный.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/393a68d5f08c.jpg" alt="Детское мороженое"></div>
+  <div class="txt">
+    <h3>Детское мороженое</h3>
+    <p class="price"><b>230 ₽</b><span>120 г</span></p>
+    <div class="badges"><span class="ic ic-g" title="без глютена">gluten<br>free</span><span class="badge">без сахара</span></div>
+    <p class="desc">Два шарика сливочного мороженого без добавленного сахара, на подсластителе. Топпинг на выбор — шоколадный или карамельный. Топпинги содержат сахар — значок «без сахара» относится к мороженому.</p>
+    <details><summary>Состав</summary><p>Мороженое сливочное на подсластителе, топпинг на выбор — шоколадный / карамельный.</p></details>
+    <p class="kb"><span><b>на порцию</b> 170 / 4 / 11 / 12</span></p>
+    <p class="alrg"><b>Аллергены</b> Молочные продукты.</p>
+  </div>
+</article><article class="item" data-q="овощные и фруктовые дольки овощи или фрукты на выбор, соус на греческом йогурте, кетчуп, банан.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/deb212a9e901.jpg" alt="Овощные и фруктовые дольки"></div>
+  <div class="txt">
+    <h3>Овощные и фруктовые дольки</h3>
+    <p class="price"><b>200 ₽</b><span>200 г</span></p>
+    <div class="badges"><span class="ic ic-g" title="без глютена">gluten<br>free</span><span class="badge">без сахара</span></div>
+    <p class="desc">Свежие дольки на выбор — овощные или фруктовые. Подаём с соусом на греческом йогурте.</p>
+    <details><summary>Состав</summary><p>Овощи или фрукты на выбор, соус на греческом йогурте, кетчуп, банан.</p></details>
+    <p class="kb"><span><b>на порцию</b> 80–110 / 3 / 1 / 13–24</span></p>
+    <p class="alrg"><b>Аллергены</b> Молочные продукты.</p>
+  </div>
+</article><article class="item" data-q="молочный коктейль молоко, вкус на выбор — клубника / банан / ваниль / шоколад.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/f72901b042be.jpg" alt="Молочный коктейль"></div>
+  <div class="txt">
+    <h3>Молочный коктейль</h3>
+    <p class="price"><b>300 ₽</b><span>370 мл</span></p>
+    <div class="badges"><span class="ic ic-g" title="без глютена">gluten<br>free</span></div>
+    <p class="desc">Молоко, взбитое до кремовой текстуры. Вкус на выбор — клубника, банан, ваниль или шоколад.</p>
+    <details><summary>Состав</summary><p>Молоко, вкус на выбор — клубника / банан / ваниль / шоколад.</p></details>
+    <p class="kb"><span><b>на порцию</b> 340 / 9 / 10 / 52</span></p>
+    <p class="alrg"><b>Аллергены</b> Молочные продукты.</p>
+  </div>
+</article><article class="item" data-q="детский смузи ягоды сезонные.">
+  <div class="ph"><img loading="lazy" decoding="async" src="img/3fdd4431a60b.jpg" alt="Детский смузи"></div>
+  <div class="txt">
+    <h3>Детский смузи</h3>
+    <p class="price"><b>300 ₽</b><span>200 мл</span></p>
+    <div class="badges"><span class="ic ic-g" title="без глютена">gluten<br>free</span><span class="ic ic-l" title="без лактозы">lactose<br>free</span><span class="badge">без сахара</span></div>
+    <p class="desc">Смузи из сезонных ягод без добавленного сахара.</p>
+    <details><summary>Состав</summary><p>Ягоды сезонные.</p></details>
+    <p class="kb"><span><b>на порцию</b> 85 / 1 / 0 / 20</span></p>
+    <p class="alrg"><b>Аллергены</b> Не заявлены.</p>
+  </div>
+</article></div>
+  <a class="up" href="#top">Наверх ↑</a>
+</section>
+</main>
+<button class="up-fab" id="fab" title="Наверх" aria-label="Наверх">↑</button>
+<footer class="brandfoot"><span class="disc"><svg class="mono" viewBox="0 0 1180 420" fill="currentColor" aria-hidden="true"><path d="M0 0h100v420H0zM270 0h100v420H270zM540 0h100v420H540zM810 0h100v420H810zM1080 0h100v420h-100zM100 165h170v95H100zM640 165h170v95H640zM540 0h100L370 420H270zM1080 0h100L910 420H810z"/></svg></span><p><b>Ни стыда ни сахара</b>Каталог меню · составы, пищевая ценность и аллергены. Данные подтверждает шеф-повар перед подачей гостю.</p></footer>
+<footer>
+  <p>Пищевая ценность указана расчётно, на 100 г и на порцию: ккал / белки / жиры / углеводы. Возможны следы других аллергенов — уточняйте у сотрудников.</p>
+  <p class="mono">НИНИ</p>
+</footer>
+<script>
+(function(){
+  const q=document.getElementById('q'), items=[...document.querySelectorAll('.item')],
+        secs=[...document.querySelectorAll('.sec')], cnt=document.getElementById('count'),
+        empty=document.getElementById('empty'), fab=document.getElementById('fab'),
+        links=[...document.querySelectorAll('.toc a')];
+  items.forEach(el=>{el.dataset.sec=(el.closest('.sec').querySelector('h2')||{}).textContent||''});
+  function apply(){
+    const v=q.value.trim().toLowerCase(); let n=0;
+    items.forEach(el=>{
+      const ok=!v||(el.dataset.q+' '+el.dataset.sec.toLowerCase()).includes(v);
+      el.hidden=!ok; if(ok)n++;
+    });
+    secs.forEach(s=>{s.hidden=![...s.querySelectorAll('.item')].some(i=>!i.hidden)});
+    if(empty) empty.hidden=n>0;
+    cnt.textContent = n===items.length ? items.length+' позиций' : 'найдено '+n+' из '+items.length;
+    links.forEach(a=>{const t=document.querySelector(a.getAttribute('href'));a.style.display=t&&t.hidden?'none':''});
+  }
+  q.addEventListener('input',apply);
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(es=>{es.forEach(e=>{
+      const a=links.find(l=>l.getAttribute('href')==='#'+e.target.id);
+      if(a&&e.isIntersecting){links.forEach(l=>l.classList.remove('on'));a.classList.add('on');
+        a.scrollIntoView({block:'nearest',inline:'nearest'});}});},{rootMargin:'-120px 0px -70% 0px'});
+    secs.forEach(s=>io.observe(s));
+  }
+  addEventListener('keydown',e=>{
+    if(e.key==='/'&&document.activeElement!==q){e.preventDefault();q.focus();}
+    if(e.key==='Escape'&&document.activeElement===q){q.value='';apply();q.blur();}});
+  addEventListener('scroll',()=>{fab.classList.toggle('show',scrollY>700)},{passive:true});
+  fab.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
+  apply();
+})();
+</script>
+</body></html>
