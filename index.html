@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Меню НИНИ — состав и КБЖУ</title>
+<title>НИНИ · Ни стыда ни сахара — меню, состав и КБЖУ</title>
 <meta name="description" content="Меню кафе «Ни стыда ни сахара», Улан-Удэ: состав, КБЖУ и аллергены каждой позиции.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23F8BDC4'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,12 +23,12 @@ nav.main a:hover{color:var(--olive)}
 .cta{background:var(--ink);color:var(--cream);padding:12px 22px;border-radius:999px;font-weight:600;font-size:14px}
 .cta:hover{background:var(--olive)}
 /* hero */
-.hero{background:var(--ink);color:var(--cream);position:relative;overflow:hidden}
-.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(248,189,196,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(248,189,196,.08) 1px,transparent 1px);background-size:44px 44px}
+.mhead{background:var(--ink);color:var(--cream);position:relative;overflow:hidden}
+.mhead:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(248,189,196,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(248,189,196,.08) 1px,transparent 1px);background-size:44px 44px}
 .hin{position:relative;padding:72px 24px 56px}
 .kick{font-size:13px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--pink);margin-bottom:14px}
-.hero h1{font-size:clamp(46px,7vw,92px);font-weight:700;line-height:.95;letter-spacing:-.03em;text-transform:uppercase}
-.hero .lead{font-size:clamp(16px,1.6vw,20px);font-weight:300;color:#DDD6CE;margin-top:18px;max-width:60ch}
+.mhead h1{font-size:clamp(46px,7vw,92px);font-weight:700;line-height:.95;letter-spacing:-.03em;text-transform:uppercase}
+.mhead .lead{font-size:clamp(16px,1.6vw,20px);font-weight:300;color:#DDD6CE;margin-top:18px;max-width:60ch}
 .srch{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:32px}
 #q{flex:1 1 320px;max-width:620px;padding:17px 24px;border:0;border-radius:999px;background:var(--cream);color:var(--ink);font:inherit;font-size:16px}
 #q:focus{outline:3px solid var(--pink);outline-offset:2px}
@@ -104,6 +104,44 @@ footer{background:var(--ink);color:#CFC8BF;padding:44px 0;font-size:13.5px}
 .ft p{max-width:640px;line-height:1.5}
 .up-fab{position:fixed;right:18px;bottom:18px;z-index:40;width:48px;height:48px;border-radius:50%;border:0;background:var(--ink);color:var(--cream);font-size:18px;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.2)}
 .up-fab.show{display:flex}
+/* landing blocks on top of the menu (landing/build.py) */
+.hero{position:relative;height:min(84vh,780px);overflow:hidden;background:var(--ink)}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(248,189,196,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(248,189,196,.07) 1px,transparent 1px);background-size:44px 44px}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .9s ease}
+.slide.on{opacity:1;z-index:1}
+.slide img{position:absolute;right:0;top:0;width:50%;height:100%;object-fit:cover}
+.cap{position:absolute;z-index:2;left:max(24px,calc((100vw - 1240px)/2 + 24px));top:50%;transform:translateY(-50%);width:min(560px,calc(50% - 64px));color:var(--cream)}
+.cap h1{font-size:clamp(46px,7vw,92px);font-weight:700;line-height:.95;letter-spacing:-.03em;text-transform:uppercase}
+.cap .lead{font-size:clamp(17px,1.6vw,21px);font-weight:300;line-height:1.45;margin:20px 0 30px;color:#EDE8E2}
+.cap .btn{background:var(--pink);color:var(--ink)}
+.dots{position:absolute;z-index:3;bottom:32px;left:max(24px,calc((100vw - 1240px)/2 + 24px));display:flex;gap:10px}
+.dots button{width:10px;height:10px;border-radius:50%;border:0;background:rgba(250,248,246,.45);cursor:pointer;transition:all .3s}
+.dots button.on{width:32px;border-radius:6px;background:var(--pink)}
+.arr{position:absolute;z-index:3;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:1px solid rgba(250,248,246,.5);background:rgba(0,0,0,.2);color:var(--cream);font-size:22px;cursor:pointer}
+.arr.l{left:calc(50% + 20px)}.arr.r{right:20px}
+.hits-s{padding:88px 0 72px}
+.lhead{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:36px}
+.lhead h2,.about h2{font-size:clamp(32px,4.2vw,54px);font-weight:700;letter-spacing:-.02em;line-height:1;text-transform:uppercase}
+.more{font-weight:600;border-bottom:2px solid var(--pink);padding-bottom:4px;white-space:nowrap}
+.hits{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:#fff;border-radius:24px;overflow:hidden;border:1px solid var(--line);transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(37,37,37,.10)}
+.card .ph{aspect-ratio:4/5;background:#1a1a1a}
+.ct{padding:22px 24px 26px}
+.ct h3{font-size:19px;font-weight:600;line-height:1.3}
+.ct p{display:flex;gap:14px;align-items:baseline;margin-top:10px}
+.ct b{font-size:20px;color:var(--olive)}
+.ct span{font-size:14px;color:#7a746c}
+.about{background:var(--ink);color:var(--cream);position:relative;overflow:hidden;padding:96px 0}
+.about:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(248,189,196,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(248,189,196,.08) 1px,transparent 1px);background-size:44px 44px}
+.ab{position:relative;display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
+.ab img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:28px}
+.ab p.t{font-size:19px;font-weight:300;line-height:1.6;color:#DDD6CE;margin-top:24px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px}
+.facts div{border:1px solid rgba(248,189,196,.45);border-radius:18px;padding:18px}
+.facts b{display:block;font-size:22px;color:var(--pink)}
+.facts span{font-size:14px;color:#CFC8BF}
+.mhead{border-top:1px solid var(--line)}
 @media (max-width:1000px){.grid{grid-template-columns:1fr 1fr;gap:18px}}
 @media (max-width:760px){
  nav.main{display:none}
@@ -113,16 +151,31 @@ footer{background:var(--ink);color:#CFC8BF;padding:44px 0;font-size:13.5px}
  .ph{aspect-ratio:4/3}
  .sec{padding-top:44px;scroll-margin-top:130px}
  .shops{grid-template-columns:1fr}
+ .hero{height:auto}
+ .slide{position:relative;display:none}.slide.on{display:block}
+ .slide img{position:relative;width:100%;height:auto;aspect-ratio:4/5}
+ .cap{position:relative;left:auto;top:auto;transform:none;width:auto;padding:28px 20px 72px}
+ .dots{left:20px;bottom:28px}.arr{display:none}
+ .hits{grid-template-columns:1fr;gap:16px}.hits-s{padding:56px 0 40px}
+ .lhead{flex-direction:column;align-items:flex-start}
+ .ab{grid-template-columns:1fr;gap:36px}.about{padding:64px 0}.facts{grid-template-columns:1fr}
 }
-@media print{header.top,.toc,.up-fab,.hero .srch,.order{display:none!important}.item{break-inside:avoid}}
+@media print{header.top,.toc,.up-fab,.mhead .srch,.order{display:none!important}.item{break-inside:avoid}}
 </style></head>
 <body id="top">
 <header class="top"><div class="wrap hbar">
  <a class="brand" href="#top"><span class="disc"><svg viewBox="0 0 1180 420" fill="currentColor" aria-hidden="true"><path d="M0 0h100v420H0zM270 0h100v420H270zM540 0h100v420H540zM810 0h100v420H810zM1080 0h100v420h-100zM100 165h170v95H100zM640 165h170v95H640zM540 0h100L370 420H270zM1080 0h100L910 420H810z"/></svg></span><b>Ни стыда<br>ни сахара</b></a>
- <nav class="main"><a href="#top">Меню</a><a href="#pp-to-go">To go</a><a href="#shops">Адреса</a><a href="https://instagram.com/ni.stida_ni.sahara">Instagram</a></nav>
+ <nav class="main"><a href="#menu">Меню</a><a href="#pp-to-go">To go</a><a href="#about">О нас</a><a href="#shops">Адреса</a><a href="https://instagram.com/ni.stida_ni.sahara">Instagram</a></nav>
  <a class="cta" href="#order">Заказать</a>
 </div></header>
-<section class="hero"><div class="wrap hin">
+<div class="hero" id="hero"><div class="slide on"><img src="img/hero-togo.jpg" alt="" ><div class="cap"><p class="kick">Новое · ПП to go</p><h1>Возьми меня<br>с собой</h1><p class="lead">Сэндвичи и боксы собраны, закрыты и подписаны: КБЖУ на каждой наклейке.</p><a class="btn" href="#pp-to-go">Смотреть to go</a></div></div><div class="slide"><img src="img/hero-energy.jpg" alt="" loading=lazy ><div class="cap"><p class="kick">Энерго-стаканы</p><h1>Завтрак<br>в стакане</h1><p class="lead">Чиа-пудинг, гранола и ягоды — черника, манго или клубника.</p><a class="btn" href="#pp-to-go">Выбрать вкус</a></div></div><div class="slide"><img src="img/hero-matcha.jpg" alt="" loading=lazy ><div class="cap"><p class="kick">Кофе и матча</p><h1>Осень<br>на зелёном</h1><p class="lead">Матча, кофе и авторские чаи — в зале и с собой.</p><a class="btn" href="#menu">Меню напитков</a></div></div><div class="slide"><img src="img/hero-tea.jpg" alt="" loading=lazy ><div class="cap"><p class="kick">Ни стыда ни сахара</p><h1>Сладко —<br>без сахара</h1><p class="lead">Десерты, завтраки и боулы с КБЖУ и составом на каждой позиции.</p><a class="btn" href="#menu">Всё меню</a></div></div>
+ <button class="arr l" aria-label="Назад">←</button><button class="arr r" aria-label="Вперёд">→</button>
+ <div class="dots"><button aria-label="Слайд 1" class=on></button><button aria-label="Слайд 2"></button><button aria-label="Слайд 3"></button><button aria-label="Слайд 4"></button></div></div>
+<section class="hits-s"><div class="wrap">
+ <div class="lhead"><h2>Хиты to go</h2><a class="more" href="#pp-to-go">Вся линейка →</a></div>
+ <div class="hits"><a class="card" href="#pp-to-go"><div class="ph"><img src="img/f-sandwich.jpg" alt="Сэндвич to go «Курица»" loading="lazy"></div><div class="ct"><h3>Сэндвич to go «Курица»</h3><p><b>490 ₽</b><span>448 ккал · 251 г</span></p></div></a><a class="card" href="#pp-to-go"><div class="ph"><img src="img/f-box.jpg" alt="Бокс to go «Гречка, курица, яйцо»" loading="lazy"></div><div class="ct"><h3>Бокс to go «Гречка, курица, яйцо»</h3><p><b>510 ₽</b><span>417 ккал · 380 г</span></p></div></a><a class="card" href="#pp-to-go"><div class="ph"><img src="img/f-energy.jpg" alt="Энерго-стакан «Манго»" loading="lazy"></div><div class="ct"><h3>Энерго-стакан «Манго»</h3><p><b>490 ₽</b><span>372 ккал · 282 г</span></p></div></a></div>
+</div></section>
+<section class="mhead" id="menu"><div class="wrap hin">
  <p class="kick">Меню · состав и КБЖУ</p>
  <h1>Что сегодня<br>без сахара?</h1>
  <p class="lead">Состав, пищевая ценность и аллергены у каждой позиции. Ищите по названию или продукту.</p>
@@ -1894,6 +1947,13 @@ footer{background:var(--ink);color:#CFC8BF;padding:44px 0;font-size:13.5px}
   <a class="up" href="#top">Наверх ↑</a>
 </section>
 </main>
+<section class="about" id="about"><div class="wrap ab">
+ <div><p class="kick">О нас</p><h2>Ни стыда<br>ни сахара</h2>
+  <p class="t">Кафе правильного питания в Улан-Удэ. Готовим завтраки, каши, поке и боулы, печём десерты без сахара — и честно пишем КБЖУ и состав у каждой позиции. Чтобы есть вкусно и не считать в уме.</p>
+  <div class="facts"><div><b>КБЖУ</b><span>и состав в меню у каждой позиции</span></div><div><b>без сахара</b><span>десерты и сладкое</span></div><div><b>2 места</b><span>Сахьяновой и Калашникова</span></div></div>
+ </div>
+ <img src="img/about.jpg" alt="Чай в НИНИ" loading="lazy">
+</div></section>
 <section class="shops-s" id="shops"><div class="wrap"><h2>Где нас найти</h2><div class="shops"><div class="shop"><p class="kick">Фабричный Маркет</p><h3>ул. Сахьяновой, 7Б/3</h3><p class="hrs"><b>08:00–20:00</b><span class="pill">перерыв 14:00–14:30</span></p><a class="tel" href="tel:+79834375413">☎ 8 983 437-54-13</a></div><div class="shop"><p class="kick">45-й квартал · 1 этаж</p><h3>ул. Калашникова, 11Б/1</h3><p class="hrs"><b>08:00–20:00</b><span class="pill">без перерыва</span></p><a class="tel" href="tel:+79834527070">☎ 8 983 452-70-70</a></div></div></div></section>
 <section class="order" id="order"><div class="wrap ord">
  <div><h2>Заказать</h2><p>Позвоните в ближайшую НИНИ — соберём заказ с собой. Или напишите нам в Instagram.</p></div>
@@ -1904,6 +1964,20 @@ footer{background:var(--ink);color:#CFC8BF;padding:44px 0;font-size:13.5px}
  <p>Пищевая ценность указана расчётно: ккал / белки / жиры / углеводы. Возможны следы других аллергенов — уточняйте у сотрудников.</p>
  <p>© НИНИ · Ни стыда ни сахара · Улан-Удэ</p>
 </div></footer>
+<script>
+(function(){
+ var s=[].slice.call(document.querySelectorAll('.slide')),d=[].slice.call(document.querySelectorAll('.dots button')),i=0,t;
+ function go(n){s[i].classList.remove('on');d[i].classList.remove('on');i=(n+s.length)%s.length;s[i].classList.add('on');d[i].classList.add('on');}
+ function play(){clearInterval(t);t=setInterval(function(){go(i+1)},6000);}
+ d.forEach(function(b,k){b.onclick=function(){go(k);play();}});
+ document.querySelector('.arr.l').onclick=function(){go(i-1);play();};
+ document.querySelector('.arr.r').onclick=function(){go(i+1);play();};
+ var x0=null,h=document.getElementById('hero');
+ h.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+ h.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){go(i+(dx<0?1:-1));play();}x0=null;});
+ play();
+})();
+</script>
 <script>
 (function(){
   const q=document.getElementById('q'), items=[...document.querySelectorAll('.item')],
