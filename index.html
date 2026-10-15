@@ -1,145 +1,135 @@
 <!DOCTYPE html>
-<html lang="ru"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Каталог меню НИНИ — составы и КБЖУ</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%238F883D'/%3E%3Cg fill='%23fff' transform='translate(8,22) scale(0.0407)'%3E%3Cpath d='M0 0h100v420H0zM270 0h100v420H270zM540 0h100v420H540zM810 0h100v420H810zM1080 0h100v420h-100zM100 165h170v95H100zM640 165h170v95H640zM540 0h100L370 420H270zM1080 0h100L910 420H810z'/%3E%3C/g%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;700&display=swap" rel="stylesheet">
-<style>:root{
-  --bg:#FAF8F6;--card:#fff;--ink:#252525;--soft:#6b6663;--olive:#8F883D;--olive-d:#6E682C;
-  --pink:#F8BDC4;--line:#e6e2d9;
-}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#141209;--card:#1d1a12;--ink:#F2EDE0;--soft:#a39b89;--olive:#A6BB63;--olive-d:#C2D488;
-  --pink:#E79FBB;--line:#332f26;}}
-:root[data-theme="dark"]{--bg:#141209;--card:#1d1a12;--ink:#F2EDE0;--soft:#a39b89;--olive:#A6BB63;
-  --olive-d:#C2D488;--pink:#E79FBB;--line:#332f26;}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Geologica',system-ui,sans-serif;background:var(--bg);color:var(--ink);
-  font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
-.hero{max-width:1100px;margin:0 auto;padding:48px 20px 24px}
-.brand{font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--olive)}
-h1{margin-top:14px;font-size:clamp(34px,6vw,54px);font-weight:700;line-height:1;letter-spacing:-.025em;text-transform:uppercase}
-.lead{margin-top:14px;font-size:15px;font-weight:300;color:var(--soft);max-width:62ch}
-#q{margin-top:22px;width:100%;max-width:560px;padding:13px 16px;border:1.5px solid var(--line);
-  border-radius:12px;background:var(--card);color:var(--ink);font:inherit;font-size:14px}
-#q:focus{outline:2px solid var(--olive);outline-offset:1px;border-color:transparent}
-
-.toc{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);
-  padding:12px 20px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:thin}
-.toc a{flex:0 0 auto;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:20px;
-  padding:7px 13px;font-size:12px;font-weight:500;white-space:nowrap}
-.toc a:hover{border-color:var(--olive);color:var(--olive-d)}
-.toc a i{font-style:normal;font-size:10px;color:var(--soft);margin-left:5px}
-
-main{max-width:1100px;margin:0 auto;padding:10px 20px 60px}
-.empty{padding:40px 0;color:var(--soft)}
-.sec{padding-top:38px;scroll-margin-top:64px}
-.sec-head{display:flex;align-items:baseline;gap:10px;border-bottom:2px solid var(--olive);padding-bottom:8px;margin-bottom:20px}
-.sec-head h2{font-size:clamp(20px,3.4vw,27px);font-weight:700;letter-spacing:-.02em;text-transform:uppercase;color:var(--olive-d)}
-.sec-head span{font-size:12px;color:var(--soft)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(430px,1fr));gap:22px}
-.item{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
-.ph{aspect-ratio:1/1;background:#efece4;overflow:hidden}
-.ph img{width:100%;height:100%;object-fit:cover;display:block}
-.nophoto{width:100%;height:100%;display:flex;align-items:center;justify-content:center;
-  font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#a09a8c}
-.txt{padding:16px 16px 18px;display:flex;flex-direction:column;gap:8px}
-h3{font-size:17px;font-weight:700;line-height:1.2}
-.price{display:flex;align-items:baseline;gap:9px}
-.price b{font-size:19px;font-weight:700;color:var(--olive-d)}
-.price span{font-size:12px;color:var(--soft)}
-.badges{display:flex;flex-wrap:wrap;gap:6px}
-.badge{background:var(--pink);color:#252525;border-radius:20px;padding:3px 9px;font-size:10px;font-weight:700;
-  letter-spacing:.06em;text-transform:uppercase}
-.desc{font-size:13.5px;font-weight:300;color:var(--soft);line-height:1.45}
-details{border-top:1px dotted var(--line);padding-top:8px}
-summary{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--olive);cursor:pointer}
-details p{margin-top:7px;font-size:13px;font-weight:300;line-height:1.45}
-.kb{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:11.5px;color:var(--soft)}
-.kb b{font-weight:700;color:var(--ink);font-size:10px;letter-spacing:.08em;text-transform:uppercase;margin-right:4px}
-.alrg{font-size:11.5px;font-weight:300;color:var(--soft);line-height:1.4}
-.alrg b{font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--olive);margin-right:5px}
-.up{display:inline-block;margin-top:16px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--soft);text-decoration:none}
-.up:hover{color:var(--olive-d)}
-footer{border-top:1px solid var(--line);padding:26px 20px 40px;max-width:1100px;margin:0 auto;
-  font-size:12px;font-weight:300;color:var(--soft);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-footer .mono{font-weight:700;letter-spacing:.02em;color:var(--ink);font-size:15px}
-@media (max-width:640px){
-  .hero{padding:34px 16px 18px}
-  main{padding:8px 16px 44px}
-  .grid{grid-template-columns:1fr;gap:14px}
-  .ph{aspect-ratio:16/11}
-}
-
-/* --- фирменный стиль: клетка, логотип, монограмма --- */
-:root{--grid:rgba(110,104,44,.09);--cell:22px}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--grid:rgba(242,237,224,.06)}}
-:root[data-theme="dark"]{--grid:rgba(242,237,224,.06)}
-body{background-color:var(--bg);
-  background-image:repeating-linear-gradient(to right,var(--grid) 0 1px,transparent 1px var(--cell)),
-                   repeating-linear-gradient(to bottom,var(--grid) 0 1px,transparent 1px var(--cell))}
-.hero{position:relative}
-.mark{display:flex;align-items:center;gap:14px}
-.mark .disc{width:52px;height:52px;border-radius:50%;background:var(--olive-d);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
-.mark .disc .mono{width:28px;color:#FAF8F6}
-.wordmark{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;line-height:1.35;color:var(--ink)}
-.toc{background:var(--bg);box-shadow:0 1px 0 var(--line)}
-.sec-head .mono{width:22px;color:var(--olive);flex:0 0 auto;margin-left:auto;opacity:.5}
-footer.brandfoot{max-width:1100px;margin:0 auto;padding:30px 20px 54px;border-top:1px solid var(--line);
-  display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-footer.brandfoot .disc{width:44px;height:44px;border-radius:50%;background:var(--pink);display:flex;align-items:center;justify-content:center}
-footer.brandfoot .disc .mono{width:24px;color:#252525}
-footer.brandfoot p{font-size:12px;color:var(--soft);font-weight:300}
-footer.brandfoot b{display:block;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);font-size:11px;margin-bottom:3px}
-
-/* --- панель инструментов --- */
-.bar{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
-.bar .row{max-width:1100px;margin:0 auto;padding:10px 20px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-.bar #q{margin:0;flex:1 1 260px;min-width:200px;padding:11px 14px;font-size:14px}
-.chips{display:flex;gap:6px;flex-wrap:wrap}
-.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:20px;padding:7px 12px;
-  font:inherit;font-size:12px;font-weight:500;cursor:pointer;white-space:nowrap}
-.chip[aria-pressed="true"]{background:var(--olive-d);border-color:var(--olive-d);color:#FAF8F6}
-.chip:hover{border-color:var(--olive)}
-.count{font-size:12px;color:var(--soft);white-space:nowrap}
-.toc{position:sticky;top:57px;z-index:15}
-.toc a.on{border-color:var(--olive);color:var(--olive-d);font-weight:700}
-.up-fab{position:fixed;right:18px;bottom:18px;z-index:30;width:44px;height:44px;border-radius:50%;
-  border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:16px;cursor:pointer;
-  display:none;align-items:center;justify-content:center;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+<html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Меню НИНИ — состав и КБЖУ</title>
+<meta name="description" content="Меню кафе «Ни стыда ни сахара», Улан-Удэ: состав, КБЖУ и аллергены каждой позиции.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23F8BDC4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#252525;--cream:#FAF8F6;--card:#fff;--soft:#6b6663;--olive:#6E682C;--olive2:#8F883D;--pink:#F8BDC4;--silver:#BDB3B3;--line:#E7E1D8}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Geologica,Arial,sans-serif;color:var(--ink);background:var(--cream);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+header.top{position:sticky;top:0;z-index:30;background:rgba(250,248,246,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hbar{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:12px}
+.disc{width:44px;height:44px;border-radius:50%;background:var(--pink);display:flex;align-items:center;justify-content:center;flex:none}
+.disc svg{width:26px}
+.brand b{font-size:12.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;line-height:1.25}
+nav.main{display:flex;gap:28px;font-size:15px;font-weight:500}
+nav.main a:hover{color:var(--olive)}
+.cta{background:var(--ink);color:var(--cream);padding:12px 22px;border-radius:999px;font-weight:600;font-size:14px}
+.cta:hover{background:var(--olive)}
+/* hero */
+.hero{background:var(--ink);color:var(--cream);position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(248,189,196,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(248,189,196,.08) 1px,transparent 1px);background-size:44px 44px}
+.hin{position:relative;padding:72px 24px 56px}
+.kick{font-size:13px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--pink);margin-bottom:14px}
+.hero h1{font-size:clamp(46px,7vw,92px);font-weight:700;line-height:.95;letter-spacing:-.03em;text-transform:uppercase}
+.hero .lead{font-size:clamp(16px,1.6vw,20px);font-weight:300;color:#DDD6CE;margin-top:18px;max-width:60ch}
+.srch{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:32px}
+#q{flex:1 1 320px;max-width:620px;padding:17px 24px;border:0;border-radius:999px;background:var(--cream);color:var(--ink);font:inherit;font-size:16px}
+#q:focus{outline:3px solid var(--pink);outline-offset:2px}
+.count{font-size:14px;color:var(--silver)}
+.legend{display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-top:26px;font-size:13px;color:#CFC8BF}
+.legend span{display:flex;align-items:center;gap:8px}
+/* chips */
+.toc{position:sticky;top:72px;z-index:20;background:rgba(250,248,246,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.toc .wrap{display:flex;gap:8px;overflow-x:auto;padding-top:12px;padding-bottom:12px;scrollbar-width:none}
+.toc .wrap::-webkit-scrollbar{display:none}
+.toc a{flex:0 0 auto;border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:9px 16px;font-size:13.5px;font-weight:500;white-space:nowrap;transition:all .2s}
+.toc a i{font-style:normal;font-size:11px;color:var(--soft);margin-left:6px}
+.toc a:hover{border-color:var(--ink)}
+.toc a.on{background:var(--ink);border-color:var(--ink);color:var(--cream)}
+.toc a.on i{color:var(--pink)}
+/* sections and cards */
+main{max-width:1240px;margin:0 auto;padding:12px 24px 80px}
+.empty{padding:48px 0;color:var(--soft);font-size:17px}
+.sec{padding-top:64px;scroll-margin-top:150px}
+.sec-head{display:flex;align-items:flex-end;gap:14px;margin-bottom:28px}
+.sec-head h2{font-size:clamp(30px,4vw,50px);font-weight:700;letter-spacing:-.02em;line-height:1;text-transform:uppercase}
+.sec-head span{font-size:13px;font-weight:600;background:var(--pink);border-radius:999px;padding:4px 12px;margin-bottom:6px}
+.sec-head .mono{display:none}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.item:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(37,37,37,.10)}
+.ph{aspect-ratio:1/1;background:#EFEAE2;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.item:hover .ph img{transform:scale(1.04)}
+.nophoto{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#A39C90}
+.txt{padding:20px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+h3{font-size:18px;font-weight:600;line-height:1.3}
+.price{display:flex;align-items:baseline;gap:12px}
+.price b{font-size:20px;font-weight:700;color:var(--olive)}
+.price span{font-size:13px;color:#7a746c}
+.badges{display:flex;flex-wrap:wrap;gap:7px;align-items:center}
+.badge{background:var(--pink);color:var(--ink);border-radius:999px;padding:4px 11px;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.ic{width:38px;height:38px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:7.5px;font-weight:700;line-height:1.05;text-align:center;letter-spacing:.02em;text-transform:uppercase;color:#fff;flex:none}
+.ic-g{background:#6E682C}.ic-l{background:#F8BDC4;color:#252525}.ic-p{background:#BDB3B3;color:#252525}
+.desc{font-size:14px;font-weight:300;color:var(--soft);line-height:1.5}
+details{border-top:1px solid var(--line);padding-top:10px;margin-top:auto}
+summary{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--olive);cursor:pointer;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"+ "}
+details[open] summary:before{content:"− "}
+details p{margin-top:8px;font-size:13.5px;font-weight:300;line-height:1.5}
+.kb{display:flex;flex-wrap:wrap;gap:6px}
+.kb span{background:#F4F0EA;border-radius:999px;padding:5px 12px;font-size:12.5px;color:var(--ink)}
+.kb b{font-weight:700;font-size:10px;letter-spacing:.08em;text-transform:uppercase;margin-right:5px;color:var(--olive)}
+.alrg{font-size:12.5px;font-weight:300;color:var(--soft);line-height:1.45}
+.alrg b{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin-right:6px}
+.up{display:inline-block;margin-top:22px;font-size:13px;font-weight:600;border-bottom:2px solid var(--pink);padding-bottom:3px}
+/* shops + order + footer */
+.shops-s{padding:88px 0 96px;border-top:1px solid var(--line)}
+.shops-s h2,.order h2{font-size:clamp(32px,4.2vw,54px);font-weight:700;letter-spacing:-.02em;line-height:1;text-transform:uppercase;margin-bottom:32px}
+.shops{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.shop{background:#fff;border:1px solid var(--line);border-radius:24px;padding:32px}
+.shop .kick{color:var(--olive);margin-bottom:10px}
+.shop h3{font-size:26px}
+.hrs{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:16px 0}
+.hrs b{background:var(--olive);color:var(--cream);border-radius:999px;padding:8px 18px;font-size:17px}
+.pill{background:var(--pink);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:600}
+.tel{font-size:19px;font-weight:600}
+.order{background:var(--pink);padding:80px 0}
+.ord{display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
+.order h2{margin-bottom:0}
+.ord p{font-size:18px;font-weight:300;margin-top:14px;max-width:520px;line-height:1.5}
+.bs{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--ink);color:var(--cream);padding:16px 26px;border-radius:999px;font-weight:600;font-size:15px}
+.btn.w{background:#fff;color:var(--ink)}
+footer{background:var(--ink);color:#CFC8BF;padding:44px 0;font-size:13.5px}
+.ft{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.ft p{max-width:640px;line-height:1.5}
+.up-fab{position:fixed;right:18px;bottom:18px;z-index:40;width:48px;height:48px;border-radius:50%;border:0;background:var(--ink);color:var(--cream);font-size:18px;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.2)}
 .up-fab.show{display:flex}
-@media print{.bar,.toc,.up-fab,.hint{display:none!important}
-  .item{break-inside:avoid;border:1px solid #ccc}
-  body{background:#fff!important}}
-@media (max-width:600px){.bar .row{padding:8px 16px}.count{width:100%}}
-
-/* значки из меню: gluten free / lactose free / protein */
-.badges{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
-.ic{width:36px;height:36px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
-  font-size:7.5px;font-weight:700;line-height:1.05;text-align:center;letter-spacing:.02em;text-transform:uppercase;
-  color:#fff;flex:0 0 auto}
-.ic-g{background:#6E682C}
-.ic-l{background:#F8BDC4}
-.ic-p{background:#BDB3B3}
-.legend{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-top:16px;font-size:12px;color:var(--soft)}
-.legend span{display:flex;align-items:center;gap:7px}
+@media (max-width:1000px){.grid{grid-template-columns:1fr 1fr;gap:18px}}
+@media (max-width:760px){
+ nav.main{display:none}
+ .hbar{height:64px}.toc{top:64px}
+ .wrap{padding:0 20px}.wrap.hin{padding:40px 20px 36px}main{padding:8px 16px 56px}
+ .grid{grid-template-columns:1fr;gap:16px}
+ .ph{aspect-ratio:4/3}
+ .sec{padding-top:44px;scroll-margin-top:130px}
+ .shops{grid-template-columns:1fr}
+}
+@media print{header.top,.toc,.up-fab,.hero .srch,.order{display:none!important}.item{break-inside:avoid}}
 </style></head>
 <body id="top">
-<header class="hero">
-  <div class="mark"><span class="disc"><svg class="mono" viewBox="0 0 1180 420" fill="currentColor" aria-hidden="true"><path d="M0 0h100v420H0zM270 0h100v420H270zM540 0h100v420H540zM810 0h100v420H810zM1080 0h100v420h-100zM100 165h170v95H100zM640 165h170v95H640zM540 0h100L370 420H270zM1080 0h100L910 420H810z"/></svg></span><p class="wordmark">Ни стыда<br>ни сахара</p></div>
-  <h1>Каталог меню</h1>
-  <p class="lead">Составы, пищевая ценность и аллергены по каждой позиции.</p>
-<div class="legend"><span class="ic ic-g" title="без глютена">gluten<br>free</span><span>без глютена</span><span class="ic ic-l" title="без лактозы">lactose<br>free</span><span>без лактозы</span><span class="ic ic-p" title="много белка">protein</span><span>много белка</span></div>
-</header>
-<div class="bar">
-  <div class="row">
-    <input id="q" type="search" placeholder="Поиск: название, продукт, раздел — например, лосось" aria-label="Поиск" autocomplete="off">
-    <span class="count" id="count"></span>
-  </div>
-</div>
-<nav class="toc" aria-label="Оглавление"><a href="#zavtraki-nini">Завтраки НИНИ <i>6</i></a><a href="#ayca">Яйца <i>5</i></a><a href="#ne-hleb">Не хлеб <i>5</i></a><a href="#hleb">Хлеб <i>9</i></a><a href="#kasi">Каши <i>7</i></a><a href="#sladkoe">Сладкое <i>16</i></a><a href="#poke-i-bouly">Поке и боулы <i>15</i></a><a href="#pp-to-go">ПП to go <i>9</i></a><a href="#deserty-porcionnye">Десерты порционные <i>17</i></a><a href="#cizkeyki">Чизкейки <i>4</i></a><a href="#keyk-boksy">Кейк-боксы <i>3</i></a><a href="#tarty-kol-ca-i-eklery">Тарты, кольца и эклеры <i>7</i></a><a href="#deserty-mussovye">Десерты муссовые <i>10</i></a><a href="#deserty-proteinovye">Десерты протеиновые <i>15</i></a><a href="#deserty-bezglutenovye">Десерты безглютеновые <i>4</i></a><a href="#torty">Торты <i>10</i></a><a href="#detskoe-menu">Детское меню <i>11</i></a></nav>
+<header class="top"><div class="wrap hbar">
+ <a class="brand" href="#top"><span class="disc"><svg viewBox="0 0 1180 420" fill="currentColor" aria-hidden="true"><path d="M0 0h100v420H0zM270 0h100v420H270zM540 0h100v420H540zM810 0h100v420H810zM1080 0h100v420h-100zM100 165h170v95H100zM640 165h170v95H640zM540 0h100L370 420H270zM1080 0h100L910 420H810z"/></svg></span><b>Ни стыда<br>ни сахара</b></a>
+ <nav class="main"><a href="#top">Меню</a><a href="#pp-to-go">To go</a><a href="#shops">Адреса</a><a href="https://instagram.com/ni.stida_ni.sahara">Instagram</a></nav>
+ <a class="cta" href="#order">Заказать</a>
+</div></header>
+<section class="hero"><div class="wrap hin">
+ <p class="kick">Меню · состав и КБЖУ</p>
+ <h1>Что сегодня<br>без сахара?</h1>
+ <p class="lead">Состав, пищевая ценность и аллергены у каждой позиции. Ищите по названию или продукту.</p>
+ <div class="srch"><input id="q" type="search" placeholder="Поиск: лосось, сырники, протеин…" aria-label="Поиск" autocomplete="off"><span class="count" id="count">153 позиций</span></div>
+ <div class="legend"><span class="ic ic-g" title="без глютена">gluten<br>free</span><span>без глютена</span><span class="ic ic-l" title="без лактозы">lactose<br>free</span><span>без лактозы</span><span class="ic ic-p" title="много белка">protein</span><span>много белка</span></div>
+</div></section>
+<nav class="toc" aria-label="Разделы"><div class="wrap"><a href="#zavtraki-nini">Завтраки НИНИ <i>6</i></a><a href="#ayca">Яйца <i>5</i></a><a href="#ne-hleb">Не хлеб <i>5</i></a><a href="#hleb">Хлеб <i>9</i></a><a href="#kasi">Каши <i>7</i></a><a href="#sladkoe">Сладкое <i>16</i></a><a href="#poke-i-bouly">Поке и боулы <i>15</i></a><a href="#pp-to-go">ПП to go <i>9</i></a><a href="#deserty-porcionnye">Десерты порционные <i>17</i></a><a href="#cizkeyki">Чизкейки <i>4</i></a><a href="#keyk-boksy">Кейк-боксы <i>3</i></a><a href="#tarty-kol-ca-i-eklery">Тарты, кольца и эклеры <i>7</i></a><a href="#deserty-mussovye">Десерты муссовые <i>10</i></a><a href="#deserty-proteinovye">Десерты протеиновые <i>15</i></a><a href="#deserty-bezglutenovye">Десерты безглютеновые <i>4</i></a><a href="#torty">Торты <i>10</i></a><a href="#detskoe-menu">Детское меню <i>11</i></a></div></nav>
 <main>
   <p id="empty" hidden class="empty">Ничего не нашлось. Попробуйте другое слово.</p>
   <section class="sec" id="zavtraki-nini">
@@ -1904,12 +1894,16 @@ footer.brandfoot b{display:block;font-weight:700;letter-spacing:.2em;text-transf
   <a class="up" href="#top">Наверх ↑</a>
 </section>
 </main>
+<section class="shops-s" id="shops"><div class="wrap"><h2>Где нас найти</h2><div class="shops"><div class="shop"><p class="kick">Фабричный Маркет</p><h3>ул. Сахьяновой, 7Б/3</h3><p class="hrs"><b>08:00–20:00</b><span class="pill">перерыв 14:00–14:30</span></p><a class="tel" href="tel:+79834375413">☎ 8 983 437-54-13</a></div><div class="shop"><p class="kick">45-й квартал · 1 этаж</p><h3>ул. Калашникова, 11Б/1</h3><p class="hrs"><b>08:00–20:00</b><span class="pill">без перерыва</span></p><a class="tel" href="tel:+79834527070">☎ 8 983 452-70-70</a></div></div></div></section>
+<section class="order" id="order"><div class="wrap ord">
+ <div><h2>Заказать</h2><p>Позвоните в ближайшую НИНИ — соберём заказ с собой. Или напишите нам в Instagram.</p></div>
+ <div class="bs"><a class="btn" href="tel:+79834375413">Позвонить · Фабричный Маркет</a><a class="btn" href="tel:+79834527070">Позвонить · 45-й квартал</a><a class="btn w" href="https://instagram.com/ni.stida_ni.sahara">Написать в Instagram</a></div>
+</div></section>
 <button class="up-fab" id="fab" title="Наверх" aria-label="Наверх">↑</button>
-<footer class="brandfoot"><span class="disc"><svg class="mono" viewBox="0 0 1180 420" fill="currentColor" aria-hidden="true"><path d="M0 0h100v420H0zM270 0h100v420H270zM540 0h100v420H540zM810 0h100v420H810zM1080 0h100v420h-100zM100 165h170v95H100zM640 165h170v95H640zM540 0h100L370 420H270zM1080 0h100L910 420H810z"/></svg></span><p><b>Ни стыда ни сахара</b>Каталог меню · составы, пищевая ценность и аллергены. Данные подтверждает шеф-повар перед подачей гостю.</p></footer>
-<footer>
-  <p>Пищевая ценность указана расчётно, на 100 г и на порцию: ккал / белки / жиры / углеводы. Возможны следы других аллергенов — уточняйте у сотрудников.</p>
-  <p class="mono">НИНИ</p>
-</footer>
+<footer><div class="wrap ft">
+ <p>Пищевая ценность указана расчётно: ккал / белки / жиры / углеводы. Возможны следы других аллергенов — уточняйте у сотрудников.</p>
+ <p>© НИНИ · Ни стыда ни сахара · Улан-Удэ</p>
+</div></footer>
 <script>
 (function(){
   const q=document.getElementById('q'), items=[...document.querySelectorAll('.item')],
