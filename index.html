@@ -92,14 +92,20 @@ details p{margin-top:8px;font-size:13.5px;font-weight:300;line-height:1.5}
 .hrs b{background:var(--olive);color:var(--cream);border-radius:999px;padding:8px 18px;font-size:17px}
 .pill{background:var(--pink);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:600}
 .tel{font-size:19px;font-weight:600}
-.order{background:var(--pink);padding:80px 0}
-.ord{display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
-.order h2{margin-bottom:0}
-.ord p{font-size:18px;font-weight:300;margin-top:14px;max-width:520px;line-height:1.5}
+.order{background:var(--pink);padding:88px 0}
+.dl{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.dcard{background:#fff;border-radius:24px;padding:34px;display:flex;flex-direction:column;gap:14px}
+.dcard.ya{background:#FCE000;color:#21201F}
+.dcard .tag{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--olive)}
+.dcard.ya .tag{color:#21201F;opacity:.7}
+.dcard h3{font-size:28px;font-weight:700;line-height:1.1}
+.dcard p{font-size:16.5px;font-weight:300;line-height:1.5}
+.dcard .btn{align-self:flex-start;margin-top:auto}
+.dcard .bs{margin-top:auto}
+.ig{margin-top:26px;font-size:16px}.ig a{font-weight:600;border-bottom:2px solid var(--ink)}
 .bs{display:flex;gap:12px;flex-wrap:wrap}
 .btn{display:inline-block;background:var(--ink);color:var(--cream);padding:16px 26px;border-radius:999px;font-weight:600;font-size:15px}
 .btn.w{background:#fff;color:var(--ink)}
-.btn.eda{background:#FCE000;color:#21201F}
 footer{background:var(--ink);color:#CFC8BF;padding:44px 0;font-size:13.5px}
 .ft{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 .ft p{max-width:640px;line-height:1.5}
@@ -151,7 +157,8 @@ footer{background:var(--ink);color:#CFC8BF;padding:44px 0;font-size:13.5px}
  .grid{grid-template-columns:1fr;gap:16px}
  .ph{aspect-ratio:4/3}
  .sec{padding-top:44px;scroll-margin-top:130px}
- .shops{grid-template-columns:1fr}
+ .shops,.dl{grid-template-columns:1fr}
+ .dcard{padding:26px}
  .hero{height:auto}
  .slide{position:relative;display:none}.slide.on{display:block}
  .slide img{position:relative;width:100%;height:auto;aspect-ratio:4/5}
@@ -166,7 +173,7 @@ footer{background:var(--ink);color:#CFC8BF;padding:44px 0;font-size:13.5px}
 <body id="top">
 <header class="top"><div class="wrap hbar">
  <a class="brand" href="#top"><span class="disc"><svg viewBox="0 0 1180 420" fill="currentColor" aria-hidden="true"><path d="M0 0h100v420H0zM270 0h100v420H270zM540 0h100v420H540zM810 0h100v420H810zM1080 0h100v420h-100zM100 165h170v95H100zM640 165h170v95H640zM540 0h100L370 420H270zM1080 0h100L910 420H810z"/></svg></span><b>Ни стыда<br>ни сахара</b></a>
- <nav class="main"><a href="#menu">Меню</a><a href="#pp-to-go">To go</a><a href="#about">О нас</a><a href="#shops">Адреса</a><a href="https://instagram.com/ni.stida_ni.sahara">Instagram</a></nav>
+ <nav class="main"><a href="#menu">Меню</a><a href="#pp-to-go">To go</a><a href="#about">О нас</a><a href="#shops">Адреса</a><a href="#order">Доставка</a><a href="https://instagram.com/ni.stida_ni.sahara">Instagram</a></nav>
  <a class="cta" href="#order">Заказать</a>
 </div></header>
 <div class="hero" id="hero"><div class="slide on"><img src="img/hero-togo.jpg" alt="" ><div class="cap"><p class="kick">Новое · ПП to go</p><h1>Возьми меня<br>с собой</h1><p class="lead">Сэндвичи и боксы собраны, закрыты и подписаны: КБЖУ на каждой наклейке.</p><a class="btn" href="#pp-to-go">Смотреть to go</a></div></div><div class="slide"><img src="img/hero-energy.jpg" alt="" loading=lazy ><div class="cap"><p class="kick">Энерго-стаканы</p><h1>Завтрак<br>в стакане</h1><p class="lead">Чиа-пудинг, гранола и ягоды — черника, манго или клубника.</p><a class="btn" href="#pp-to-go">Выбрать вкус</a></div></div><div class="slide"><img src="img/hero-matcha.jpg" alt="" loading=lazy ><div class="cap"><p class="kick">Кофе и матча</p><h1>Осень<br>на зелёном</h1><p class="lead">Матча, кофе и авторские чаи — в зале и с собой.</p><a class="btn" href="#menu">Меню напитков</a></div></div><div class="slide"><img src="img/hero-tea.jpg" alt="" loading=lazy ><div class="cap"><p class="kick">Ни стыда ни сахара</p><h1>Сладко —<br>без сахара</h1><p class="lead">Десерты, завтраки и боулы с КБЖУ и составом на каждой позиции.</p><a class="btn" href="#menu">Всё меню</a></div></div>
@@ -1956,9 +1963,17 @@ footer{background:var(--ink);color:#CFC8BF;padding:44px 0;font-size:13.5px}
  <img src="img/about.jpg" alt="Чай в НИНИ" loading="lazy">
 </div></section>
 <section class="shops-s" id="shops"><div class="wrap"><h2>Где нас найти</h2><div class="shops"><div class="shop"><p class="kick">Фабричный Маркет</p><h3>ул. Сахьяновой, 7Б/3</h3><p class="hrs"><b>08:00–20:00</b><span class="pill">перерыв 14:00–14:30</span></p><a class="tel" href="tel:+79834375413">☎ 8 983 437-54-13</a></div><div class="shop"><p class="kick">45-й квартал · 1 этаж</p><h3>ул. Калашникова, 11Б/1</h3><p class="hrs"><b>08:00–20:00</b><span class="pill">без перерыва</span></p><a class="tel" href="tel:+79834527070">☎ 8 983 452-70-70</a></div></div></div></section>
-<section class="order" id="order"><div class="wrap ord">
- <div><h2>Заказать</h2><p>Закажите доставку в Яндекс Еде или позвоните в ближайшую НИНИ — соберём заказ с собой.</p></div>
- <div class="bs"><a class="btn eda" href="https://eda.yandex.ru/r/ni_styda_ni_sahara_restaurant" target="_blank" rel="noopener">Доставка · Яндекс Еда</a><a class="btn" href="tel:+79834375413">Позвонить · Фабричный Маркет</a><a class="btn" href="tel:+79834527070">Позвонить · 45-й квартал</a><a class="btn w" href="https://instagram.com/ni.stida_ni.sahara">Написать в Instagram</a></div>
+<section class="order" id="order"><div class="wrap">
+ <h2>Доставка и заказ</h2>
+ <div class="dl">
+  <div class="dcard ya"><p class="tag">Доставка</p><h3>НИНИ в Яндекс Еде</h3>
+   <p>Завтраки, боулы, десерты без сахара и ПП to go — с доставкой до двери. Заказ, оплата и отслеживание курьера — в приложении или на сайте Яндекс Еды.</p>
+   <a class="btn" href="https://eda.yandex.ru/r/ni_styda_ni_sahara_restaurant" target="_blank" rel="noopener">Заказать в Яндекс Еде</a></div>
+  <div class="dcard"><p class="tag">С собой</p><h3>Самовывоз</h3>
+   <p>Позвоните в ближайшую НИНИ — соберём заказ, пока вы в пути. ПП to go и энерго-стаканы ждут на витрине.</p>
+   <div class="bs"><a class="btn" href="tel:+79834375413">Позвонить · Фабричный Маркет</a><a class="btn" href="tel:+79834527070">Позвонить · 45-й квартал</a></div></div>
+ </div>
+ <p class="ig">Есть вопрос? <a href="https://instagram.com/ni.stida_ni.sahara">Напишите нам в Instagram →</a></p>
 </div></section>
 <button class="up-fab" id="fab" title="Наверх" aria-label="Наверх">↑</button>
 <footer><div class="wrap ft">
