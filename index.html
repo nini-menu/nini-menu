@@ -2074,7 +2074,7 @@ footer{background:var(--ink);color:#CFC8BF;padding:44px 0;font-size:13.5px}
     const io=new IntersectionObserver(es=>{es.forEach(e=>{
       const a=links.find(l=>l.getAttribute('href')==='#'+e.target.id);
       if(a&&e.isIntersecting){links.forEach(l=>l.classList.remove('on'));a.classList.add('on');
-        a.scrollIntoView({block:'nearest',inline:'nearest'});}});},{rootMargin:'-120px 0px -70% 0px'});
+        const w=a.parentElement;w.scrollTo({left:a.offsetLeft-(w.clientWidth-a.offsetWidth)/2,behavior:'smooth'});}});},{rootMargin:'-120px 0px -70% 0px'});
     secs.forEach(s=>io.observe(s));
   }
   addEventListener('keydown',e=>{
