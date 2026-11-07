@@ -2116,16 +2116,23 @@ footer{background:var(--ink);color:#CFC8BF;padding:44px 0;font-size:13.5px}
 </script>
 <!--cat-slide--><script>
 (function(){
- var P=["Это мой десерт", "Начну с понедельника", "ЗОЖ для слабаков", "Сахар не нужен, я и так сладкий", "Калории не считаю, считаю ложки", "Без сахара. Без стыда. Без делёжки", "Диета? Не слышал", "Отойди от чизкейка", "Я на ПП, а ты кто такой", "Последний кусочек — мой", "Ещё один десерт и спать", "Это не обжорство, это дегустация", "Худею. Медленно. С ложкой"],CLICK="Ладно, делюсь. Пошли к десертам",N=75,NB=11,bl=new Array(NB),bi=-1,C=38,V='1794054896',box=document.getElementById('catbox');
+ // phones get the light set: half the frames at 360 px (about 8x less memory)
+ var MOB=!matchMedia('(hover:hover)').matches||innerWidth<=820,DIR=MOB?'img/cat/m/':'img/cat/';
+ var P=["Это мой десерт", "Начну с понедельника", "ЗОЖ для слабаков", "Сахар не нужен, я и так сладкий", "Калории не считаю, считаю ложки", "Без сахара. Без стыда. Без делёжки", "Диета? Не слышал", "Отойди от чизкейка", "Я на ПП, а ты кто такой", "Последний кусочек — мой", "Ещё один десерт и спать", "Это не обжорство, это дегустация", "Худею. Медленно. С ложкой"],CLICK="Ладно, делюсь. Пошли к десертам",N=MOB?38:75,NB=11,bl=new Array(NB),bi=-1,C=MOB?19:38,V='1794055817',box=document.getElementById('catbox');
  if(!box)return;var cv=box.querySelector('canvas'),ctx=cv.getContext('2d'),bub=box.querySelector('.cat-bub'),
-fr=new Array(N),cur=C,tg=C,drawn=-1,ph=-1,w=false;
+fr=new Array(N),cur=C,tg=C,drawn=-1,ph=-1,w=false,vis=true;
+ if(MOB){cv.width=cv.height=360;}
+ // pause everything while the cat is scrolled away or the tab is hidden (keeps menu scrolling smooth)
+ if('IntersectionObserver' in window)new IntersectionObserver(function(e){vis=e[0].isIntersecting;}).observe(box);
+ function on(){return vis&&!document.hidden;}
  // frames load right away at low priority and are decoded ahead of time (no stutter on first turn)
  function load(){for(var i=0;i<N;i++)(function(i){var im=new Image();im.decoding='async';if('fetchPriority' in im)im.fetchPriority='low';
    im.onload=function(){(window.createImageBitmap?createImageBitmap(im):Promise.resolve(im)).then(function(bm){fr[i]=bm;})
-    .catch(function(){fr[i]=im;});};im.src='img/cat/'+(i<10?'0':'')+i+'.webp?v='+V;})(i);
+    .catch(function(){fr[i]=im;});};im.src=DIR+(i<10?'0':'')+i+'.webp?v='+V;})(i);
    for(var j=0;j<NB;j++)(function(j){var im=new Image();im.onload=function(){(window.createImageBitmap?createImageBitmap(im):Promise.resolve(im))
-    .then(function(bm){bl[j]=bm;}).catch(function(){bl[j]=im;});};im.src='img/cat/b'+(j<10?'0':'')+j+'.webp?v='+V;})(j);}
- load();
+    .then(function(bm){bl[j]=bm;}).catch(function(){bl[j]=im;});};im.src=DIR+'b'+(j<10?'0':'')+j+'.webp?v='+V;})(j);}
+ // phones: start loading after the menu itself has loaded
+ if(!MOB||document.readyState==='complete')load();else addEventListener('load',function(){setTimeout(load,300)});
  function near(i){for(var d=0;d<N;d++){if(fr[i-d])return i-d;if(fr[i+d])return i+d;}return -1;}
  // sub-frame drawing: blend the two neighbouring frames by the fractional position -> no visible steps
  function draw(x){var k=Math.floor(x),f=x-k,a=fr[k],b=fr[k+1];
@@ -2141,9 +2148,9 @@ fr=new Array(N),cur=C,tg=C,drawn=-1,ph=-1,w=false;
   addEventListener('mousemove',function(e){aim(e.clientX)});
   document.addEventListener('mouseleave',function(){look(0)});
  }else{
-  var st=0,tl=false;setInterval(function(){if(tl)return;st=(st+1)%4;look([0,1,0,-1][st])},2600);
+  var st=0,tl=false;setInterval(function(){if(tl||!on())return;st=(st+1)%4;look([0,1,0,-1][st])},2600);
   box.addEventListener('touchmove',function(e){aim(e.touches[0].clientX)},{passive:true});
-  var onT=function(e){if(e.gamma==null)return;tl=true;look(e.gamma/25)},D=window.DeviceOrientationEvent,b=box.querySelector('.cat-tilt');
+  var onT=function(e){if(e.gamma==null||!on())return;tl=true;look(e.gamma/25)},D=window.DeviceOrientationEvent,b=box.querySelector('.cat-tilt');
   if(D&&typeof D.requestPermission==='function'){b.style.display='block';b.addEventListener('click',function(ev){ev.stopPropagation();
    D.requestPermission().then(function(s){if(s==='granted'){addEventListener('deviceorientation',onT);b.style.display='none';}}).catch(function(){});});}
   else if(D)addEventListener('deviceorientation',onT);
@@ -2152,7 +2159,7 @@ fr=new Array(N),cur=C,tg=C,drawn=-1,ph=-1,w=false;
   setTimeout(function(){box.classList.remove('say');var t=document.getElementById('deserty-porcionnye');if(t)t.scrollIntoView({behavior:'smooth'});},900);});
  // blink: only while resting on the front pose; any head movement cancels it
  function blinkReady(){for(var j=0;j<NB;j++)if(!bl[j])return false;return NB>0;}
- function blink(){if(!blinkReady()||!fr[C]||Math.abs(tg-C)>.5||Math.abs(cur-C)>.5){later();return;}
+ function blink(){if(!on()||!blinkReady()||!fr[C]||Math.abs(tg-C)>.5||Math.abs(cur-C)>.5){later();return;}
   // timeline: front -> blink frames -> front, each step cross-faded into the next (smooth, ~0.75 s)
   var S=[fr[C]].concat(bl,[fr[C]]),DUR=1300,t0=performance.now();bi=0;
   (function step(now){if(Math.abs(tg-C)>.5){bi=-1;drawn=-1;later();return;}
@@ -2167,7 +2174,7 @@ fr=new Array(N),cur=C,tg=C,drawn=-1,ph=-1,w=false;
  later();
  // time-based easing: the head glides to the target at the same pace on any screen refresh rate
  var last=performance.now();
- (function loop(now){var dt=Math.min(64,now-last||16);last=now;cur+=(tg-cur)*(1-Math.exp(-dt/140));
-  if(bi<0)draw(cur);requestAnimationFrame(loop)})(last);
+ (function loop(now){var dt=Math.min(64,now-last||16);last=now;
+  if(on()){cur+=(tg-cur)*(1-Math.exp(-dt/140));if(bi<0)draw(cur);}requestAnimationFrame(loop)})(last);
 })();
 </script><!--/cat-slide--></body></html>
