@@ -2116,19 +2116,21 @@ footer{background:var(--ink);color:#CFC8BF;padding:44px 0;font-size:13.5px}
 </script>
 <!--cat-slide--><script>
 (function(){
- var P=["Это мой десерт", "Начну с понедельника", "ЗОЖ для слабаков", "Сахар не нужен, я и так сладкий", "Калории не считаю, считаю ложки", "Без сахара. Без стыда. Без делёжки", "Диета? Не слышал", "Отойди от чизкейка", "Я на ПП, а ты кто такой", "Последний кусочек — мой", "Ещё один десерт и спать", "Это не обжорство, это дегустация", "Худею. Медленно. С ложкой"],CLICK="Ладно, делюсь. Пошли к десертам",N=75,C=38,V='1794052923',box=document.getElementById('catbox');
+ var P=["Это мой десерт", "Начну с понедельника", "ЗОЖ для слабаков", "Сахар не нужен, я и так сладкий", "Калории не считаю, считаю ложки", "Без сахара. Без стыда. Без делёжки", "Диета? Не слышал", "Отойди от чизкейка", "Я на ПП, а ты кто такой", "Последний кусочек — мой", "Ещё один десерт и спать", "Это не обжорство, это дегустация", "Худею. Медленно. С ложкой"],CLICK="Ладно, делюсь. Пошли к десертам",N=75,NB=11,bl=new Array(NB),bi=-1,C=38,V='1794054896',box=document.getElementById('catbox');
  if(!box)return;var cv=box.querySelector('canvas'),ctx=cv.getContext('2d'),bub=box.querySelector('.cat-bub'),
 fr=new Array(N),cur=C,tg=C,drawn=-1,ph=-1,w=false;
  // frames load right away at low priority and are decoded ahead of time (no stutter on first turn)
  function load(){for(var i=0;i<N;i++)(function(i){var im=new Image();im.decoding='async';if('fetchPriority' in im)im.fetchPriority='low';
    im.onload=function(){(window.createImageBitmap?createImageBitmap(im):Promise.resolve(im)).then(function(bm){fr[i]=bm;})
-    .catch(function(){fr[i]=im;});};im.src='img/cat/'+(i<10?'0':'')+i+'.webp?v='+V;})(i);}
+    .catch(function(){fr[i]=im;});};im.src='img/cat/'+(i<10?'0':'')+i+'.webp?v='+V;})(i);
+   for(var j=0;j<NB;j++)(function(j){var im=new Image();im.onload=function(){(window.createImageBitmap?createImageBitmap(im):Promise.resolve(im))
+    .then(function(bm){bl[j]=bm;}).catch(function(){bl[j]=im;});};im.src='img/cat/b'+(j<10?'0':'')+j+'.webp?v='+V;})(j);}
  load();
  function near(i){for(var d=0;d<N;d++){if(fr[i-d])return i-d;if(fr[i+d])return i+d;}return -1;}
  function draw(i){var k=near(i);if(k<0||k===drawn)return;ctx.clearRect(0,0,cv.width,cv.height);
   ctx.drawImage(fr[k],0,0,cv.width,cv.height);drawn=k;box.classList.add('ready');}
  function watch(on){if(on===w)return;w=on;if(on){ph=(ph+1)%P.length;bub.textContent=P[ph];}box.classList.toggle('watch',on);}
- function look(t){t=Math.max(-1,Math.min(1,t));tg=t>=0?C+t*(N-1-C):C+t*C;watch(t>.55);}
+ function look(t){t=Math.max(-1,Math.min(1,t));if(Math.abs(t)<.15)t=0;tg=t>=0?C+t*(N-1-C):C+t*C;watch(t>.55);}
  function aim(x){var r=box.getBoundingClientRect(),cx=r.left+r.width/2;look((x-cx)/Math.max(240,innerWidth*.42));}
  if(matchMedia('(hover:hover)').matches){
   addEventListener('mousemove',function(e){aim(e.clientX)});
@@ -2143,6 +2145,20 @@ fr=new Array(N),cur=C,tg=C,drawn=-1,ph=-1,w=false;
  }
  box.addEventListener('click',function(){bub.textContent=CLICK;box.classList.add('say');look(1);
   setTimeout(function(){box.classList.remove('say');var t=document.getElementById('sladkoe');if(t)t.scrollIntoView({behavior:'smooth'});},900);});
- (function loop(){cur+=(tg-cur)*.14;draw(Math.round(cur));requestAnimationFrame(loop)})();
+ // blink: only while resting on the front pose; any head movement cancels it
+ function blinkReady(){for(var j=0;j<NB;j++)if(!bl[j])return false;return NB>0;}
+ function blink(){if(!blinkReady()||!fr[C]||Math.abs(tg-C)>.5||Math.abs(cur-C)>.5){later();return;}
+  // timeline: front -> blink frames -> front, each step cross-faded into the next (smooth, ~0.75 s)
+  var S=[fr[C]].concat(bl,[fr[C]]),STEP=62,t0=performance.now();bi=0;
+  (function step(now){if(Math.abs(tg-C)>.5){bi=-1;drawn=-1;later();return;}
+   var p=Math.max(0,(now-t0)/STEP),k=Math.floor(p),f=p-k;
+   if(k>=S.length-1){bi=-1;drawn=-1;later();return;}
+   f=f*f*(3-2*f);   // ease each cross-fade
+   ctx.clearRect(0,0,cv.width,cv.height);ctx.globalAlpha=1;ctx.drawImage(S[k],0,0,cv.width,cv.height);
+   ctx.globalAlpha=f;ctx.drawImage(S[k+1],0,0,cv.width,cv.height);ctx.globalAlpha=1;
+   requestAnimationFrame(step);})(t0);}
+ function later(){setTimeout(blink,4000+Math.random()*3000);}
+ later();
+ (function loop(){cur+=(tg-cur)*.14;if(bi<0)draw(Math.round(cur));requestAnimationFrame(loop)})();
 })();
 </script><!--/cat-slide--></body></html>
