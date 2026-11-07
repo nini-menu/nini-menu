@@ -2127,8 +2127,13 @@ fr=new Array(N),cur=C,tg=C,drawn=-1,ph=-1,w=false;
     .then(function(bm){bl[j]=bm;}).catch(function(){bl[j]=im;});};im.src='img/cat/b'+(j<10?'0':'')+j+'.webp?v='+V;})(j);}
  load();
  function near(i){for(var d=0;d<N;d++){if(fr[i-d])return i-d;if(fr[i+d])return i+d;}return -1;}
- function draw(i){var k=near(i);if(k<0||k===drawn)return;ctx.clearRect(0,0,cv.width,cv.height);
-  ctx.drawImage(fr[k],0,0,cv.width,cv.height);drawn=k;box.classList.add('ready');}
+ // sub-frame drawing: blend the two neighbouring frames by the fractional position -> no visible steps
+ function draw(x){var k=Math.floor(x),f=x-k,a=fr[k],b=fr[k+1];
+  if(!a||(f>.01&&!b)){var n=near(Math.round(x));if(n<0)return;a=fr[n];b=null;f=0;}
+  if(Math.abs(x-drawn)<.004)return;
+  ctx.clearRect(0,0,cv.width,cv.height);ctx.globalAlpha=1;ctx.drawImage(a,0,0,cv.width,cv.height);
+  if(b&&f>.01){ctx.globalAlpha=f;ctx.drawImage(b,0,0,cv.width,cv.height);ctx.globalAlpha=1;}
+  drawn=x;box.classList.add('ready');}
  function watch(on){if(on===w)return;w=on;if(on){ph=(ph+1)%P.length;bub.textContent=P[ph];}box.classList.toggle('watch',on);}
  function look(t){t=Math.max(-1,Math.min(1,t));if(Math.abs(t)<.15)t=0;tg=t>=0?C+t*(N-1-C):C+t*C;watch(t>.55);}
  function aim(x){var r=box.getBoundingClientRect(),cx=r.left+r.width/2;look((x-cx)/Math.max(240,innerWidth*.42));}
@@ -2160,6 +2165,9 @@ fr=new Array(N),cur=C,tg=C,drawn=-1,ph=-1,w=false;
    requestAnimationFrame(step);})(t0);}
  function later(){setTimeout(blink,2000+Math.random()*1500);}
  later();
- (function loop(){cur+=(tg-cur)*.14;if(bi<0)draw(Math.round(cur));requestAnimationFrame(loop)})();
+ // time-based easing: the head glides to the target at the same pace on any screen refresh rate
+ var last=performance.now();
+ (function loop(now){var dt=Math.min(64,now-last||16);last=now;cur+=(tg-cur)*(1-Math.exp(-dt/140));
+  if(bi<0)draw(cur);requestAnimationFrame(loop)})(last);
 })();
 </script><!--/cat-slide--></body></html>
