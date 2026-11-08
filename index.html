@@ -2118,9 +2118,9 @@ footer{background:var(--ink);color:#CFC8BF;padding:44px 0;font-size:13.5px}
 (function(){
  // phones get the light set: half the frames at 360 px (about 8x less memory)
  var MOB=!matchMedia('(hover:hover)').matches||innerWidth<=820,DIR=MOB?'img/cat/m/':'img/cat/';
- var P=["Это мой десерт", "Начну с понедельника", "ЗОЖ для слабаков", "Сахар не нужен, я и так сладкий", "Калории не считаю, считаю ложки", "Без сахара. Без стыда. Без делёжки", "Диета? Не слышал", "Отойди от чизкейка", "Я на ПП, а ты кто такой", "Последний кусочек — мой", "Ещё один десерт и спать", "Это не обжорство, это дегустация", "Худею. Медленно. С ложкой"],CLICK="Ладно, делюсь. Пошли к десертам",N=MOB?38:75,NB=11,bl=new Array(NB),bi=-1,C=MOB?19:38,V='1794055817',box=document.getElementById('catbox');
+ var P=["Это мой десерт", "Начну с понедельника", "ЗОЖ для слабаков", "Сахар не нужен, я и так сладкий", "Калории не считаю, считаю ложки", "Без сахара. Без стыда. Без делёжки", "Диета? Не слышал", "Отойди от чизкейка", "Я на ПП, а ты кто такой", "Последний кусочек — мой", "Ещё один десерт и спать", "Это не обжорство, это дегустация", "Худею. Медленно. С ложкой"],CLICK="Ладно, делюсь. Пошли к десертам",N=MOB?38:75,NB=11,bl=new Array(NB),bi=-1,C=MOB?19:38,V='1794121614',box=document.getElementById('catbox');
  if(!box)return;var cv=box.querySelector('canvas'),ctx=cv.getContext('2d'),bub=box.querySelector('.cat-bub'),
-fr=new Array(N),cur=C,tg=C,drawn=-1,ph=-1,w=false,vis=true;
+P=MOB?[0.0, 0.0121, 0.0227, 0.0363, 0.0536, 0.0741, 0.0972, 0.1247, 0.1523, 0.1837, 0.2172, 0.2554, 0.3078, 0.3553, 0.4004, 0.4435, 0.4784, 0.5028, 0.5123, 0.5352, 0.5726, 0.5993, 0.6356, 0.6612, 0.6883, 0.7189, 0.7445, 0.7746, 0.7956, 0.8188, 0.8354, 0.849, 0.8673, 0.8777, 0.889, 0.8937, 0.8994, 0.9041]:[0.0, 0.0036, 0.0121, 0.0168, 0.0227, 0.029, 0.0363, 0.0447, 0.0536, 0.0631, 0.0741, 0.0855, 0.0972, 0.1109, 0.1247, 0.1387, 0.1523, 0.1676, 0.1837, 0.2007, 0.2172, 0.2358, 0.2554, 0.2764, 0.3078, 0.3318, 0.3553, 0.3786, 0.4004, 0.4226, 0.4435, 0.4628, 0.4784, 0.4923, 0.5028, 0.509, 0.5123, 0.5144, 0.5352, 0.5574, 0.5726, 0.5857, 0.5993, 0.6146, 0.6356, 0.6486, 0.6612, 0.6754, 0.6883, 0.7073, 0.7189, 0.7323, 0.7445, 0.7636, 0.7746, 0.7856, 0.7956, 0.8043, 0.8188, 0.8275, 0.8354, 0.8423, 0.849, 0.8607, 0.8673, 0.8728, 0.8777, 0.8827, 0.889, 0.8915, 0.8937, 0.8973, 0.8994, 0.9021, 0.9041, 0.9698, 0.9719, 0.9764, 0.9802, 0.9824, 0.9837, 0.9876, 0.9911, 0.9942, 0.9969, 1.0],PC=P[C],fr=new Array(N),cur=PC,tg=PC,drawn=-1,ph=-1,w=false,vis=true;
  if(MOB){cv.width=cv.height=360;}
  // pause everything while the cat is scrolled away or the tab is hidden (keeps menu scrolling smooth)
  if('IntersectionObserver' in window)new IntersectionObserver(function(e){vis=e[0].isIntersecting;}).observe(box);
@@ -2135,14 +2135,21 @@ fr=new Array(N),cur=C,tg=C,drawn=-1,ph=-1,w=false,vis=true;
  if(!MOB||document.readyState==='complete')load();else addEventListener('load',function(){setTimeout(load,300)});
  function near(i){for(var d=0;d<N;d++){if(fr[i-d])return i-d;if(fr[i+d])return i+d;}return -1;}
  // sub-frame drawing: blend the two neighbouring frames by the fractional position -> no visible steps
+ var ghost=null,gA=0;   // snapshot of an interrupted blink, faded out over ~180 ms
+ function keepGhost(){ghost=document.createElement('canvas');ghost.width=cv.width;ghost.height=cv.height;
+  ghost.getContext('2d').drawImage(cv,0,0);gA=1;}
  function draw(x){var k=Math.floor(x),f=x-k,a=fr[k],b=fr[k+1];
   if(!a||(f>.01&&!b)){var n=near(Math.round(x));if(n<0)return;a=fr[n];b=null;f=0;}
-  if(Math.abs(x-drawn)<.004)return;
+  if(Math.abs(x-drawn)<.004&&gA<=0)return;
   ctx.clearRect(0,0,cv.width,cv.height);ctx.globalAlpha=1;ctx.drawImage(a,0,0,cv.width,cv.height);
   if(b&&f>.01){ctx.globalAlpha=f;ctx.drawImage(b,0,0,cv.width,cv.height);ctx.globalAlpha=1;}
+  if(ghost&&gA>0){ctx.globalAlpha=gA;ctx.drawImage(ghost,0,0);ctx.globalAlpha=1;}
   drawn=x;box.classList.add('ready');}
  function watch(on){if(on===w)return;w=on;if(on){ph=(ph+1)%P.length;bub.textContent=P[ph];}box.classList.toggle('watch',on);}
- function look(t){t=Math.max(-1,Math.min(1,t));if(Math.abs(t)<.15)t=0;tg=t>=0?C+t*(N-1-C):C+t*C;watch(t>.55);}
+ // head position u in [0,1] -> fractional frame index (frames are spaced by real movement, so the pace is even)
+ function idx(u){var lo=0,hi=P.length-1;if(u<=P[0])return 0;if(u>=P[hi])return hi;
+  while(hi-lo>1){var m=(lo+hi)>>1;if(P[m]<=u)lo=m;else hi=m;}return lo+(u-P[lo])/((P[hi]-P[lo])||1);}
+ function look(t){t=Math.max(-1,Math.min(1,t));var a=Math.abs(t);t=a<.12?0:(t>0?1:-1)*(a-.12)/.88;tg=t>=0?PC+t*(1-PC):PC+t*PC;watch(t>.55);}
  function aim(x){var r=box.getBoundingClientRect(),cx=r.left+r.width/2;look((x-cx)/Math.max(240,innerWidth*.42));}
  if(matchMedia('(hover:hover)').matches){
   addEventListener('mousemove',function(e){aim(e.clientX)});
@@ -2159,10 +2166,10 @@ fr=new Array(N),cur=C,tg=C,drawn=-1,ph=-1,w=false,vis=true;
   setTimeout(function(){box.classList.remove('say');var t=document.getElementById('deserty-porcionnye');if(t)t.scrollIntoView({behavior:'smooth'});},900);});
  // blink: only while resting on the front pose; any head movement cancels it
  function blinkReady(){for(var j=0;j<NB;j++)if(!bl[j])return false;return NB>0;}
- function blink(){if(!on()||!blinkReady()||!fr[C]||Math.abs(tg-C)>.5||Math.abs(cur-C)>.5){later();return;}
+ function blink(){if(!on()||!blinkReady()||!fr[C]||Math.abs(tg-PC)>.01||Math.abs(cur-PC)>.01){later();return;}
   // timeline: front -> blink frames -> front, each step cross-faded into the next (smooth, ~0.75 s)
   var S=[fr[C]].concat(bl,[fr[C]]),DUR=1300,t0=performance.now();bi=0;
-  (function step(now){if(Math.abs(tg-C)>.5){bi=-1;drawn=-1;later();return;}
+  (function step(now){if(Math.abs(tg-PC)>.01){keepGhost();bi=-1;drawn=-1;later();return;}
    var u=Math.max(0,(now-t0)/DUR);
    if(u>=1){bi=-1;drawn=-1;later();return;}
    u=u<.5?4*u*u*u:1-Math.pow(-2*u+2,3)/2;   // one continuous ease-in-out over the whole blink
@@ -2170,11 +2177,11 @@ fr=new Array(N),cur=C,tg=C,drawn=-1,ph=-1,w=false,vis=true;
    ctx.clearRect(0,0,cv.width,cv.height);ctx.globalAlpha=1;ctx.drawImage(S[k],0,0,cv.width,cv.height);
    ctx.globalAlpha=f;ctx.drawImage(S[k+1],0,0,cv.width,cv.height);ctx.globalAlpha=1;
    requestAnimationFrame(step);})(t0);}
- function later(){setTimeout(blink,2000+Math.random()*1500);}
+ function later(){setTimeout(blink,1500+Math.random()*1300);}
  later();
  // time-based easing: the head glides to the target at the same pace on any screen refresh rate
  var last=performance.now();
  (function loop(now){var dt=Math.min(64,now-last||16);last=now;
-  if(on()){cur+=(tg-cur)*(1-Math.exp(-dt/140));if(bi<0)draw(cur);}requestAnimationFrame(loop)})(last);
+  if(on()){cur+=(tg-cur)*(1-Math.exp(-dt/(MOB?320:210)));if(gA>0)gA=Math.max(0,gA-dt/180);if(bi<0)draw(idx(cur));}requestAnimationFrame(loop)})(last);
 })();
 </script><!--/cat-slide--></body></html>
